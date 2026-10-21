@@ -1,0 +1,123 @@
+[
+  {
+    "slug": "scorekeeper",
+    "code": "SK",
+    "name": "Pickleball Scorekeeper",
+    "shortName": "Scorekeeper",
+    "tagline": "Call the score right, every rally.",
+    "description": "Keep score for singles and doubles with server tracking, side-out scoring, undo, and spoken score calls.",
+    "color": "#1f7a4d",
+    "glyph": "score",
+    "features": [
+      "Singles and doubles modes",
+      "Player and team name setup",
+      "Target score 11, 15 or 21 with optional win-by-two",
+      "Large, touch-friendly rally buttons",
+      "Serving team, server number and serving side indicator",
+      "Undo last rally, new game and reset",
+      "Game and match completion display",
+      "Optional sound and spoken score calls"
+    ],
+    "offline": "Fully offline after the first launch. Spoken score calls use your device's built-in voice."
+  },
+  {
+    "slug": "match-tracker",
+    "code": "MT",
+    "name": "Match Tracker",
+    "shortName": "Matches",
+    "tagline": "Every result, one tap away.",
+    "description": "Log completed matches, see your wins, losses and win percentage, and export your history to CSV.",
+    "color": "#0f5f8a",
+    "glyph": "chart",
+    "features": [
+      "Enter player and team names",
+      "Save completed match results with game scores",
+      "Wins, losses and games played",
+      "Recent match history",
+      "Win percentage",
+      "Export records as CSV",
+      "Clear local history"
+    ],
+    "offline": "Fully offline. Records are saved on this device only and do not sync between devices."
+  },
+  {
+    "slug": "drill-generator",
+    "code": "DG",
+    "name": "Drill Generator",
+    "shortName": "Drills",
+    "tagline": "A fresh practice plan in seconds.",
+    "description": "Build practice routines by skill level, focus and time, then run them with a built-in timer.",
+    "color": "#b45309",
+    "glyph": "drill",
+    "features": [
+      "Beginner, intermediate and advanced levels",
+      "Serving, dinking, volleying, footwork or placement focus",
+      "15 to 90 minute sessions",
+      "Routines built from a curated drill library",
+      "Instructions, repetitions and rest periods",
+      "Practice timer with sound cues",
+      "Save favourite drills"
+    ],
+    "offline": "Fully offline. The drill library is built in; no AI service or internet connection needed."
+  },
+  {
+    "slug": "tournament",
+    "code": "TB",
+    "name": "Tournament Bracket Maker",
+    "shortName": "Brackets",
+    "tagline": "Run club tournaments from one device.",
+    "description": "Generate single-elimination brackets or round-robin schedules, enter scores and print the results.",
+    "color": "#7c3aed",
+    "glyph": "bracket",
+    "features": [
+      "Enter player or team names",
+      "Single-elimination brackets with automatic byes",
+      "Round-robin schedules with standings",
+      "Enter match scores",
+      "Winners advance automatically",
+      "Match status and results",
+      "Print or save brackets as PDF",
+      "Export and import tournament files"
+    ],
+    "offline": "Fully offline on one device. Printing to PDF uses your browser's print dialog."
+  },
+  {
+    "slug": "paddle-finder",
+    "code": "PF",
+    "name": "Paddle Finder",
+    "shortName": "Paddles",
+    "tagline": "Find the paddle that fits your game.",
+    "description": "Browse a curated paddle catalog, filter by price, weight, shape and play style, and compare up to three.",
+    "color": "#be123c",
+    "glyph": "paddle",
+    "features": [
+      "Curated paddle catalog",
+      "Filter by price, weight, shape and play style",
+      "Compare up to three paddles",
+      "Paddle selection guidance",
+      "Save favourite paddles",
+      "Links to retailers"
+    ],
+    "offline": "Catalog, filters and comparison work offline. Retailer links need an internet connection. Prices and availability may change."
+  },
+  {
+    "slug": "rules-quiz",
+    "code": "RQ",
+    "name": "Rules & Quiz",
+    "shortName": "Rules",
+    "tagline": "Know the rules. Prove it.",
+    "description": "A searchable rules reference with court diagrams, plus a beginner quiz with explanations.",
+    "color": "#0e7490",
+    "glyph": "book",
+    "features": [
+      "Searchable rules reference",
+      "Court layout and terminology",
+      "Serving and scoring explained",
+      "Faults and the non-volley zone (kitchen)",
+      "Beginner-friendly rules quiz",
+      "Quiz scoring with answer explanations",
+      "Printable quick-reference guide"
+    ],
+    "offline": "Fully offline. Rules and quiz content are built into the app."
+  }
+]

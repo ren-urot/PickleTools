@@ -1,0 +1,20 @@
+{
+  "lastReviewed": "2026-10-21",
+  "note": "Specs are typical manufacturer figures and vary by unit (about ±0.3 oz). Peso prices are approximate local prices and change often - confirm with the retailer before buying.",
+  "paddles": [
+    { "id": "joola-hyperion-16", "brand": "JOOLA", "model": "Ben Johns Hyperion CFS 16", "shape": "elongated", "weightOz": 8.0, "thicknessMm": 16, "face": "carbon", "style": "control", "levels": ["intermediate", "advanced"], "pricePhp": 11500, "url": "" },
+    { "id": "joola-perseus-16", "brand": "JOOLA", "model": "Ben Johns Perseus 16", "shape": "elongated", "weightOz": 8.2, "thicknessMm": 16, "face": "carbon", "style": "power", "levels": ["advanced"], "pricePhp": 13500, "url": "" },
+    { "id": "selkirk-invikta", "brand": "Selkirk", "model": "Vanguard Power Air Invikta", "shape": "elongated", "weightOz": 7.9, "thicknessMm": 13, "face": "carbon", "style": "power", "levels": ["intermediate", "advanced"], "pricePhp": 12500, "url": "" },
+    { "id": "six-zero-dbd-16", "brand": "Six Zero", "model": "Double Black Diamond Control 16", "shape": "hybrid", "weightOz": 8.1, "thicknessMm": 16, "face": "carbon", "style": "control", "levels": ["intermediate", "advanced"], "pricePhp": 9500, "url": "" },
+    { "id": "engage-pursuit-mx", "brand": "Engage", "model": "Pursuit MX 6.0", "shape": "hybrid", "weightOz": 8.0, "thicknessMm": 16, "face": "carbon", "style": "all-court", "levels": ["intermediate", "advanced"], "pricePhp": 11000, "url": "" },
+    { "id": "crbn-1x-14", "brand": "CRBN", "model": "1X Power Series 14mm", "shape": "widebody", "weightOz": 8.0, "thicknessMm": 14, "face": "carbon", "style": "power", "levels": ["intermediate", "advanced"], "pricePhp": 10500, "url": "" },
+    { "id": "vatic-flash-16", "brand": "Vatic Pro", "model": "PRISM Flash 16mm", "shape": "hybrid", "weightOz": 8.0, "thicknessMm": 16, "face": "carbon", "style": "all-court", "levels": ["beginner", "intermediate"], "pricePhp": 5500, "url": "" },
+    { "id": "franklin-signature-14", "brand": "Franklin", "model": "Signature Pro 14mm", "shape": "standard", "weightOz": 8.0, "thicknessMm": 14, "face": "carbon", "style": "all-court", "levels": ["intermediate", "advanced"], "pricePhp": 7500, "url": "" },
+    { "id": "paddletek-bantam-ts5", "brand": "Paddletek", "model": "Bantam TS-5 Pro", "shape": "standard", "weightOz": 7.9, "thicknessMm": 13, "face": "graphite", "style": "control", "levels": ["beginner", "intermediate"], "pricePhp": 6500, "url": "" },
+    { "id": "onix-z5", "brand": "Onix", "model": "Z5 Graphite", "shape": "widebody", "weightOz": 7.9, "thicknessMm": 13, "face": "graphite", "style": "all-court", "levels": ["beginner"], "pricePhp": 4500, "url": "" },
+    { "id": "head-radical-elite", "brand": "HEAD", "model": "Radical Elite", "shape": "standard", "weightOz": 7.8, "thicknessMm": 11, "face": "fiberglass", "style": "power", "levels": ["beginner"], "pricePhp": 3200, "url": "" },
+    { "id": "gearbox-pro-power-elongated", "brand": "Gearbox", "model": "Pro Power Elongated", "shape": "elongated", "weightOz": 8.0, "thicknessMm": 14, "face": "carbon", "style": "power", "levels": ["advanced"], "pricePhp": 14000, "url": "" },
+    { "id": "niupipo-explorer", "brand": "Niupipo", "model": "Explorer", "shape": "standard", "weightOz": 7.5, "thicknessMm": 13, "face": "fiberglass", "style": "all-court", "levels": ["beginner"], "pricePhp": 1800, "url": "" },
+    { "id": "slk-evo-control", "brand": "SLK by Selkirk", "model": "Evo Control", "shape": "standard", "weightOz": 7.9, "thicknessMm": 16, "face": "fiberglass", "style": "control", "levels": ["beginner", "intermediate"], "pricePhp": 4800, "url": "" }
+  ]
+}
