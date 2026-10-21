@@ -1,20 +1,17 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
-import publicKey from '../../config/license-public-key.json'
 import { store, peso } from '../../config/store'
 import { apps, getApp } from '../../shared/apps'
-import { installUrl } from '../../shared/delivery'
 import { copyText, downloadFile } from '../../shared/download'
-import { isDeviceCode, normalizeDeviceCode, ORDER_ID_RE, signActivation, verifyActivation } from '../../shared/license'
+import { ORDER_ID_RE } from '../../shared/license'
 import { readJSON, useLocalState, writeJSON, removeKey } from '../../shared/storage'
-import { allChecked, decodeSubmission, duplicateReferences, isOverdue, needsReplacement, newDeskOrder, ordersCSV, parseSubmissionText, withStatus, type DeskOrder } from '../lib/desk'
-import { activationEmail, gmailCompose, installEmail, mailto, needsInfoEmail, notFoundEmail, refundEmail, type Email } from '../lib/emails'
+import { adminCall, type Activation } from '../lib/adminApi'
+import { allChecked, decodeSubmission, duplicateReferences, isOverdue, newDeskOrder, ordersCSV, parseSubmissionText, withStatus, type DeskOrder } from '../lib/desk'
+import { gmailCompose, installEmail, mailto, needsInfoEmail, notFoundEmail, refundEmail, type Email } from '../lib/emails'
 import { statusLabel, type OrderStatus } from '../lib/order'
 import { normalizeReference } from '../lib/paymentForm'
 import { navigate } from '../router'
 
-const KEY_STORE = 'pt:admin:private-key'
-const SALT_STORE = 'pt:admin:salt'
-const siteRoot = () => `${location.origin}${location.pathname.replace(/index\.html$/, '')}`
+const PASSWORD_STORE = 'pt:admin:password'
 
 const statusChip: Record<OrderStatus, string> = {
   not_sent: 'bg-ink/10 text-ink/70',
@@ -48,7 +45,7 @@ export function Admin({ importPayload }: { importPayload?: string | null }) {
   }, [importPayload])
   const [adding, setAdding] = useState(false)
   const [filter, setFilter] = useState<'open' | 'all' | OrderStatus>('open')
-  const [creds, setCreds] = useState(() => ({ salt: readJSON(SALT_STORE, ''), key: readJSON(KEY_STORE, '') }))
+  const [password, setPassword] = useState(() => readJSON(PASSWORD_STORE, ''))
   const fileRef = useRef<HTMLInputElement>(null)
 
   const update = (o: DeskOrder) => setOrders((prev) => prev.map((x) => (x.orderId === o.orderId ? o : x)))
@@ -107,7 +104,7 @@ export function Admin({ importPayload }: { importPayload?: string | null }) {
         </div>
       </div>
 
-      <Setup creds={creds} setCreds={setCreds} />
+      <SignIn password={password} setPassword={setPassword} />
 
       {notice && (
         <p className={`mt-4 rounded-xl p-3 text-sm font-semibold ${notice.ok ? 'bg-court-50 text-court-800' : 'bg-red-50 text-red-800'}`} role="status">
@@ -164,7 +161,7 @@ export function Admin({ importPayload }: { importPayload?: string | null }) {
               }}
             />
           ) : current ? (
-            <OrderDetail key={current.orderId} o={current} orders={orders} creds={creds} onChange={update} />
+            <OrderDetail key={current.orderId} o={current} orders={orders} password={password} onChange={update} />
           ) : (
             <div className="card p-8 text-center text-ink/60">
               <p className="font-semibold text-ink">Workflow</p>
@@ -172,7 +169,7 @@ export function Admin({ importPayload }: { importPayload?: string | null }) {
                 <li>A submission email arrives. Log it here (status: Verifying).</li>
                 <li>Find the payment in GoTyme. Tick the three checks.</li>
                 <li>Send the install link email (status: Paid · install link sent).</li>
-                <li>Customer replies with a device code. Issue the activation code (status: Activated).</li>
+                <li>The buyer opens the link on their phone and the app activates automatically (status: Activated).</li>
                 <li>Use Needs info / Not found / Refund when something doesn’t match.</li>
               </ol>
             </div>
@@ -183,73 +180,56 @@ export function Admin({ importPayload }: { importPayload?: string | null }) {
   )
 }
 
-function Setup({ creds, setCreds }: { creds: { salt: string; key: string }; setCreds: (c: { salt: string; key: string }) => void }) {
-  const [salt, setSalt] = useState(creds.salt)
-  const [key, setKey] = useState(creds.key)
-  const [remember, setRemember] = useState(!!readJSON(KEY_STORE, ''))
-  const [msg, setMsg] = useState<{ ok: boolean; text: string } | null>(null)
-  const ready = !!creds.key
-  // Open by default only when keys are missing; never auto-collapse, so the save message stays visible.
-  const [startOpen] = useState(!ready)
+function SignIn({ password, setPassword }: { password: string; setPassword: (p: string) => void }) {
+  const [value, setValue] = useState('')
+  const [error, setError] = useState('')
+  const [busy, setBusy] = useState(false)
 
-  const save = async () => {
-    if (key.trim()) {
-      try {
-        const jwk = JSON.parse(key) as JsonWebKey
-        const code = await signActivation(jwk, 'scorekeeper', 'TEST-TEST-TEST', 'PT-SK-000000-0000')
-        const ok = publicKey ? await verifyActivation(code, publicKey as JsonWebKey, 'scorekeeper', 'TEST-TEST-TEST') : null
-        if (!ok) return setMsg({ ok: false, text: 'This private key does not match the public key built into the apps.' })
-      } catch {
-        return setMsg({ ok: false, text: 'That is not a valid private key (paste the JSON printed by npm run keygen).' })
-      }
-    }
-    if (remember) {
-      writeJSON(KEY_STORE, key.trim())
-      writeJSON(SALT_STORE, salt.trim())
-    } else {
-      removeKey(KEY_STORE)
-      removeKey(SALT_STORE)
-    }
-    setCreds({ salt: salt.trim(), key: key.trim() })
-    setMsg({ ok: true, text: remember ? 'Saved on this device.' : 'Loaded for this session only.' })
-  }
+  if (password)
+    return (
+      <p className="mt-4 flex flex-wrap items-center gap-2 text-sm text-ink/60">
+        <span className="chip bg-court-100 text-court-800">Signed in</span>
+        <button
+          className="underline"
+          onClick={() => {
+            removeKey(PASSWORD_STORE)
+            setPassword('')
+          }}
+        >
+          Sign out
+        </button>
+      </p>
+    )
 
   return (
-    <details className="card mt-6 p-4" open={startOpen}>
-      <summary className="cursor-pointer font-bold">
-        Delivery & activation keys {ready ? <span className="chip ml-2 bg-court-100 text-court-800">Ready</span> : <span className="chip ml-2 bg-amber-100 text-amber-900">Not set</span>}
-      </summary>
-      <div className="mt-4 grid gap-4 md:grid-cols-2">
-        <div>
-          <label className="label" htmlFor="salt">
-            Delivery salt
-          </label>
-          <input id="salt" type="password" className="input font-mono" value={salt} onChange={(e) => setSalt(e.target.value)} autoComplete="off" />
-          <p className="mt-1 text-xs text-ink/60">Same value as the DELIVERY_SALT build secret. Used to compute the unlisted install links.</p>
-        </div>
-        <div>
-          <label className="label" htmlFor="pk">
-            Activation private key (JSON)
-          </label>
-          <textarea id="pk" className="input min-h-20 font-mono text-xs" value={key} onChange={(e) => setKey(e.target.value)} spellCheck={false} autoComplete="off" />
-          <p className="mt-1 text-xs text-ink/60">From keys/license-private-key.json. Never share it - anyone with it can create activation codes.</p>
-        </div>
+    <form
+      className="card mt-6 flex flex-wrap items-end gap-3 border-2 border-ball p-5"
+      onSubmit={async (e) => {
+        e.preventDefault()
+        setBusy(true)
+        const r = await adminCall(value.trim(), { action: 'ping' })
+        setBusy(false)
+        if (!r.ok) return setError(r.message)
+        writeJSON(PASSWORD_STORE, value.trim())
+        setPassword(value.trim())
+      }}
+    >
+      <div className="min-w-60 flex-1">
+        <label className="label" htmlFor="admin-pw">
+          Admin password
+        </label>
+        <input id="admin-pw" type="password" className="input font-mono" value={value} onChange={(e) => setValue(e.target.value)} autoComplete="current-password" />
+        <p className="mt-1 text-xs text-ink/60">Enter it once. This device remembers it until you sign out.</p>
       </div>
-      <label className="mt-3 flex items-center gap-2 text-sm">
-        <input type="checkbox" className="size-5 accent-court-600" checked={remember} onChange={(e) => setRemember(e.target.checked)} />
-        Remember on this device (only on a private, password-protected device)
-      </label>
-      <div className="mt-3 flex items-center gap-3">
-        <button className="btn-primary" onClick={save}>
-          Save keys
-        </button>
-        {msg && (
-          <p className={`text-sm ${msg.ok ? 'text-court-700' : 'text-red-700'}`} role="status">
-            {msg.text}
-          </p>
-        )}
-      </div>
-    </details>
+      <button className="btn-primary" disabled={busy || !value.trim()}>
+        {busy ? 'Checking…' : 'Sign in'}
+      </button>
+      {error && (
+        <p className="w-full text-sm text-red-700" role="alert">
+          {error}
+        </p>
+      )}
+    </form>
   )
 }
 
@@ -332,11 +312,11 @@ function NewOrder({ orders, onSave, onCancel }: { orders: DeskOrder[]; onSave: (
 /** An email waiting to be sent; the order only changes once the admin confirms it went out. */
 interface Outgoing {
   email: Email
-  step: 1 | 2
+  step: 1
   onSent: (current: DeskOrder) => DeskOrder
 }
 
-function OrderDetail({ o, orders, creds, onChange }: { o: DeskOrder; orders: DeskOrder[]; creds: { salt: string; key: string }; onChange: (o: DeskOrder) => void }) {
+function OrderDetail({ o, orders, password, onChange }: { o: DeskOrder; orders: DeskOrder[]; password: string; onChange: (o: DeskOrder) => void }) {
   const app = getApp(o.slug)!
   const [outgoing, setOutgoing] = useState<Outgoing | null>(null)
   const [sentNote, setSentNote] = useState('')
@@ -345,52 +325,26 @@ function OrderDetail({ o, orders, creds, onChange }: { o: DeskOrder; orders: Des
     setSentNote('')
     setOutgoing(next)
   }
-  const [device, setDevice] = useState('')
-  const [replacement, setReplacement] = useState(false)
-  const [err, setErr] = useState('')
+  const [busy, setBusy] = useState(false)
   const dupes = duplicateReferences(orders, o.reference, o.orderId)
-  const dev = normalizeDeviceCode(device)
-  const mustReplace = isDeviceCode(dev) && needsReplacement(o, dev)
   const terminal = o.status === 'rejected' || o.status === 'refunded'
 
   const check = (k: keyof DeskOrder['checks'], v: boolean) => {
     const next = { ...o, checks: { ...o.checks, [k]: v } }
     onChange(o.status === 'submitted' && v ? withStatus(next, 'verifying', 'Started checking GoTyme') : next)
   }
-  const link = () => installUrl(siteRoot(), creds.salt, o.slug)
-
   const sendInstall = async () => {
-    // Without the salt the link points at /apps/<slug>/, which doesn't exist on the live site.
-    if (!creds.salt) return setInstallErr('Enter the delivery salt in “Delivery & activation keys” (top of the page) first. Without it the install link won’t work.')
+    if (!password) return setInstallErr('Sign in with the admin password at the top of the page first.')
     setInstallErr('')
+    setBusy(true)
+    const r = await adminCall<{ installUrl: string }>(password, { action: 'approve', orderId: o.orderId })
+    setBusy(false)
+    if (!r.ok) return setInstallErr(r.message)
     prepare({
-      email: installEmail(o, app, await link()),
+      email: installEmail(o, app, r.installUrl),
       step: 1,
-      onSent: (cur) => withStatus(cur, cur.status === 'activated' ? 'activated' : 'verified', cur.status === 'verified' || cur.status === 'activated' ? 'Install link resent' : 'Install link sent'),
+      onSent: (cur) => withStatus(cur, cur.status === 'activated' ? 'activated' : 'verified', cur.status === 'verified' || cur.status === 'activated' ? 'Install link resent' : 'Approved · install link sent'),
     })
-  }
-
-  const issue = async () => {
-    setErr('')
-    if (!isDeviceCode(dev)) return setErr('Device codes look like AB12-CD34-EF56.')
-    if (!creds.key) return setErr('Load the activation private key first (Delivery & activation keys).')
-    if (mustReplace && !replacement) return setErr('This order is already activated on another device. Tick “Replacement” only for a lost, reset or replaced device.')
-    try {
-      const code = await signActivation(JSON.parse(creds.key) as JsonWebKey, o.slug, dev, o.orderId)
-      const replacing = mustReplace
-      prepare({
-        email: activationEmail(o, app, dev, code, await link()),
-        step: 2,
-        onSent: (cur) => {
-          const activations = cur.activations.some((a) => a.device === dev) ? cur.activations : [...cur.activations, { device: dev, code, issuedAt: Date.now(), replacement: replacing }]
-          return withStatus({ ...cur, activations }, 'activated', `Activation sent for ${dev}${replacing ? ' (replacement)' : ''}`)
-        },
-      })
-      setDevice('')
-      setReplacement(false)
-    } catch {
-      setErr('Signing failed - check the private key.')
-    }
   }
 
   return (
@@ -411,7 +365,6 @@ function OrderDetail({ o, orders, creds, onChange }: { o: DeskOrder; orders: Des
           <Row k="Sender" v={o.senderName || '-'} />
           <Row k="Paid at" v={o.paidAt || '-'} />
           <Row k="Logged" v={new Date(o.createdAt).toLocaleString('en-PH')} />
-          <Row k="Devices" v={o.activations.length ? o.activations.map((a) => `${a.device}${a.replacement ? ' (repl.)' : ''}`).join(', ') : '-'} />
         </dl>
         {o.notes && <p className="mt-2 text-sm text-ink/70">Notes: {o.notes}</p>}
       </div>
@@ -435,8 +388,8 @@ function OrderDetail({ o, orders, creds, onChange }: { o: DeskOrder; orders: Des
           </Check>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
-          <button className="btn-primary" disabled={!allChecked(o) || terminal} onClick={sendInstall}>
-            {o.status === 'verified' || o.status === 'activated' ? 'Resend install link' : 'Send install link'}
+          <button className="btn-primary" disabled={!allChecked(o) || terminal || busy} onClick={sendInstall}>
+            {busy ? 'Approving…' : o.status === 'verified' || o.status === 'activated' ? 'Resend install link' : 'Approve & send install link'}
           </button>
           <button className="btn-ghost" disabled={terminal} onClick={() => prepare({ email: needsInfoEmail(o, app), step: 1, onSent: (cur) => withStatus(cur, 'needs_info', 'Asked customer for receipt details') })}>
             Needs info
@@ -448,7 +401,7 @@ function OrderDetail({ o, orders, creds, onChange }: { o: DeskOrder; orders: Des
             Refunded
           </button>
         </div>
-        {!allChecked(o) && !terminal && <p className="mt-2 text-xs text-ink/60">Tick all three checks to unlock “Send install link”.</p>}
+        {!allChecked(o) && !terminal && <p className="mt-2 text-xs text-ink/60">Tick all three checks to unlock “Approve & send install link”.</p>}
         {installErr && (
           <p className="mt-2 rounded-xl bg-red-50 p-3 text-sm font-semibold text-red-800" role="alert">
             {installErr}
@@ -463,32 +416,7 @@ function OrderDetail({ o, orders, creds, onChange }: { o: DeskOrder; orders: Des
         </p>
       )}
 
-      <div className={`card p-5 ${o.status === 'verified' || o.status === 'activated' ? '' : 'opacity-60'}`}>
-        <h3 className="font-bold">2 · Activate the customer’s device</h3>
-        <p className="mt-1 text-sm text-ink/60">Paste the device code the customer sent from inside the installed app.</p>
-        <div className="mt-3 flex flex-wrap gap-2">
-          <label className="sr-only" htmlFor="device">
-            Device code
-          </label>
-          <input id="device" className="input w-56 font-mono uppercase" placeholder="AB12-CD34-EF56" value={device} onChange={(e) => setDevice(e.target.value)} disabled={!(o.status === 'verified' || o.status === 'activated')} />
-          <button className="btn-primary" onClick={issue} disabled={!(o.status === 'verified' || o.status === 'activated')}>
-            Issue activation code
-          </button>
-        </div>
-        {mustReplace && (
-          <label className="mt-3 flex items-center gap-2 rounded-xl bg-amber-50 p-3 text-sm text-amber-900">
-            <input type="checkbox" className="size-5 accent-court-600" checked={replacement} onChange={(e) => setReplacement(e.target.checked)} />
-            Replacement for a lost/reset device ({o.activations.filter((a) => a.replacement).length} used; policy allows 1 free)
-          </label>
-        )}
-        {err && (
-          <p className="mt-2 text-sm text-red-700" role="alert">
-            {err}
-          </p>
-        )}
-      </div>
-
-      {outgoing?.step === 2 && <EmailPreview email={outgoing.email} onCancel={() => setOutgoing(null)} onSent={() => { onChange(outgoing.onSent(o)); setOutgoing(null); setSentNote(`Marked as sent: “${outgoing.email.subject}”.`) }} />}
+      {(o.status === 'verified' || o.status === 'activated') && <ActivationPanel o={o} password={password} onChange={onChange} />}
 
       <details className="card p-5">
         <summary className="cursor-pointer font-bold">History</summary>
@@ -501,6 +429,79 @@ function OrderDetail({ o, orders, creds, onChange }: { o: DeskOrder; orders: Des
           ))}
         </ul>
       </details>
+    </div>
+  )
+}
+
+/** Activation happens on the buyer's phone; this shows which phone and lets you move it. */
+function ActivationPanel({ o, password, onChange }: { o: DeskOrder; password: string; onChange: (o: DeskOrder) => void }) {
+  const [activation, setActivation] = useState<Activation | null | undefined>(undefined)
+  const [error, setError] = useState('')
+  const [confirmReset, setConfirmReset] = useState(false)
+
+  const refresh = async () => {
+    setError('')
+    const r = await adminCall<{ activation: Activation | null }>(password, { action: 'status', orderId: o.orderId })
+    if (!r.ok) return setError(r.message)
+    setActivation(r.activation)
+    if (r.activation && o.status !== 'activated') onChange(withStatus(o, 'activated', `Activated on phone ${r.activation.device}`))
+  }
+
+  useEffect(() => {
+    if (password) refresh()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [o.orderId, password])
+
+  return (
+    <div className="card p-5">
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <h3 className="font-bold">2 · Activation</h3>
+        <button className="text-sm font-semibold text-court-700 hover:underline" onClick={refresh}>
+          ↻ Refresh
+        </button>
+      </div>
+      {activation === undefined && !error && <p className="mt-2 text-sm text-ink/60">Checking…</p>}
+      {activation === null && (
+        <p className="mt-2 text-sm text-ink/70">
+          <strong>Waiting for the buyer.</strong> The app activates automatically on the first phone that opens the install link. Nothing to do here.
+        </p>
+      )}
+      {activation && (
+        <div className="mt-2 space-y-3 text-sm">
+          <p className="rounded-xl bg-court-50 p-3 text-court-900">
+            ✓ <strong>Activated</strong> on phone <span className="font-mono">{activation.device}</span> · {new Date(activation.at).toLocaleString('en-PH')}
+          </p>
+          {confirmReset ? (
+            <div className="flex flex-wrap items-center gap-2 rounded-xl bg-amber-50 p-3">
+              <span className="flex-1 text-amber-900">Free this purchase so the buyer can activate on a new phone?</span>
+              <button
+                className="btn-primary min-h-10"
+                onClick={async () => {
+                  const r = await adminCall(password, { action: 'reset', orderId: o.orderId })
+                  if (!r.ok) return setError(r.message)
+                  setConfirmReset(false)
+                  setActivation(null)
+                  onChange(withStatus(o, 'verified', `Phone ${activation.device} released for a new phone`))
+                }}
+              >
+                Yes, allow a new phone
+              </button>
+              <button className="btn-ghost min-h-10" onClick={() => setConfirmReset(false)}>
+                Cancel
+              </button>
+            </div>
+          ) : (
+            <button className="btn-ghost" onClick={() => setConfirmReset(true)}>
+              Buyer changed phones
+            </button>
+          )}
+        </div>
+      )}
+      {error && (
+        <p className="mt-2 text-sm text-red-700" role="alert">
+          {error}
+        </p>
+      )}
     </div>
   )
 }

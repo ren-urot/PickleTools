@@ -17,17 +17,17 @@ export function InstallGuide() {
         'Open the install link from our email in Chrome on your phone.',
         <>Tap <strong>Install</strong> in the app’s top bar, or Chrome’s <strong>⋮ menu → Install app</strong> (some phones say <em>Add to Home screen</em>).</>,
         'Confirm. The app icon appears on your home screen and in your app drawer.',
-        'Open the app from the icon. It shows your device code - email it to us, then paste the activation code we send.',
+        'That’s it: the app activated itself when you opened the link. Open it from the icon any time, even offline.',
         'Samsung Internet and Edge work the same way: menu → Add page to → Home screen.',
       ],
     },
     ios: {
       label: 'iPhone / iPad (Safari)',
       steps: [
-        <>Open the install link in <strong>Safari</strong>. (On iOS 16.4+ other browsers also offer Add to Home Screen.)</>,
+        <>Open the install link in <strong>Safari</strong> and tap <strong>Copy install link</strong>.</>,
         <>Tap the <strong>Share</strong> button (square with an arrow), scroll, and choose <strong>Add to Home Screen</strong>.</>,
         'Tap Add. Then open the app from your Home Screen - not from Safari.',
-        <>Activate inside the installed app: it shows a device code. <strong>The installed app and Safari have different device codes</strong>, so always request activation from the Home Screen app.</>,
+        <>In the Home Screen app, tap <strong>Paste install link</strong>. It activates on this iPhone automatically. (Activation happens in the installed app because Safari and Home Screen apps keep separate data.)</>,
         'Open each app at least once a few weeks so iOS keeps its offline data.',
       ],
     },
@@ -37,7 +37,7 @@ export function InstallGuide() {
         'Open the install link in Chrome or Edge on Windows, Mac, Linux or Chromebook.',
         <>Click the <strong>install icon</strong> at the right of the address bar, or menu → <strong>Install {store.businessName} app</strong> / Apps → Install this site as an app.</>,
         'The app opens in its own window and appears in your Start menu, Dock or launcher.',
-        'Send us the device code shown in the app and enter the activation code we reply with.',
+        'The app activates itself the first time you open the link. No codes to type.',
         'Firefox and desktop Safari can use the app in a tab but don’t support installing it.',
       ],
     },
@@ -61,7 +61,7 @@ export function InstallGuide() {
         </div>
         <div className="card p-5">
           <h2 className="font-bold">Your data</h2>
-          <p className="mt-2 text-sm text-ink/75">Records live only on this device. Clearing browser data, uninstalling or changing devices removes them and resets your device code.</p>
+          <p className="mt-2 text-sm text-ink/75">Records live only on this device. Clearing browser data, uninstalling or changing devices removes them. If you change phones, email us your order ID and we’ll move your purchase.</p>
         </div>
       </div>
     </Page>
@@ -93,7 +93,7 @@ export function Track({ initialId }: { initialId: string }) {
     },
     { title: 'Payment verification', body: `We match your reference in our GoTyme account, usually within ${store.verificationHours} hours.`, state: order?.received ? 'done' : order?.status === 'not_sent' ? 'todo' : 'current' },
     { title: 'Install link emailed', body: 'Sent once your payment is confirmed. Check spam and Promotions folders.', state: order?.received ? 'done' : 'todo' },
-    { title: 'Activate on your device', body: 'Open the installed app, send us the device code, then enter the activation code we reply with.', state: order?.received ? 'current' : 'todo' },
+    { title: 'Activate on your phone', body: 'Open the install link on your phone. The app activates itself automatically.', state: order?.received ? 'current' : 'todo' },
   ]
 
   return (
@@ -183,7 +183,7 @@ export function Privacy() {
       <div className="card space-y-5 p-6 text-ink/80 [&_h2]:text-lg [&_h2]:font-bold [&_h2]:text-ink">
         <section>
           <h2>What we collect</h2>
-          <p>When you submit the payment form: the app you bought, your email, the amount, your transaction reference number and, if you give them, the sender name, payment time, a backup contact and a receipt image. When you activate an app: your order ID and the app’s device code (a random code - not a phone number or hardware identifier).</p>
+          <p>When you submit the payment form: the app you bought, your email, the amount, your transaction reference number and, if you give them, the sender name, payment time, a backup contact and a receipt image. When you activate an app: your order ID, a random code that identifies the app on your phone (not a phone number or hardware ID) and the activation time.</p>
         </section>
         <section>
           <h2>How we use it</h2>
@@ -224,7 +224,7 @@ export function Policy() {
         </section>
         <section>
           <h2>Replacement activations</h2>
-          <p>If your device is lost, replaced or reset, or browser data is cleared, email your order ID and new device code. We provide one free replacement activation per order; further replacements are at our discretion.</p>
+          <p>If your phone is lost, replaced or reset, or browser data is cleared, email your order ID and we’ll release the purchase so you can activate it again from your install link. We provide one free move per order; further moves are at our discretion.</p>
         </section>
         <section>
           <h2>Refunds</h2>

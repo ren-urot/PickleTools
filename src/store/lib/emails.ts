@@ -20,37 +20,14 @@ We've confirmed your ${peso(store.price)} payment for ${app.name}. Thank you!
 1) On the phone you'll use, open this link:
 ${url}
 
-2) Install it:
-   • Android (Chrome): tap Install, or ⋮ menu → Install app / Add to Home screen.
-   • iPhone/iPad (Safari): Share → Add to Home Screen, then open it from your Home Screen.
+   The app activates automatically on that phone. That's it!
 
-3) Open the installed app. It shows a DEVICE CODE (like AB12-CD34-EF56).
-   Reply to this email with that code (or use the "Email activation request" button in the app).
+2) Add it to your home screen so it works offline:
+   • Android (Chrome): tap Install, or ⋮ menu → Install app.
+   • iPhone/iPad (Safari): tap "Copy install link", then Share → Add to Home Screen.
+     Open the app from your Home Screen and tap "Paste install link".
 
-4) We'll reply with your activation code. Paste it into the app and you're set.
-
-Your purchase activates one device. Please don't share this link - it won't work without an activation code for your device.
-
-Order ID: ${o.orderId}${sign}`,
-  }
-}
-
-export function activationEmail(o: { orderId: string; email: string }, app: AppMeta, device: string, code: string, url: string): Email {
-  return {
-    to: o.email,
-    subject: `Activation code for ${app.name} · ${o.orderId}`,
-    body: `Hi!
-
-Here is your activation code for ${app.name} on device ${device}:
-
-${code}
-
-Open the installed app, paste the whole code above into "Enter your activation code", and tap Activate.
-
-On Android or a computer you can also just open this link on the same device:
-${url}#activate=${code}
-
-This code only works on the device with code ${device}. If you change phones or clear your browser data, email us your order ID and the new device code.
+Your purchase works on one phone. If you forward this link, it won't work on anyone else's phone.
 
 Order ID: ${o.orderId}${sign}`,
   }

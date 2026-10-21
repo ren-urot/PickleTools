@@ -14,14 +14,14 @@ export const checkoutSteps: ReactNode[] = [
   'Complete the payment and keep the receipt screen open.',
   'Submit your transaction reference number using the form below.',
   <>Wait for us to verify your payment (usually within {H} hours). We’ll email your install link.</>,
-  'Install the app, then activate it on your phone with the code we send.',
+  'Open the install link on your phone. The app activates itself automatically.',
 ]
 
 export const howItWorks: { title: string; body: string }[] = [
   { title: 'Pick an app', body: `Each tool is a separate ${P} one-time purchase. No subscription, no account.` },
   { title: 'Pay by QR', body: 'Scan our GoTyme QR with GCash or your bank app and pay the exact amount.' },
   { title: 'Send your reference', body: 'Submit the transaction reference so we can match your payment.' },
-  { title: 'Install & activate', body: `Once verified (within ${H} hours), we email your install link and activate the app on your phone.` },
+  { title: 'Install & activate', body: `Once verified (within ${H} hours), we email your install link. Open it on your phone and the app activates itself.` },
 ]
 
 export const faqs: { id: string; q: string; a: ReactNode }[] = [
@@ -72,12 +72,12 @@ export const faqs: { id: string; q: string; a: ReactNode }[] = [
   {
     id: 'one-device',
     q: 'Can I use the app on more than one phone, or share it?',
-    a: 'Each purchase activates one device. When you first open the app it shows a device code; we send an activation code that works only on that device. A shared link opens to the activation screen, and the code won’t work on another phone. To use an app on a second device, buy it again.',
+    a: 'Each purchase works on one phone. The app locks itself to the first phone that opens your install link, so a forwarded link won’t work on anyone else’s phone. To use an app on a second phone, buy it again.',
   },
   {
     id: 'new-phone',
     q: 'I changed phones or cleared my browser data. What now?',
-    a: 'Your device code changes when browser data is cleared or you switch phones. Email us your order ID and the new device code and we’ll send a replacement activation (one free replacement per order for lost, broken or reset devices).',
+    a: 'Email us your order ID. We’ll release your purchase so you can open the same install link on your new phone (one free move per order for lost, broken or reset phones).',
   },
   {
     id: 'offline',

@@ -1,5 +1,6 @@
 import { beforeAll, describe, expect, it } from 'vitest'
-import { generateKeyPair, getDeviceCode, isDeviceCode, normalizeDeviceCode, signActivation, verifyActivation } from './license'
+import { getDeviceCode } from './device'
+import { generateKeyPair, isDeviceCode, normalizeDeviceCode, signActivation, verifyActivation } from './license'
 
 let keys: Awaited<ReturnType<typeof generateKeyPair>>
 let other: Awaited<ReturnType<typeof generateKeyPair>>

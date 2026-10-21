@@ -217,7 +217,7 @@ export function AppDetail({ app }: { app: AppMeta }) {
           <ol className="mt-3 list-decimal space-y-1 pl-5 text-ink/80">
             <li>We email your install link once your payment is verified.</li>
             <li>Open the link on the phone you’ll use and add the app to your home screen.</li>
-            <li>Open the installed app, send us the device code it shows, and enter the activation code we reply with.</li>
+            <li>The app activates automatically on that phone. No codes to type.</li>
           </ol>
           <a className="mt-2 inline-block font-semibold text-court-700 underline" href={href('/install')}>
             Full install guide →

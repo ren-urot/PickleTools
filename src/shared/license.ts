@@ -9,12 +9,9 @@
 // lives in site storage - clearing it requires a re-issue - and a determined person could
 // modify the public JavaScript. This deters casual sharing; it is not DRM.
 
-import { readJSON, writeJSON } from './storage'
-
 const ALG = { name: 'ECDSA', namedCurve: 'P-256' } as const
 const SIGN = { name: 'ECDSA', hash: 'SHA-256' } as const
 const CROCKFORD = '0123456789ABCDEFGHJKMNPQRSTVWXYZ'
-const DEVICE_KEY = 'pt:device-code'
 
 export const ORDER_ID_RE = /^PT-[A-Z]{2}-\d{6}-[0-9A-HJKMNP-TV-Z]{4}$/
 
@@ -31,14 +28,6 @@ export function normalizeDeviceCode(input: string): string {
 
 export const isDeviceCode = (s: string) => /^[0-9A-HJKMNP-TV-Z]{4}-[0-9A-HJKMNP-TV-Z]{4}-[0-9A-HJKMNP-TV-Z]{4}$/.test(s)
 
-/** The persistent code for this browser/installed app. */
-export function getDeviceCode(): string {
-  const existing = readJSON<string | null>(DEVICE_KEY, null)
-  if (existing && isDeviceCode(existing)) return existing
-  const code = normalizeDeviceCode(randomBase32(12))
-  writeJSON(DEVICE_KEY, code)
-  return code
-}
 
 export const licenseMessage = (slug: string, device: string, orderId: string) => `pickletools/v1|${slug}|${device}|${orderId}`
 

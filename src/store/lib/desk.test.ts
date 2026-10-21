@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { getApp } from '../../shared/apps'
 import { allChecked, decodeSubmission, duplicateReferences, encodeSubmission, isOverdue, needsReplacement, newDeskOrder, ordersCSV, parseSubmissionText, withStatus, type DeskOrder } from './desk'
-import { activationEmail, gmailCompose, installEmail, mailto } from './emails'
+import { gmailCompose, installEmail, mailto } from './emails'
 
 const base: DeskOrder = {
   orderId: 'PT-SK-261021-7KQ4',
@@ -56,12 +56,10 @@ describe('emails', () => {
     const e = installEmail(base, app, 'https://x/apps/scorekeeper-abc/')
     expect(e.subject).toContain(base.orderId)
     expect(e.body).toContain('https://x/apps/scorekeeper-abc/')
-    expect(e.body).toMatch(/one device/)
-  })
-  it('activation email carries the code and a same-device link', () => {
-    const e = activationEmail(base, app, 'AAAA-BBBB-CCCC', 'PT-SK-261021-7KQ4.sig', 'https://x/apps/scorekeeper-abc/')
-    expect(e.body).toContain('https://x/apps/scorekeeper-abc/#activate=PT-SK-261021-7KQ4.sig')
-    expect(mailto(e)).toMatch(/^mailto:ana%40gmail\.com\?subject=/)
+    expect(e.body).toMatch(/activates automatically/)
+    expect(e.body).toMatch(/one phone/)
+    expect(e.body).not.toMatch(/device code/i)
+    expect(mailto(e).startsWith('mailto:ana%40gmail.com?subject=')).toBe(true)
   })
 })
 

@@ -335,8 +335,7 @@ export function Confirmation({ orderId }: { orderId: string }) {
             items={[
               <>We match your reference in our GoTyme account (usually within {store.verificationHours} hours).</>,
               'We email your install link. Check your spam or Promotions folder too.',
-              'Install the app on your phone and open it - it shows a device code.',
-              'Send us that device code; we reply with your activation code. Paste it in and you’re done.',
+              'Open the link on your phone. The app activates itself automatically, and you’re done.',
             ]}
           />
         </div>
