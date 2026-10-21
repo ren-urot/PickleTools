@@ -13,7 +13,7 @@ export const store = {
    * Set to null to close payments: checkout then blocks the form and says not to pay.
    */
   qrImage: ((import.meta.env.VITE_QR_IMAGE as string | undefined) || 'payment/gotyme-qr.png') as string | null,
-  supportEmail: import.meta.env.VITE_SUPPORT_EMAIL ?? 'support@example.com',
+  supportEmail: import.meta.env.VITE_SUPPORT_EMAIL || 'ren.ensombl@gmail.com',
   /** Promise shown to customers; the admin desk highlights orders older than this. */
   verificationHours: 24,
   form: {

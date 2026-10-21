@@ -5,3 +5,6 @@ dist
 .env.local
 keys/
 .playwright-mcp/
+
+.vercel
+.env*
