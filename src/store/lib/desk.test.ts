@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { getApp } from '../../shared/apps'
 import { allChecked, decodeSubmission, duplicateReferences, encodeSubmission, isOverdue, needsReplacement, newDeskOrder, ordersCSV, parseSubmissionText, withStatus, type DeskOrder } from './desk'
-import { activationEmail, installEmail, mailto } from './emails'
+import { activationEmail, gmailCompose, installEmail, mailto } from './emails'
 
 const base: DeskOrder = {
   orderId: 'PT-SK-261021-7KQ4',
@@ -121,5 +121,13 @@ describe('newDeskOrder', () => {
     const blank = { email: '', reference: '', amount: '', senderName: '', paidAt: '', contact: '' }
     expect(newDeskOrder({ ...blank, orderId: 'PT-ZZ-261022-KB48' })).toBeNull()
     expect(newDeskOrder({ ...blank, orderId: 'hello' })).toBeNull()
+  })
+})
+
+describe('gmailCompose', () => {
+  it('pre-fills recipient, subject and body for the support mailbox', () => {
+    const url = new URL(gmailCompose({ to: 'buyer@gmail.com', subject: 'Your app · PT-SK-261022-KB48', body: 'Line 1\nhttps://x/apps/a-b/' }, 'shop@gmail.com'))
+    expect(url.origin + url.pathname).toBe('https://mail.google.com/mail/')
+    expect(Object.fromEntries(url.searchParams)).toMatchObject({ view: 'cm', authuser: 'shop@gmail.com', to: 'buyer@gmail.com', su: 'Your app · PT-SK-261022-KB48', body: 'Line 1\nhttps://x/apps/a-b/' })
   })
 })

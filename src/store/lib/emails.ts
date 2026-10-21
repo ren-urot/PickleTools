@@ -101,3 +101,10 @@ Order ID: ${o.orderId}${sign}`,
 }
 
 export const mailto = (e: Email) => `mailto:${encodeURIComponent(e.to)}?subject=${encodeURIComponent(e.subject)}&body=${encodeURIComponent(e.body)}`
+
+/**
+ * Gmail's web compose window, pre-filled. Works without a desktop email program, and
+ * `authuser` picks the support mailbox when several Google accounts are signed in.
+ */
+export const gmailCompose = (e: Email, from = store.supportEmail) =>
+  `https://mail.google.com/mail/?view=cm&fs=1&authuser=${encodeURIComponent(from)}&to=${encodeURIComponent(e.to)}&su=${encodeURIComponent(e.subject)}&body=${encodeURIComponent(e.body)}`

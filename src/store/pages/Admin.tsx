@@ -7,7 +7,7 @@ import { copyText, downloadFile } from '../../shared/download'
 import { isDeviceCode, normalizeDeviceCode, ORDER_ID_RE, signActivation, verifyActivation } from '../../shared/license'
 import { readJSON, useLocalState, writeJSON, removeKey } from '../../shared/storage'
 import { allChecked, decodeSubmission, duplicateReferences, isOverdue, needsReplacement, newDeskOrder, ordersCSV, parseSubmissionText, withStatus, type DeskOrder } from '../lib/desk'
-import { activationEmail, installEmail, mailto, needsInfoEmail, notFoundEmail, refundEmail, type Email } from '../lib/emails'
+import { activationEmail, gmailCompose, installEmail, mailto, needsInfoEmail, notFoundEmail, refundEmail, type Email } from '../lib/emails'
 import { statusLabel, type OrderStatus } from '../lib/order'
 import { normalizeReference } from '../lib/paymentForm'
 import { navigate } from '../router'
@@ -329,9 +329,22 @@ function NewOrder({ orders, onSave, onCancel }: { orders: DeskOrder[]; onSave: (
   )
 }
 
+/** An email waiting to be sent; the order only changes once the admin confirms it went out. */
+interface Outgoing {
+  email: Email
+  step: 1 | 2
+  onSent: (current: DeskOrder) => DeskOrder
+}
+
 function OrderDetail({ o, orders, creds, onChange }: { o: DeskOrder; orders: DeskOrder[]; creds: { salt: string; key: string }; onChange: (o: DeskOrder) => void }) {
   const app = getApp(o.slug)!
-  const [email, setEmail] = useState<Email | null>(null)
+  const [outgoing, setOutgoing] = useState<Outgoing | null>(null)
+  const [sentNote, setSentNote] = useState('')
+  const [installErr, setInstallErr] = useState('')
+  const prepare = (next: Outgoing) => {
+    setSentNote('')
+    setOutgoing(next)
+  }
   const [device, setDevice] = useState('')
   const [replacement, setReplacement] = useState(false)
   const [err, setErr] = useState('')
@@ -347,9 +360,14 @@ function OrderDetail({ o, orders, creds, onChange }: { o: DeskOrder; orders: Des
   const link = () => installUrl(siteRoot(), creds.salt, o.slug)
 
   const sendInstall = async () => {
-    if (!creds.salt && !confirm('No delivery salt is set, so the install link will be the plain /apps/ path. Continue?')) return
-    setEmail(installEmail(o, app, await link()))
-    if (o.status !== 'activated') onChange(withStatus(o, 'verified', 'Install link sent'))
+    // Without the salt the link points at /apps/<slug>/, which doesn't exist on the live site.
+    if (!creds.salt) return setInstallErr('Enter the delivery salt in “Delivery & activation keys” (top of the page) first. Without it the install link won’t work.')
+    setInstallErr('')
+    prepare({
+      email: installEmail(o, app, await link()),
+      step: 1,
+      onSent: (cur) => withStatus(cur, cur.status === 'activated' ? 'activated' : 'verified', cur.status === 'verified' || cur.status === 'activated' ? 'Install link resent' : 'Install link sent'),
+    })
   }
 
   const issue = async () => {
@@ -359,10 +377,15 @@ function OrderDetail({ o, orders, creds, onChange }: { o: DeskOrder; orders: Des
     if (mustReplace && !replacement) return setErr('This order is already activated on another device. Tick “Replacement” only for a lost, reset or replaced device.')
     try {
       const code = await signActivation(JSON.parse(creds.key) as JsonWebKey, o.slug, dev, o.orderId)
-      const existing = o.activations.find((a) => a.device === dev)
-      const activations = existing ? o.activations : [...o.activations, { device: dev, code, issuedAt: Date.now(), replacement: mustReplace }]
-      onChange(withStatus({ ...o, activations }, 'activated', `Activation for ${dev}${mustReplace ? ' (replacement)' : ''}`))
-      setEmail(activationEmail(o, app, dev, code, await link()))
+      const replacing = mustReplace
+      prepare({
+        email: activationEmail(o, app, dev, code, await link()),
+        step: 2,
+        onSent: (cur) => {
+          const activations = cur.activations.some((a) => a.device === dev) ? cur.activations : [...cur.activations, { device: dev, code, issuedAt: Date.now(), replacement: replacing }]
+          return withStatus({ ...cur, activations }, 'activated', `Activation sent for ${dev}${replacing ? ' (replacement)' : ''}`)
+        },
+      })
       setDevice('')
       setReplacement(false)
     } catch {
@@ -413,19 +436,32 @@ function OrderDetail({ o, orders, creds, onChange }: { o: DeskOrder; orders: Des
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
           <button className="btn-primary" disabled={!allChecked(o) || terminal} onClick={sendInstall}>
-            {o.status === 'verified' || o.status === 'activated' ? 'Resend install link' : 'Mark paid & send install link'}
+            {o.status === 'verified' || o.status === 'activated' ? 'Resend install link' : 'Send install link'}
           </button>
-          <button className="btn-ghost" disabled={terminal} onClick={() => { setEmail(needsInfoEmail(o, app)); onChange(withStatus(o, 'needs_info')) }}>
+          <button className="btn-ghost" disabled={terminal} onClick={() => prepare({ email: needsInfoEmail(o, app), step: 1, onSent: (cur) => withStatus(cur, 'needs_info', 'Asked customer for receipt details') })}>
             Needs info
           </button>
-          <button className="btn-ghost" disabled={terminal || allChecked(o)} onClick={() => { setEmail(notFoundEmail(o, app)); onChange(withStatus(o, 'rejected', 'Payment not found')) }}>
+          <button className="btn-ghost" disabled={terminal || allChecked(o)} onClick={() => prepare({ email: notFoundEmail(o, app), step: 1, onSent: (cur) => withStatus(cur, 'rejected', 'Payment not found') })}>
             Payment not found
           </button>
-          <button className="btn-danger" disabled={o.status === 'refunded'} onClick={() => { setEmail(refundEmail(o, app, o.amount)); onChange(withStatus(o, 'refunded')) }}>
+          <button className="btn-danger" disabled={o.status === 'refunded'} onClick={() => prepare({ email: refundEmail(o, app, o.amount), step: 1, onSent: (cur) => withStatus(cur, 'refunded', 'Refund email sent') })}>
             Refunded
           </button>
         </div>
+        {!allChecked(o) && !terminal && <p className="mt-2 text-xs text-ink/60">Tick all three checks to unlock “Send install link”.</p>}
+        {installErr && (
+          <p className="mt-2 rounded-xl bg-red-50 p-3 text-sm font-semibold text-red-800" role="alert">
+            {installErr}
+          </p>
+        )}
       </div>
+
+      {outgoing?.step === 1 && <EmailPreview email={outgoing.email} onCancel={() => setOutgoing(null)} onSent={() => { onChange(outgoing.onSent(o)); setOutgoing(null); setSentNote(`Marked as sent: “${outgoing.email.subject}”.`) }} />}
+      {sentNote && (
+        <p className="rounded-xl bg-court-50 p-3 text-sm font-semibold text-court-800" role="status">
+          ✓ {sentNote}
+        </p>
+      )}
 
       <div className={`card p-5 ${o.status === 'verified' || o.status === 'activated' ? '' : 'opacity-60'}`}>
         <h3 className="font-bold">2 · Activate the customer’s device</h3>
@@ -452,7 +488,7 @@ function OrderDetail({ o, orders, creds, onChange }: { o: DeskOrder; orders: Des
         )}
       </div>
 
-      {email && <EmailPreview email={email} onClose={() => setEmail(null)} />}
+      {outgoing?.step === 2 && <EmailPreview email={outgoing.email} onCancel={() => setOutgoing(null)} onSent={() => { onChange(outgoing.onSent(o)); setOutgoing(null); setSentNote(`Marked as sent: “${outgoing.email.subject}”.`) }} />}
 
       <details className="card p-5">
         <summary className="cursor-pointer font-bold">History</summary>
@@ -469,34 +505,56 @@ function OrderDetail({ o, orders, creds, onChange }: { o: DeskOrder; orders: Des
   )
 }
 
-function EmailPreview({ email, onClose }: { email: Email; onClose: () => void }) {
+function EmailPreview({ email, onSent, onCancel }: { email: Email; onSent: () => void; onCancel: () => void }) {
   const [copied, setCopied] = useState(false)
+  const [opened, setOpened] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    ref.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }, [])
+
   return (
-    <div className="card border-2 border-court-600 p-5" role="region" aria-label="Email to send">
-      <div className="flex items-center justify-between gap-2">
-        <h3 className="font-bold">Email to send</h3>
-        <button className="text-sm text-ink/60 hover:underline" onClick={onClose}>
-          Close
-        </button>
-      </div>
-      <p className="mt-2 text-sm">
+    <div ref={ref} className="card border-2 border-court-600 p-5" role="region" aria-label="Email to send">
+      <h3 className="text-lg font-bold">Send this email</h3>
+      <ol className="mt-1 list-decimal pl-5 text-sm text-ink/70">
+        <li>Click <strong>Send with Gmail</strong>. Gmail opens in a new tab with everything filled in.</li>
+        <li>Press <strong>Send</strong> in Gmail.</li>
+        <li>Come back here and click <strong>Yes, I sent it</strong>.</li>
+      </ol>
+      <p className="mt-3 text-sm">
         <strong>To:</strong> {email.to}
         <br />
         <strong>Subject:</strong> {email.subject}
       </p>
-      <pre className="mt-3 max-h-80 overflow-auto whitespace-pre-wrap rounded-xl bg-paper p-3 font-sans text-sm">{email.body}</pre>
-      <div className="mt-3 flex flex-wrap gap-2">
-        <a className="btn-primary" href={mailto(email)}>
-          Open in email app
+      <details className="mt-2 text-sm">
+        <summary className="cursor-pointer text-ink/60">Show message</summary>
+        <pre className="mt-2 max-h-72 overflow-auto whitespace-pre-wrap rounded-xl bg-paper p-3 font-sans">{email.body}</pre>
+      </details>
+      <div className="mt-4 flex flex-wrap gap-2">
+        <a className="btn-primary" href={gmailCompose(email)} target="_blank" rel="noopener" onClick={() => setOpened(true)}>
+          Send with Gmail ↗
+        </a>
+        <a className="btn-ghost" href={mailto(email)} onClick={() => setOpened(true)}>
+          Use my email app
         </a>
         <button
           className="btn-ghost"
           onClick={async () => {
-            setCopied(await copyText(`${email.subject}\n\n${email.body}`))
+            setCopied(await copyText(`To: ${email.to}\nSubject: ${email.subject}\n\n${email.body}`))
+            setOpened(true)
             setTimeout(() => setCopied(false), 2000)
           }}
         >
-          {copied ? 'Copied ✓' : 'Copy subject + body'}
+          {copied ? 'Copied ✓' : 'Copy'}
+        </button>
+      </div>
+      <div className={`mt-4 flex flex-wrap items-center gap-2 rounded-xl p-3 ${opened ? 'bg-amber-50' : 'bg-ink/5'}`}>
+        <span className="flex-1 text-sm font-semibold">{opened ? 'Did the email go out?' : 'Nothing is marked as sent until you confirm.'}</span>
+        <button className="btn-primary min-h-10" onClick={onSent}>
+          Yes, I sent it
+        </button>
+        <button className="btn-ghost min-h-10" onClick={onCancel}>
+          Cancel
         </button>
       </div>
     </div>
