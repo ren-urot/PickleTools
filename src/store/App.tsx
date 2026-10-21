@@ -25,7 +25,7 @@ export default function App() {
   else if (path === '/track') [page, title] = [<Track key={params.get('id') ?? ''} initialId={params.get('id') ?? ''} />, 'Track order']
   else if (path === '/privacy') [page, title] = [<Privacy />, 'Privacy policy']
   else if (path === '/policy') [page, title] = [<Policy />, 'Purchase & refund policy']
-  else if (path === '/admin') [page, title] = [<Admin />, 'Order desk']
+  else if (path === '/admin') [page, title] = [<Admin importPayload={params.get('import')} />, 'Order desk']
 
   useEffect(() => {
     document.title = `${title} · ${store.businessName}`

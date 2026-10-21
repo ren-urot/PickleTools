@@ -1,15 +1,16 @@
-import { useMemo, useRef, useState, type ReactNode } from 'react'
+import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import publicKey from '../../config/license-public-key.json'
 import { store, peso } from '../../config/store'
-import { apps, getApp, type AppSlug } from '../../shared/apps'
+import { apps, getApp } from '../../shared/apps'
 import { installUrl } from '../../shared/delivery'
 import { copyText, downloadFile } from '../../shared/download'
 import { isDeviceCode, normalizeDeviceCode, ORDER_ID_RE, signActivation, verifyActivation } from '../../shared/license'
 import { readJSON, useLocalState, writeJSON, removeKey } from '../../shared/storage'
-import { allChecked, duplicateReferences, isOverdue, needsReplacement, ordersCSV, withStatus, type DeskOrder } from '../lib/desk'
+import { allChecked, decodeSubmission, duplicateReferences, isOverdue, needsReplacement, newDeskOrder, ordersCSV, parseSubmissionText, withStatus, type DeskOrder } from '../lib/desk'
 import { activationEmail, installEmail, mailto, needsInfoEmail, notFoundEmail, refundEmail, type Email } from '../lib/emails'
 import { statusLabel, type OrderStatus } from '../lib/order'
 import { normalizeReference } from '../lib/paymentForm'
+import { navigate } from '../router'
 
 const KEY_STORE = 'pt:admin:private-key'
 const SALT_STORE = 'pt:admin:salt'
@@ -26,9 +27,25 @@ const statusChip: Record<OrderStatus, string> = {
   refunded: 'bg-ink/10 text-ink/70',
 }
 
-export function Admin() {
+export function Admin({ importPayload }: { importPayload?: string | null }) {
   const [orders, setOrders] = useLocalState<DeskOrder[]>('pt:admin:orders', [])
   const [selected, setSelected] = useState<string | null>(null)
+  const [notice, setNotice] = useState<{ ok: boolean; text: string } | null>(null)
+
+  // "Open in Order desk" link from a submission email: log the order (once) and open it.
+  useEffect(() => {
+    if (!importPayload) return
+    const sub = decodeSubmission(importPayload)
+    const order = sub && newDeskOrder(sub, 'Imported from submission email')
+    if (!order) setNotice({ ok: false, text: 'That Order desk link is incomplete. Use “Log new submission” and paste the email instead.' })
+    else {
+      setOrders((prev) => (prev.some((o) => o.orderId === order.orderId) ? prev : [order, ...prev]))
+      setNotice({ ok: true, text: `${order.orderId} is in your queue. Check the payment in GoTyme, then tick the checks below.` })
+      setSelected(order.orderId)
+    }
+    navigate('/admin') // drop the payload from the address bar
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [importPayload])
   const [adding, setAdding] = useState(false)
   const [filter, setFilter] = useState<'open' | 'all' | OrderStatus>('open')
   const [creds, setCreds] = useState(() => ({ salt: readJSON(SALT_STORE, ''), key: readJSON(KEY_STORE, '') }))
@@ -91,6 +108,12 @@ export function Admin() {
       </div>
 
       <Setup creds={creds} setCreds={setCreds} />
+
+      {notice && (
+        <p className={`mt-4 rounded-xl p-3 text-sm font-semibold ${notice.ok ? 'bg-court-50 text-court-800' : 'bg-red-50 text-red-800'}`} role="status">
+          {notice.text}
+        </p>
+      )}
 
       {overdue > 0 && (
         <p className="mt-4 rounded-xl bg-red-50 p-3 text-sm font-semibold text-red-800" role="alert">
@@ -233,7 +256,14 @@ function Setup({ creds, setCreds }: { creds: { salt: string; key: string }; setC
 function NewOrder({ orders, onSave, onCancel }: { orders: DeskOrder[]; onSave: (o: DeskOrder) => void; onCancel: () => void }) {
   const [f, setF] = useState({ orderId: '', email: '', reference: '', amount: String(store.price), senderName: '', paidAt: '', notes: '' })
   const [error, setError] = useState('')
+  const [pasted, setPasted] = useState('')
   const id = f.orderId.trim().toUpperCase()
+  const fillFromEmail = (text: string) => {
+    setPasted(text)
+    const p = parseSubmissionText(text)
+    if (!p.orderId) return
+    setF({ orderId: p.orderId, email: p.email, reference: p.reference, amount: p.amount || String(store.price), senderName: p.senderName, paidAt: p.paidAt, notes: p.contact ? `Backup contact: ${p.contact}` : '' })
+  }
   const app = apps.find((a) => id.startsWith(`PT-${a.code}-`))
   const dupes = f.reference ? duplicateReferences(orders, f.reference) : []
   const input = (k: keyof typeof f, label: string, props: Record<string, unknown> = {}) => (
@@ -254,26 +284,18 @@ function NewOrder({ orders, onSave, onCancel }: { orders: DeskOrder[]; onSave: (
         if (orders.some((o) => o.orderId === id)) return setError('This order is already logged.')
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(f.email.trim())) return setError('Enter the customer email.')
         if (!normalizeReference(f.reference)) return setError('Enter the reference number.')
-        const ref = normalizeReference(f.reference)
-        onSave({
-          orderId: id,
-          slug: app.slug as AppSlug,
-          email: f.email.trim(),
-          reference: ref,
-          amount: Number(f.amount.replace(/[₱,\s]/g, '')) || 0,
-          senderName: f.senderName.trim(),
-          paidAt: f.paidAt.trim(),
-          notes: f.notes.trim(),
-          status: 'verifying',
-          checks: { amount: false, reference: false, unique: false },
-          activations: [],
-          history: [{ at: Date.now(), status: 'verifying', note: 'Logged from submission' }],
-          createdAt: Date.now(),
-        })
+        const order = newDeskOrder({ ...f, contact: '' })
+        if (order) onSave({ ...order, notes: f.notes.trim() })
       }}
     >
       <h2 className="text-xl font-bold">Log a submission</h2>
-      <p className="text-sm text-ink/60">Copy the fields from the submission email.</p>
+      <div>
+        <label className="label" htmlFor="paste">
+          Paste the submission email <span className="font-normal text-ink/50">(fills the fields below)</span>
+        </label>
+        <textarea id="paste" className="input min-h-24 text-sm" placeholder="Open the PickleTools email, select all (Ctrl+A), copy and paste it here" value={pasted} onChange={(e) => fillFromEmail(e.target.value)} />
+        {pasted && !f.orderId && <p className="mt-1 text-sm text-amber-800">No order ID found in that text. Fill in the fields by hand.</p>}
+      </div>
       <div className="grid gap-4 sm:grid-cols-2">
         {input('orderId', 'Order ID', { className: 'input font-mono uppercase', autoFocus: true })}
         <div>
@@ -318,7 +340,10 @@ function OrderDetail({ o, orders, creds, onChange }: { o: DeskOrder; orders: Des
   const mustReplace = isDeviceCode(dev) && needsReplacement(o, dev)
   const terminal = o.status === 'rejected' || o.status === 'refunded'
 
-  const check = (k: keyof DeskOrder['checks'], v: boolean) => onChange({ ...o, checks: { ...o.checks, [k]: v } })
+  const check = (k: keyof DeskOrder['checks'], v: boolean) => {
+    const next = { ...o, checks: { ...o.checks, [k]: v } }
+    onChange(o.status === 'submitted' && v ? withStatus(next, 'verifying', 'Started checking GoTyme') : next)
+  }
   const link = () => installUrl(siteRoot(), creds.salt, o.slug)
 
   const sendInstall = async () => {

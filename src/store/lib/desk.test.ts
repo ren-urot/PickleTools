@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { getApp } from '../../shared/apps'
-import { allChecked, duplicateReferences, isOverdue, needsReplacement, ordersCSV, withStatus, type DeskOrder } from './desk'
+import { allChecked, decodeSubmission, duplicateReferences, encodeSubmission, isOverdue, needsReplacement, newDeskOrder, ordersCSV, parseSubmissionText, withStatus, type DeskOrder } from './desk'
 import { activationEmail, installEmail, mailto } from './emails'
 
 const base: DeskOrder = {
@@ -62,5 +62,64 @@ describe('emails', () => {
     const e = activationEmail(base, app, 'AAAA-BBBB-CCCC', 'PT-SK-261021-7KQ4.sig', 'https://x/apps/scorekeeper-abc/')
     expect(e.body).toContain('https://x/apps/scorekeeper-abc/#activate=PT-SK-261021-7KQ4.sig')
     expect(mailto(e)).toMatch(/^mailto:ana%40gmail\.com\?subject=/)
+  })
+})
+
+describe('submission import', () => {
+  const sub = { orderId: 'PT-SK-261022-KB48', email: 'buyer@gmail.com', reference: '64557575', amount: '100', senderName: 'Juan dela Cruz', paidAt: '22/10/2026, 6:30:00 am', contact: '' }
+
+  it('round-trips through the desk link payload (URL-safe, unicode-safe)', () => {
+    const enc = encodeSubmission({ ...sub, senderName: 'Niño Peña' })
+    expect(enc).toMatch(/^[A-Za-z0-9_-]+$/)
+    expect(decodeSubmission(enc)).toEqual({ ...sub, senderName: 'Niño Peña' })
+  })
+
+  it('rejects junk payloads', () => {
+    expect(decodeSubmission('!!!')).toBeNull()
+    expect(decodeSubmission(encodeSubmission({ ...sub, orderId: '' }))).toBeNull()
+  })
+
+  it('parses a Web3Forms email laid out as label/value lines', () => {
+    const email = `New Form Submission
+Order ID
+PT-SK-261022-KB48
+App
+Pickleball Scorekeeper (scorekeeper)
+Customer email
+buyer@gmail.com
+Amount paid
+₱100
+Reference number
+64557575
+Sender name
+Juan dela Cruz
+Payment date/time
+-
+Backup contact
+-`
+    expect(parseSubmissionText(email)).toEqual({ ...sub, paidAt: '' })
+  })
+
+  it('parses the "Label: value" email fallback format', () => {
+    const email = `Order ID: PT-SK-261022-KB48
+Customer email: buyer@gmail.com
+Amount paid: ₱100
+Reference number: 6455 7575
+Sender name: Juan dela Cruz
+Payment date/time: 22/10/2026, 6:30:00 am
+Backup contact: -`
+    expect(parseSubmissionText(email)).toEqual(sub)
+  })
+})
+
+describe('newDeskOrder', () => {
+  it('creates a submitted order with the app taken from the order ID', () => {
+    const o = newDeskOrder({ orderId: 'pt-sk-261022-kb48', email: ' b@x.com ', reference: '6455 7575', amount: '₱100', senderName: '', paidAt: '', contact: '0917' }, 'Imported', 5)!
+    expect(o).toMatchObject({ orderId: 'PT-SK-261022-KB48', slug: 'scorekeeper', email: 'b@x.com', reference: '64557575', amount: 100, status: 'submitted', notes: 'Backup contact: 0917', createdAt: 5 })
+  })
+  it('rejects unknown apps and malformed IDs', () => {
+    const blank = { email: '', reference: '', amount: '', senderName: '', paidAt: '', contact: '' }
+    expect(newDeskOrder({ ...blank, orderId: 'PT-ZZ-261022-KB48' })).toBeNull()
+    expect(newDeskOrder({ ...blank, orderId: 'hello' })).toBeNull()
   })
 })

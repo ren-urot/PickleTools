@@ -1,5 +1,6 @@
 import { store, type FormProvider } from '../../config/store'
 import type { AppMeta } from '../../shared/apps'
+import { encodeSubmission } from './desk'
 import { normalizeReference, type PaymentFormValues } from './paymentForm'
 
 export type SubmitResult = { ok: true } | { ok: false; reason: 'not_configured' | 'network' | 'rejected' | 'timeout'; message: string }
@@ -15,6 +16,21 @@ export function orderSubject(s: Pick<OrderSubmission, 'orderId' | 'app'> & { ref
   return `[${store.businessName}] ${s.orderId} · ${s.app.name} · ref ${s.reference}`
 }
 
+/** One click from the submission email opens the Order desk with this order already logged. */
+export function deskLink(s: OrderSubmission): string {
+  const v = s.values
+  const payload = encodeSubmission({
+    orderId: s.orderId,
+    email: v.email.trim(),
+    reference: normalizeReference(v.reference),
+    amount: v.amount.replace(/[₱,s]/g, ''),
+    senderName: v.senderName.trim(),
+    paidAt: v.paidAt ? new Date(v.paidAt).toLocaleString('en-PH') : '',
+    contact: v.contact.trim(),
+  })
+  return `${location.origin}${import.meta.env.BASE_URL}#/admin?import=${payload}`
+}
+
 /** The same key/value lines go to the form service and to the email fallback. */
 export function orderFields(s: OrderSubmission): [string, string][] {
   const v = s.values
@@ -28,6 +44,7 @@ export function orderFields(s: OrderSubmission): [string, string][] {
     ['Payment date/time', v.paidAt ? new Date(v.paidAt).toLocaleString('en-PH') : '-'],
     ['Backup contact', v.contact.trim() || '-'],
     ['Submitted', new Date().toLocaleString('en-PH')],
+    ['Open in Order desk (store owner)', deskLink(s)],
   ]
 }
 

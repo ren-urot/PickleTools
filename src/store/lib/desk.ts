@@ -1,5 +1,5 @@
 import { toCSV } from '../../shared/download'
-import type { AppSlug } from '../../shared/apps'
+import { apps, type AppSlug } from '../../shared/apps'
 import type { OrderStatus } from './order'
 
 export interface Activation {
@@ -64,4 +64,92 @@ export function ordersCSV(orders: DeskOrder[]) {
     o.notes,
   ])
   return toCSV([header, ...rows])
+}
+
+/** The submission fields the desk needs to log an order. */
+export interface Submission {
+  orderId: string
+  email: string
+  reference: string
+  amount: string
+  senderName: string
+  paidAt: string
+  contact: string
+}
+
+const IMPORT_KEYS: [keyof Submission, string][] = [
+  ['orderId', 'o'],
+  ['email', 'e'],
+  ['reference', 'r'],
+  ['amount', 'm'],
+  ['senderName', 's'],
+  ['paidAt', 'p'],
+  ['contact', 'c'],
+]
+
+/** Compact, URL-safe payload for the "Open in Order desk" link in each submission email. */
+export function encodeSubmission(s: Submission): string {
+  const compact = Object.fromEntries(IMPORT_KEYS.filter(([k]) => s[k]).map(([k, short]) => [short, s[k]]))
+  const bytes = new TextEncoder().encode(JSON.stringify(compact))
+  return btoa(String.fromCharCode(...bytes)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
+}
+
+export function decodeSubmission(encoded: string): Submission | null {
+  try {
+    const bin = atob(encoded.replace(/-/g, '+').replace(/_/g, '/'))
+    const compact = JSON.parse(new TextDecoder().decode(Uint8Array.from(bin, (c) => c.charCodeAt(0)))) as Record<string, unknown>
+    const s = Object.fromEntries(IMPORT_KEYS.map(([k, short]) => [k, typeof compact[short] === 'string' ? (compact[short] as string).slice(0, 200) : ''])) as unknown as Submission
+    return s.orderId ? s : null
+  } catch {
+    return null
+  }
+}
+
+const EMAIL_RE = /[^\s@<>()"',;:]+@[^\s@<>()"',;:]+\.[a-z]{2,}/i
+
+/** Text after a field label, on the same line ("Label: value") or the next non-empty line (email tables). */
+function fieldAfter(text: string, label: string): string {
+  const lines = text.split(/\r?\n/).map((l) => l.trim())
+  const i = lines.findIndex((l) => l.toLowerCase().startsWith(label.toLowerCase()))
+  if (i < 0) return ''
+  const sameLine = lines[i].slice(label.length).replace(/^\s*[:-]?\s*/, '').trim()
+  const value = sameLine || lines.slice(i + 1).find((l) => l.length > 0) || ''
+  return value === '-' ? '' : value
+}
+
+/** Pulls order fields out of a pasted submission email (Web3Forms or the customer's email fallback). */
+export function parseSubmissionText(text: string): Submission {
+  const orderId = text.match(/PT-[A-Z]{2}-\d{6}-[0-9A-HJKMNP-TV-Z]{4}/i)?.[0].toUpperCase() ?? ''
+  const emailField = fieldAfter(text, 'Customer email')
+  return {
+    orderId,
+    email: (emailField.match(EMAIL_RE) ?? text.match(EMAIL_RE))?.[0] ?? '',
+    reference: fieldAfter(text, 'Reference number').replace(/[\s-]/g, '').toUpperCase() || (text.match(/\bref\s+([A-Z0-9]{6,30})\b/i)?.[1].toUpperCase() ?? ''),
+    amount: fieldAfter(text, 'Amount paid').replace(/[₱,\s]/g, ''),
+    senderName: fieldAfter(text, 'Sender name'),
+    paidAt: fieldAfter(text, 'Payment date/time'),
+    contact: fieldAfter(text, 'Backup contact'),
+  }
+}
+
+/** A new desk entry in "Submitted - awaiting verification", or null if the order ID isn't valid. */
+export function newDeskOrder(s: Submission, note = 'Logged from submission', now = Date.now()): DeskOrder | null {
+  const orderId = s.orderId.trim().toUpperCase()
+  const app = apps.find((a) => orderId.startsWith(`PT-${a.code}-`))
+  if (!app || !/^PT-[A-Z]{2}-\d{6}-[0-9A-HJKMNP-TV-Z]{4}$/.test(orderId)) return null
+  return {
+    orderId,
+    slug: app.slug as AppSlug,
+    email: s.email.trim(),
+    reference: s.reference.replace(/[\s-]/g, '').toUpperCase(),
+    amount: Number(s.amount.replace(/[₱,\s]/g, '')) || 0,
+    senderName: s.senderName.trim(),
+    paidAt: s.paidAt.trim(),
+    notes: s.contact.trim() ? `Backup contact: ${s.contact.trim()}` : '',
+    status: 'submitted',
+    checks: { amount: false, reference: false, unique: false },
+    activations: [],
+    history: [{ at: now, status: 'submitted', note }],
+    createdAt: now,
+  }
 }
