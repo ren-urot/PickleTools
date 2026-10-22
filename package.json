@@ -11,11 +11,13 @@
     "typecheck": "tsc -b",
     "delivery-links": "node scripts/delivery-links.mjs",
     "keygen": "node scripts/keygen.mjs",
-    "setup-secrets": "node scripts/setup-secrets.mjs"
+    "setup-secrets": "node scripts/setup-secrets.mjs",
+    "refresh-courts": "node scripts/refresh-courts.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",
     "@vercel/blob": "^2.8.2",
+    "@vercel/functions": "^3.10.2",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
