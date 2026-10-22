@@ -1,20 +1,9397 @@
 {
-  "lastReviewed": "2026-10-21",
-  "note": "Specs are typical manufacturer figures and vary by unit (about ±0.3 oz). Peso prices are approximate local prices and change often - confirm with the retailer before buying.",
-  "paddles": [
-    { "id": "joola-hyperion-16", "brand": "JOOLA", "model": "Ben Johns Hyperion CFS 16", "shape": "elongated", "weightOz": 8.0, "thicknessMm": 16, "face": "carbon", "style": "control", "levels": ["intermediate", "advanced"], "pricePhp": 11500, "url": "" },
-    { "id": "joola-perseus-16", "brand": "JOOLA", "model": "Ben Johns Perseus 16", "shape": "elongated", "weightOz": 8.2, "thicknessMm": 16, "face": "carbon", "style": "power", "levels": ["advanced"], "pricePhp": 13500, "url": "" },
-    { "id": "selkirk-invikta", "brand": "Selkirk", "model": "Vanguard Power Air Invikta", "shape": "elongated", "weightOz": 7.9, "thicknessMm": 13, "face": "carbon", "style": "power", "levels": ["intermediate", "advanced"], "pricePhp": 12500, "url": "" },
-    { "id": "six-zero-dbd-16", "brand": "Six Zero", "model": "Double Black Diamond Control 16", "shape": "hybrid", "weightOz": 8.1, "thicknessMm": 16, "face": "carbon", "style": "control", "levels": ["intermediate", "advanced"], "pricePhp": 9500, "url": "" },
-    { "id": "engage-pursuit-mx", "brand": "Engage", "model": "Pursuit MX 6.0", "shape": "hybrid", "weightOz": 8.0, "thicknessMm": 16, "face": "carbon", "style": "all-court", "levels": ["intermediate", "advanced"], "pricePhp": 11000, "url": "" },
-    { "id": "crbn-1x-14", "brand": "CRBN", "model": "1X Power Series 14mm", "shape": "widebody", "weightOz": 8.0, "thicknessMm": 14, "face": "carbon", "style": "power", "levels": ["intermediate", "advanced"], "pricePhp": 10500, "url": "" },
-    { "id": "vatic-flash-16", "brand": "Vatic Pro", "model": "PRISM Flash 16mm", "shape": "hybrid", "weightOz": 8.0, "thicknessMm": 16, "face": "carbon", "style": "all-court", "levels": ["beginner", "intermediate"], "pricePhp": 5500, "url": "" },
-    { "id": "franklin-signature-14", "brand": "Franklin", "model": "Signature Pro 14mm", "shape": "standard", "weightOz": 8.0, "thicknessMm": 14, "face": "carbon", "style": "all-court", "levels": ["intermediate", "advanced"], "pricePhp": 7500, "url": "" },
-    { "id": "paddletek-bantam-ts5", "brand": "Paddletek", "model": "Bantam TS-5 Pro", "shape": "standard", "weightOz": 7.9, "thicknessMm": 13, "face": "graphite", "style": "control", "levels": ["beginner", "intermediate"], "pricePhp": 6500, "url": "" },
-    { "id": "onix-z5", "brand": "Onix", "model": "Z5 Graphite", "shape": "widebody", "weightOz": 7.9, "thicknessMm": 13, "face": "graphite", "style": "all-court", "levels": ["beginner"], "pricePhp": 4500, "url": "" },
-    { "id": "head-radical-elite", "brand": "HEAD", "model": "Radical Elite", "shape": "standard", "weightOz": 7.8, "thicknessMm": 11, "face": "fiberglass", "style": "power", "levels": ["beginner"], "pricePhp": 3200, "url": "" },
-    { "id": "gearbox-pro-power-elongated", "brand": "Gearbox", "model": "Pro Power Elongated", "shape": "elongated", "weightOz": 8.0, "thicknessMm": 14, "face": "carbon", "style": "power", "levels": ["advanced"], "pricePhp": 14000, "url": "" },
-    { "id": "niupipo-explorer", "brand": "Niupipo", "model": "Explorer", "shape": "standard", "weightOz": 7.5, "thicknessMm": 13, "face": "fiberglass", "style": "all-court", "levels": ["beginner"], "pricePhp": 1800, "url": "" },
-    { "id": "slk-evo-control", "brand": "SLK by Selkirk", "model": "Evo Control", "shape": "standard", "weightOz": 7.9, "thicknessMm": 16, "face": "fiberglass", "style": "control", "levels": ["beginner", "intermediate"], "pricePhp": 4800, "url": "" }
-  ]
+ "lastReviewed": "2026-10-22",
+ "source": {
+  "name": "Pickleball Effect paddle database",
+  "url": "https://pickleballeffect.com/pickleball-paddle-database/"
+ },
+ "usdToPhp": 58,
+ "note": "Specs are published figures and vary by unit (about ±0.3 oz). Peso prices are estimates converted from US list prices at ₱58 = $1; local prices and availability differ, so confirm with the retailer before buying.",
+ "paddles": [
+  {
+   "id": "11six24-all-court-hurache-x",
+   "brand": "11SIX24",
+   "model": "All Court Hurache-X",
+   "shape": "elongated",
+   "weightOz": 8.18,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 149.99,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "11six24-all-court-pegasus",
+   "brand": "11SIX24",
+   "model": "All Court Pegasus",
+   "shape": "widebody",
+   "weightOz": 8.2,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 129.99,
+   "pricePhp": 7500,
+   "url": ""
+  },
+  {
+   "id": "11six24-all-court-vapor",
+   "brand": "11SIX24",
+   "model": "All Court Vapor",
+   "shape": "hybrid",
+   "weightOz": 8.16,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 129.99,
+   "pricePhp": 7500,
+   "url": ""
+  },
+  {
+   "id": "11six24-alpha-pro-power-hurache-x",
+   "brand": "11SIX24",
+   "model": "Alpha Pro Power Hurache-X",
+   "shape": "elongated",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "11six24-alpha-pro-power-pegasus",
+   "brand": "11SIX24",
+   "model": "Alpha Pro Power Pegasus",
+   "shape": "widebody",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "11six24-alpha-pro-power-vapor",
+   "brand": "11SIX24",
+   "model": "Alpha Pro Power Vapor",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "11six24-jelly-bean-2-hurache-x",
+   "brand": "11SIX24",
+   "model": "Jelly Bean 2 Hurache-X",
+   "shape": "elongated",
+   "weightOz": 7.96,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "11six24-jelly-bean-2-pegasus",
+   "brand": "11SIX24",
+   "model": "Jelly Bean 2 Pegasus",
+   "shape": "widebody",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "11six24-jelly-bean-2-ultre",
+   "brand": "11SIX24",
+   "model": "Jelly Bean 2 Ultre",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "11six24-jelly-bean-2-vapor",
+   "brand": "11SIX24",
+   "model": "Jelly Bean 2 Vapor",
+   "shape": "hybrid",
+   "weightOz": 8.24,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "11six24-jelly-bean-hurache-x",
+   "brand": "11SIX24",
+   "model": "Jelly Bean Hurache-X",
+   "shape": "elongated",
+   "weightOz": 8.14,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 99.99,
+   "pricePhp": 5800,
+   "url": ""
+  },
+  {
+   "id": "11six24-jelly-bean-vapor",
+   "brand": "11SIX24",
+   "model": "Jelly Bean Vapor",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 99.99,
+   "pricePhp": 5800,
+   "url": ""
+  },
+  {
+   "id": "11six24-power-2-hurache-x",
+   "brand": "11SIX24",
+   "model": "Power 2 Hurache X",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 209.99,
+   "pricePhp": 12200,
+   "url": ""
+  },
+  {
+   "id": "11six24-power-2-pegasus",
+   "brand": "11SIX24",
+   "model": "Power 2 Pegasus",
+   "shape": "widebody",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 209.99,
+   "pricePhp": 12200,
+   "url": ""
+  },
+  {
+   "id": "11six24-power-2-ultre",
+   "brand": "11SIX24",
+   "model": "Power 2 Ultre",
+   "shape": "hybrid",
+   "weightOz": 8.06,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 209.99,
+   "pricePhp": 12200,
+   "url": ""
+  },
+  {
+   "id": "11six24-power-2-vapor",
+   "brand": "11SIX24",
+   "model": "Power 2 Vapor",
+   "shape": "hybrid",
+   "weightOz": 7.92,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 209.99,
+   "pricePhp": 12200,
+   "url": ""
+  },
+  {
+   "id": "11six24-power-hurache-x",
+   "brand": "11SIX24",
+   "model": "Power Hurache-X",
+   "shape": "elongated",
+   "weightOz": 8.15,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "11six24-power-pegasus",
+   "brand": "11SIX24",
+   "model": "Power Pegasus",
+   "shape": "widebody",
+   "weightOz": 8.33,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "11six24-power-vapor",
+   "brand": "11SIX24",
+   "model": "Power Vapor",
+   "shape": "hybrid",
+   "weightOz": 8.3,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "adidas-metalbone-pp-14-5mm-no-weights",
+   "brand": "Adidas",
+   "model": "Metalbone PP 14.5mm (no weights)",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 14.5,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "adidas-metalbone-pp-16mm-no-weights",
+   "brand": "Adidas",
+   "model": "Metalbone PP 16mm (no weights)",
+   "shape": "elongated",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 249,
+   "pricePhp": 14400,
+   "url": ""
+  },
+  {
+   "id": "adidas-metalbone-team-eva-16mm-blue",
+   "brand": "Adidas",
+   "model": "Metalbone Team EVA 16mm (blue)",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "Unapproved",
+   "priceUsd": 209,
+   "pricePhp": 12100,
+   "url": ""
+  },
+  {
+   "id": "adidas-pro-edt-14",
+   "brand": "Adidas",
+   "model": "PRO-EDT 14",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 189,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "adidas-pro-edt-16",
+   "brand": "Adidas",
+   "model": "PRO-EDT 16",
+   "shape": "elongated",
+   "weightOz": 7.95,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 189,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "adidas-pro-edt-16-c",
+   "brand": "Adidas",
+   "model": "PRO-EDT 16 C",
+   "shape": "widebody",
+   "weightOz": 8.05,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 189,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "aireo-cyclone",
+   "brand": "Aireo",
+   "model": "Cyclone",
+   "shape": "elongated",
+   "weightOz": 7.67,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199,
+   "pricePhp": 11500,
+   "url": ""
+  },
+  {
+   "id": "babolat-baller",
+   "brand": "Babolat",
+   "model": "Baller +",
+   "shape": "hybrid",
+   "weightOz": 8.33,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "babolat-strkr",
+   "brand": "Babolat",
+   "model": "Strkr+",
+   "shape": "elongated",
+   "weightOz": 8.05,
+   "thicknessMm": 13,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "babolat-wzrd",
+   "brand": "Babolat",
+   "model": "WZRD",
+   "shape": "widebody",
+   "weightOz": 8.57,
+   "thicknessMm": 20,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "body-helix-flik-f1-terracore-xc-elongated",
+   "brand": "Body Helix",
+   "model": "Flik F1 TerraCore XC Elongated",
+   "shape": "elongated",
+   "weightOz": 7.86,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 190,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "body-helix-x2-lite",
+   "brand": "Body Helix",
+   "model": "X2 Lite",
+   "shape": "elongated",
+   "weightOz": 8.12,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 160,
+   "pricePhp": 9300,
+   "url": ""
+  },
+  {
+   "id": "body-helix-x2-pro",
+   "brand": "Body Helix",
+   "model": "X2 Pro",
+   "shape": "elongated",
+   "weightOz": 8.88,
+   "thicknessMm": 19,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 180,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "body-helix-x3-lite",
+   "brand": "Body Helix",
+   "model": "X3 Lite",
+   "shape": "elongated",
+   "weightOz": 8.25,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 160,
+   "pricePhp": 9300,
+   "url": ""
+  },
+  {
+   "id": "body-helix-x3-pro",
+   "brand": "Body Helix",
+   "model": "X3 Pro",
+   "shape": "elongated",
+   "weightOz": 8.73,
+   "thicknessMm": 18,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 180,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "body-helix-x4-gold-kevlar",
+   "brand": "Body Helix",
+   "model": "X4 Gold Kevlar",
+   "shape": "hybrid",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 140,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "bread-butter-fat-boy",
+   "brand": "Bread & Butter",
+   "model": "Fat Boy",
+   "shape": "widebody",
+   "weightOz": 8.17,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 189.99,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "bread-butter-filth-elongated",
+   "brand": "Bread & Butter",
+   "model": "Filth Elongated",
+   "shape": "elongated",
+   "weightOz": 8.18,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 165,
+   "pricePhp": 9600,
+   "url": ""
+  },
+  {
+   "id": "bread-butter-filth-hybrid",
+   "brand": "Bread & Butter",
+   "model": "Filth Hybrid",
+   "shape": "hybrid",
+   "weightOz": 8.07,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 165,
+   "pricePhp": 9600,
+   "url": ""
+  },
+  {
+   "id": "bread-butter-filth-standard",
+   "brand": "Bread & Butter",
+   "model": "Filth Standard",
+   "shape": "widebody",
+   "weightOz": 8.26,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 165,
+   "pricePhp": 9600,
+   "url": ""
+  },
+  {
+   "id": "bread-butter-invader",
+   "brand": "Bread & Butter",
+   "model": "Invader",
+   "shape": "hybrid",
+   "weightOz": 8.18,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 189.99,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "bread-butter-loco-2-elongated",
+   "brand": "Bread & Butter",
+   "model": "Loco 2 Elongated",
+   "shape": "elongated",
+   "weightOz": 7.94,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 220,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "bread-butter-loco-2-hybrid",
+   "brand": "Bread & Butter",
+   "model": "Loco 2 Hybrid",
+   "shape": "hybrid",
+   "weightOz": 7.86,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 220,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "bread-butter-loco-elongated",
+   "brand": "Bread & Butter",
+   "model": "Loco Elongated",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "bread-butter-loco-hybrid",
+   "brand": "Bread & Butter",
+   "model": "Loco Hybrid",
+   "shape": "hybrid",
+   "weightOz": 7.98,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "bread-butter-loco-standard",
+   "brand": "Bread & Butter",
+   "model": "Loco Standard",
+   "shape": "widebody",
+   "weightOz": 8.06,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "bread-butter-shogun",
+   "brand": "Bread & Butter",
+   "model": "Shogun",
+   "shape": "elongated",
+   "weightOz": 8.18,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 189.99,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "bread-butter-wild-thing",
+   "brand": "Bread & Butter",
+   "model": "Wild Thing",
+   "shape": "elongated",
+   "weightOz": 7.7,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 189.99,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "callaway-inertia",
+   "brand": "Callaway",
+   "model": "Inertia",
+   "shape": "hybrid",
+   "weightOz": 8.08,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "chorus-coda",
+   "brand": "Chorus",
+   "model": "Coda",
+   "shape": "hybrid",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 174.99,
+   "pricePhp": 10100,
+   "url": ""
+  },
+  {
+   "id": "chorus-shapeshifter-ex",
+   "brand": "Chorus",
+   "model": "Shapeshifter EX",
+   "shape": "elongated",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "chorus-shapeshifter-hx",
+   "brand": "Chorus",
+   "model": "Shapeshifter HX",
+   "shape": "hybrid",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "chorus-shapeshifter-sx",
+   "brand": "Chorus",
+   "model": "Shapeshifter SX",
+   "shape": "widebody",
+   "weightOz": 7.7,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "chorus-supercourt-ex",
+   "brand": "Chorus",
+   "model": "Supercourt EX",
+   "shape": "elongated",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 119,
+   "pricePhp": 6900,
+   "url": ""
+  },
+  {
+   "id": "chorus-supercourt-hx",
+   "brand": "Chorus",
+   "model": "Supercourt HX",
+   "shape": "hybrid",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 119,
+   "pricePhp": 6900,
+   "url": ""
+  },
+  {
+   "id": "chorus-supercourt-sx",
+   "brand": "Chorus",
+   "model": "Supercourt SX",
+   "shape": "widebody",
+   "weightOz": 7.7,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 119,
+   "pricePhp": 6900,
+   "url": ""
+  },
+  {
+   "id": "crbn-crbn-1-orginal-16-mm",
+   "brand": "CRBN",
+   "model": "CRBN 1 Orginal (16 mm)",
+   "shape": "elongated",
+   "weightOz": 8.25,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2021,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "crbn-crbn-1x-power-series-14-mm",
+   "brand": "CRBN",
+   "model": "CRBN 1X Power Series (14 mm)",
+   "shape": "elongated",
+   "weightOz": 7.87,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "crbn-crbn-1x-power-series-16-mm",
+   "brand": "CRBN",
+   "model": "CRBN 1X Power Series (16 mm)",
+   "shape": "elongated",
+   "weightOz": 8.11,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "crbn-crbn-2-orignal-16-mm",
+   "brand": "CRBN",
+   "model": "CRBN 2 Orignal (16 mm)",
+   "shape": "widebody",
+   "weightOz": 7.94,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2021,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "crbn-crbn-2x-power-series-14-mm",
+   "brand": "CRBN",
+   "model": "CRBN 2X Power Series (14 mm)",
+   "shape": "widebody",
+   "weightOz": 7.8,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "crbn-crbn-2x-power-series-16-mm",
+   "brand": "CRBN",
+   "model": "CRBN 2X Power Series (16 mm)",
+   "shape": "widebody",
+   "weightOz": 8.2,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "crbn-crbn-3x-power-series-14-mm",
+   "brand": "CRBN",
+   "model": "CRBN 3X Power Series (14 mm)",
+   "shape": "elongated",
+   "weightOz": 7.87,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "crbn-crbn-3x-power-series-16-mm",
+   "brand": "CRBN",
+   "model": "CRBN 3X Power Series (16 mm)",
+   "shape": "elongated",
+   "weightOz": 8.18,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "crbn-trufoam-barrage-2",
+   "brand": "CRBN",
+   "model": "TruFoam Barrage 2",
+   "shape": "widebody",
+   "weightOz": 7.95,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "crbn-trufoam-barrage-4",
+   "brand": "CRBN",
+   "model": "TruFoam Barrage 4",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 14,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "crbn-trufoam-genesis-1",
+   "brand": "CRBN",
+   "model": "TruFoam Genesis 1",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "crbn-trufoam-genesis-2",
+   "brand": "CRBN",
+   "model": "TruFoam Genesis 2",
+   "shape": "widebody",
+   "weightOz": 8.2,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "crbn-trufoam-genesis-3",
+   "brand": "CRBN",
+   "model": "TruFoam Genesis 3",
+   "shape": "elongated",
+   "weightOz": 8.3,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "crbn-trufoam-genesis-4",
+   "brand": "CRBN",
+   "model": "TruFoam Genesis 4",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "crbn-trufoam-waves-1",
+   "brand": "CRBN",
+   "model": "TruFoam Waves 1",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "crbn-trufoam-waves-2",
+   "brand": "CRBN",
+   "model": "TruFoam Waves 2",
+   "shape": "widebody",
+   "weightOz": 8.12,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "crbn-trufoam-waves-3",
+   "brand": "CRBN",
+   "model": "TruFoam Waves 3",
+   "shape": "elongated",
+   "weightOz": 8.18,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "crbn-trufoam-waves-4",
+   "brand": "CRBN",
+   "model": "TruFoam Waves 4",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "diadem-blucore-max-19mm",
+   "brand": "Diadem",
+   "model": "BluCore Max 19mm",
+   "shape": "widebody",
+   "weightOz": 8.4,
+   "thicknessMm": 19,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 280,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "diadem-blucore-pro-16mm",
+   "brand": "Diadem",
+   "model": "BluCore Pro 16mm",
+   "shape": "elongated",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 280,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "diadem-blucore-standard-14mm",
+   "brand": "Diadem",
+   "model": "BluCore Standard 14mm",
+   "shape": "elongated",
+   "weightOz": 7.8,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 280,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "diadem-edge-18k",
+   "brand": "Diadem",
+   "model": "Edge 18k",
+   "shape": "elongated",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 229.95,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "diadem-edge-18k-power-max",
+   "brand": "Diadem",
+   "model": "Edge 18k Power Max",
+   "shape": "widebody",
+   "weightOz": 8.16,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 239.95,
+   "pricePhp": 13900,
+   "url": ""
+  },
+  {
+   "id": "diadem-edge-18k-speed-pro",
+   "brand": "Diadem",
+   "model": "Edge 18k Speed Pro",
+   "shape": "elongated",
+   "weightOz": 8.03,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 239.95,
+   "pricePhp": 13900,
+   "url": ""
+  },
+  {
+   "id": "diadem-edge-blucore-hybrid-14",
+   "brand": "Diadem",
+   "model": "Edge Blucore Hybrid 14",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 249.95,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "diadem-edge-blucore-hybrid-16",
+   "brand": "Diadem",
+   "model": "Edge Blucore Hybrid 16",
+   "shape": "hybrid",
+   "weightOz": 8.14,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 249.95,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "diadem-edge-blucore-pro-14",
+   "brand": "Diadem",
+   "model": "Edge Blucore Pro 14",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 249.95,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "diadem-edge-blucore-pro-16",
+   "brand": "Diadem",
+   "model": "Edge Blucore Pro 16",
+   "shape": "elongated",
+   "weightOz": 8.12,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 249.95,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "diadem-edge-flex-hybrid-16",
+   "brand": "Diadem",
+   "model": "Edge Flex Hybrid 16",
+   "shape": "hybrid",
+   "weightOz": 8.44,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "diadem-edge-flex-pro-14",
+   "brand": "Diadem",
+   "model": "Edge Flex Pro 14",
+   "shape": "elongated",
+   "weightOz": 8.2,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "diadem-edge-flex-pro-16",
+   "brand": "Diadem",
+   "model": "Edge Flex Pro 16",
+   "shape": "elongated",
+   "weightOz": 8.2,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "diadem-icon-infinity-max",
+   "brand": "Diadem",
+   "model": "Icon Infinity Max",
+   "shape": "widebody",
+   "weightOz": 8.25,
+   "thicknessMm": 13.7,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 219.95,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "dunlop-ag-thr33",
+   "brand": "Dunlop",
+   "model": "AG-THR33",
+   "shape": "hybrid",
+   "weightOz": 7.9,
+   "thicknessMm": 14,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "dunlop-cr-thr33",
+   "brand": "Dunlop",
+   "model": "CR-THR33",
+   "shape": "hybrid",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "dunlop-tt-thr33",
+   "brand": "Dunlop",
+   "model": "TT-THR33",
+   "shape": "widebody",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "element-6-fuego",
+   "brand": "Element 6",
+   "model": "Fuego",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "element-6-surtr",
+   "brand": "Element 6",
+   "model": "Surtr",
+   "shape": "hybrid",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199,
+   "pricePhp": 11500,
+   "url": ""
+  },
+  {
+   "id": "element-6-zephyr",
+   "brand": "Element 6",
+   "model": "Zephyr",
+   "shape": "hybrid",
+   "weightOz": 7.82,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "engage-alpha-pro-14",
+   "brand": "Engage",
+   "model": "Alpha Pro 14",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "engage-alpha-pro-16",
+   "brand": "Engage",
+   "model": "Alpha Pro 16",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "engage-axiom-elongated-16mm",
+   "brand": "Engage",
+   "model": "Axiom Elongated 16mm",
+   "shape": "elongated",
+   "weightOz": 7.94,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 199,
+   "pricePhp": 11500,
+   "url": ""
+  },
+  {
+   "id": "engage-profoam",
+   "brand": "Engage",
+   "model": "Profoam",
+   "shape": "elongated",
+   "weightOz": 8.06,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "engage-pursuit-pro-ex",
+   "brand": "Engage",
+   "model": "Pursuit Pro EX",
+   "shape": "widebody",
+   "weightOz": 8,
+   "thicknessMm": 13,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "engage-pursuit-pro-ex-6-0",
+   "brand": "Engage",
+   "model": "Pursuit Pro EX 6.0",
+   "shape": "widebody",
+   "weightOz": 7.92,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "engage-pursuit-pro-mx",
+   "brand": "Engage",
+   "model": "Pursuit Pro MX",
+   "shape": "elongated",
+   "weightOz": 8.06,
+   "thicknessMm": 13,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "engage-pursuit-pro-mx-6-0",
+   "brand": "Engage",
+   "model": "Pursuit Pro MX 6.0",
+   "shape": "elongated",
+   "weightOz": 7.87,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "engage-pursuit-pro1-lite",
+   "brand": "Engage",
+   "model": "Pursuit Pro1 (Lite)",
+   "shape": "elongated",
+   "weightOz": 7.85,
+   "thicknessMm": 13,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "engage-pursuit-pro1-standard",
+   "brand": "Engage",
+   "model": "Pursuit Pro1 (Standard)",
+   "shape": "elongated",
+   "weightOz": 8.04,
+   "thicknessMm": 13,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "engage-pursuit-pro1-6-0-lite",
+   "brand": "Engage",
+   "model": "Pursuit Pro1 6.0 (Lite)",
+   "shape": "elongated",
+   "weightOz": 7.66,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "engage-pursuit-pro1-6-0-standard",
+   "brand": "Engage",
+   "model": "Pursuit Pro1 6.0 (Standard)",
+   "shape": "elongated",
+   "weightOz": 8.01,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "engage-pursuit-pro1-6-0-hybrid",
+   "brand": "Engage",
+   "model": "Pursuit Pro1 6.0 Hybrid",
+   "shape": "hybrid",
+   "weightOz": 7.96,
+   "thicknessMm": 15.2,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "engage-pursuit-pro1-6-0-widebody",
+   "brand": "Engage",
+   "model": "Pursuit Pro1 6.0 Widebody",
+   "shape": "widebody",
+   "weightOz": 8.06,
+   "thicknessMm": 15.2,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "engage-pursuit-pro1-hybrid",
+   "brand": "Engage",
+   "model": "Pursuit Pro1 Hybrid",
+   "shape": "hybrid",
+   "weightOz": 7.96,
+   "thicknessMm": 12.7,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "engage-pursuit-pro1-innovation-12-7",
+   "brand": "Engage",
+   "model": "Pursuit Pro1 Innovation 12.7",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 12.7,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "engage-pursuit-pro1-innovation-15-2",
+   "brand": "Engage",
+   "model": "Pursuit Pro1 Innovation 15.2",
+   "shape": "elongated",
+   "weightOz": 7.92,
+   "thicknessMm": 15.2,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "engage-pursuit-pro1-widebody",
+   "brand": "Engage",
+   "model": "Pursuit Pro1 Widebody",
+   "shape": "widebody",
+   "weightOz": 8.1,
+   "thicknessMm": 12.7,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "engage-pursuit-v2",
+   "brand": "Engage",
+   "model": "Pursuit V2",
+   "shape": "hybrid",
+   "weightOz": 7.85,
+   "thicknessMm": 15.2,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "engage-x2-elongated",
+   "brand": "Engage",
+   "model": "X2 Elongated",
+   "shape": "elongated",
+   "weightOz": 8.26,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "engage-x2-widebody",
+   "brand": "Engage",
+   "model": "X2 Widebody",
+   "shape": "widebody",
+   "weightOz": 8.15,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 259.99,
+   "pricePhp": 15100,
+   "url": ""
+  },
+  {
+   "id": "enhance-duo-elongated",
+   "brand": "Enhance",
+   "model": "Duo Elongated",
+   "shape": "elongated",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 174.99,
+   "pricePhp": 10100,
+   "url": ""
+  },
+  {
+   "id": "enhance-duo-hybrid-lh",
+   "brand": "Enhance",
+   "model": "Duo Hybrid LH",
+   "shape": "hybrid",
+   "weightOz": 7.94,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "enhance-duo-widebody",
+   "brand": "Enhance",
+   "model": "Duo Widebody",
+   "shape": "widebody",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "enhance-turbo-epp-elongated",
+   "brand": "Enhance",
+   "model": "Turbo EPP Elongated",
+   "shape": "elongated",
+   "weightOz": 7.95,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 119.99,
+   "pricePhp": 7000,
+   "url": ""
+  },
+  {
+   "id": "enhance-turbo-epp-hybrid",
+   "brand": "Enhance",
+   "model": "Turbo EPP Hybrid",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 119.99,
+   "pricePhp": 7000,
+   "url": ""
+  },
+  {
+   "id": "enhance-turbo-epp-widebody",
+   "brand": "Enhance",
+   "model": "Turbo EPP Widebody",
+   "shape": "widebody",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 119.99,
+   "pricePhp": 7000,
+   "url": ""
+  },
+  {
+   "id": "enhance-turbo-mpp-armorgrit-elongated",
+   "brand": "Enhance",
+   "model": "Turbo MPP ArmorGrit Elongated",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 119.99,
+   "pricePhp": 7000,
+   "url": ""
+  },
+  {
+   "id": "enhance-turbo-mpp-armorgrit-hybrid",
+   "brand": "Enhance",
+   "model": "Turbo MPP ArmorGrit Hybrid",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 119.99,
+   "pricePhp": 7000,
+   "url": ""
+  },
+  {
+   "id": "enhance-turbo-mpp-armorgrit-widebody",
+   "brand": "Enhance",
+   "model": "Turbo MPP ArmorGrit Widebody",
+   "shape": "widebody",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 119.99,
+   "pricePhp": 7000,
+   "url": ""
+  },
+  {
+   "id": "enhance-turbo-mpp-elongated",
+   "brand": "Enhance",
+   "model": "Turbo MPP Elongated",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 119.99,
+   "pricePhp": 7000,
+   "url": ""
+  },
+  {
+   "id": "enhance-turbo-mpp-hybrid",
+   "brand": "Enhance",
+   "model": "Turbo MPP Hybrid",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 119,
+   "pricePhp": 6900,
+   "url": ""
+  },
+  {
+   "id": "enhance-turbo-mpp-widebody",
+   "brand": "Enhance",
+   "model": "Turbo MPP Widebody",
+   "shape": "widebody",
+   "weightOz": 8.17,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 119.99,
+   "pricePhp": 7000,
+   "url": ""
+  },
+  {
+   "id": "f-b-runout-e",
+   "brand": "F+B",
+   "model": "Runout E",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 12.7,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "f-b-runout-h",
+   "brand": "F+B",
+   "model": "Runout H",
+   "shape": "hybrid",
+   "weightOz": 8.1,
+   "thicknessMm": 12.7,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "f-b-runout-s",
+   "brand": "F+B",
+   "model": "Runout S",
+   "shape": "widebody",
+   "weightOz": 8.18,
+   "thicknessMm": 12.7,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "flik-f3-elongated",
+   "brand": "Flik",
+   "model": "F3 Elongated",
+   "shape": "elongated",
+   "weightOz": 7.95,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 190,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "flik-f3-hybrid",
+   "brand": "Flik",
+   "model": "F3 Hybrid",
+   "shape": "hybrid",
+   "weightOz": 7.98,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 190,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "flik-f3-widebody",
+   "brand": "Flik",
+   "model": "F3 Widebody",
+   "shape": "widebody",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 190,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "franklin-aurelius-alw-12-7",
+   "brand": "Franklin",
+   "model": "Aurelius ALW 12.7",
+   "shape": "widebody",
+   "weightOz": 7.4,
+   "thicknessMm": 12.7,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "franklin-aurelius-alw-14",
+   "brand": "Franklin",
+   "model": "Aurelius ALW 14",
+   "shape": "widebody",
+   "weightOz": 7.61,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "franklin-aurelius-alw-16",
+   "brand": "Franklin",
+   "model": "Aurelius ALW 16",
+   "shape": "widebody",
+   "weightOz": 7.6,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "franklin-c45-dynasty-14",
+   "brand": "Franklin",
+   "model": "C45 Dynasty 14",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "franklin-c45-dynasty-16",
+   "brand": "Franklin",
+   "model": "C45 Dynasty 16",
+   "shape": "elongated",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "franklin-c45-hybrid",
+   "brand": "Franklin",
+   "model": "C45 Hybrid",
+   "shape": "hybrid",
+   "weightOz": 7.55,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "franklin-c45-parris-todd",
+   "brand": "Franklin",
+   "model": "C45 Parris Todd",
+   "shape": "hybrid",
+   "weightOz": 7.5,
+   "thicknessMm": 13.25,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "franklin-c45-tempo-14",
+   "brand": "Franklin",
+   "model": "C45 Tempo 14",
+   "shape": "widebody",
+   "weightOz": 7.8,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "franklin-c45-tempo-16",
+   "brand": "Franklin",
+   "model": "C45 Tempo 16",
+   "shape": "widebody",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "franklin-dynasty-12-feather-weight",
+   "brand": "Franklin",
+   "model": "Dynasty 12 Feather Weight",
+   "shape": "elongated",
+   "weightOz": 7.25,
+   "thicknessMm": 12,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 149.99,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "franklin-fs-tour-dynasty-14mm",
+   "brand": "Franklin",
+   "model": "FS Tour Dynasty (14mm)",
+   "shape": "elongated",
+   "weightOz": 8.28,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 150,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "franklin-fs-tour-dynasty-16mm",
+   "brand": "Franklin",
+   "model": "FS Tour Dynasty (16mm)",
+   "shape": "elongated",
+   "weightOz": 8.69,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 150,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "franklin-fs-tour-tempo-14mm",
+   "brand": "Franklin",
+   "model": "FS Tour Tempo (14mm)",
+   "shape": "widebody",
+   "weightOz": 8.47,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 150,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "franklin-fs-tour-tempo-16mm",
+   "brand": "Franklin",
+   "model": "FS Tour Tempo (16mm)",
+   "shape": "widebody",
+   "weightOz": 8.9,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 150,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "friday-aura-elongated",
+   "brand": "Friday",
+   "model": "Aura Elongated",
+   "shape": "elongated",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 129,
+   "pricePhp": 7500,
+   "url": ""
+  },
+  {
+   "id": "friday-aura-hybrid",
+   "brand": "Friday",
+   "model": "Aura Hybrid",
+   "shape": "hybrid",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 129,
+   "pricePhp": 7500,
+   "url": ""
+  },
+  {
+   "id": "friday-aura-pro-elongated",
+   "brand": "Friday",
+   "model": "Aura Pro Elongated",
+   "shape": "elongated",
+   "weightOz": 7.95,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 169,
+   "pricePhp": 9800,
+   "url": ""
+  },
+  {
+   "id": "friday-aura-pro-hybrid",
+   "brand": "Friday",
+   "model": "Aura Pro Hybrid",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 169,
+   "pricePhp": 9800,
+   "url": ""
+  },
+  {
+   "id": "friday-aura-pro-widebody",
+   "brand": "Friday",
+   "model": "Aura Pro Widebody",
+   "shape": "widebody",
+   "weightOz": 7.85,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 169,
+   "pricePhp": 9800,
+   "url": ""
+  },
+  {
+   "id": "friday-aura-widebody",
+   "brand": "Friday",
+   "model": "Aura Widebody",
+   "shape": "widebody",
+   "weightOz": 7.83,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 129,
+   "pricePhp": 7500,
+   "url": ""
+  },
+  {
+   "id": "friday-challenger",
+   "brand": "Friday",
+   "model": "Challenger",
+   "shape": "elongated",
+   "weightOz": 7.7,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 89,
+   "pricePhp": 5200,
+   "url": ""
+  },
+  {
+   "id": "friday-fever",
+   "brand": "Friday",
+   "model": "Fever",
+   "shape": "elongated",
+   "weightOz": 7.75,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 99,
+   "pricePhp": 5700,
+   "url": ""
+  },
+  {
+   "id": "friday-fever-2",
+   "brand": "Friday",
+   "model": "Fever 2",
+   "shape": "widebody",
+   "weightOz": 8.03,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 99,
+   "pricePhp": 5700,
+   "url": ""
+  },
+  {
+   "id": "friday-original",
+   "brand": "Friday",
+   "model": "Original",
+   "shape": "hybrid",
+   "weightOz": 8.2,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 69,
+   "pricePhp": 4000,
+   "url": ""
+  },
+  {
+   "id": "gamma-rcf-airbender-16",
+   "brand": "Gamma",
+   "model": "RCF-Airbender 16",
+   "shape": "elongated",
+   "weightOz": 8.45,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "gamma-rcf-obsidian-10",
+   "brand": "Gamma",
+   "model": "RCF-Obsidian 10",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 10,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 159.99,
+   "pricePhp": 9300,
+   "url": ""
+  },
+  {
+   "id": "gamma-rcf-obsidian-13",
+   "brand": "Gamma",
+   "model": "RCF-Obsidian 13",
+   "shape": "elongated",
+   "weightOz": 8.03,
+   "thicknessMm": 13,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 159.99,
+   "pricePhp": 9300,
+   "url": ""
+  },
+  {
+   "id": "gamma-rcf-obsidian-16",
+   "brand": "Gamma",
+   "model": "RCF-Obsidian 16",
+   "shape": "elongated",
+   "weightOz": 8.13,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 159.99,
+   "pricePhp": 9300,
+   "url": ""
+  },
+  {
+   "id": "gearbox-cx14h-ultimate-power",
+   "brand": "Gearbox",
+   "model": "CX14H Ultimate Power",
+   "shape": "widebody",
+   "weightOz": 8.5,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "gearbox-gbx-power-elongated",
+   "brand": "Gearbox",
+   "model": "GBX Power Elongated",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "gearbox-gbx-power-hybrid",
+   "brand": "Gearbox",
+   "model": "GBX Power Hybrid",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "gearbox-gx2-elongated",
+   "brand": "Gearbox",
+   "model": "GX2 Elongated",
+   "shape": "elongated",
+   "weightOz": 7.94,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 269.99,
+   "pricePhp": 15700,
+   "url": ""
+  },
+  {
+   "id": "gearbox-gx2-hyper",
+   "brand": "Gearbox",
+   "model": "GX2 Hyper",
+   "shape": "widebody",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 269.99,
+   "pricePhp": 15700,
+   "url": ""
+  },
+  {
+   "id": "gearbox-gx2-integra-xl",
+   "brand": "Gearbox",
+   "model": "GX2 Integra XL",
+   "shape": "hybrid",
+   "weightOz": 7.91,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 269.99,
+   "pricePhp": 15700,
+   "url": ""
+  },
+  {
+   "id": "gearbox-gx2-power-elongated",
+   "brand": "Gearbox",
+   "model": "GX2 Power Elongated",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "gearbox-gx2-power-hybrid",
+   "brand": "Gearbox",
+   "model": "GX2 Power Hybrid",
+   "shape": "hybrid",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "gearbox-pressure-x-8e-elongated",
+   "brand": "Gearbox",
+   "model": "Pressure X 8E Elongated",
+   "shape": "elongated",
+   "weightOz": 8.08,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "gearbox-pressure-x-8m-elongated",
+   "brand": "Gearbox",
+   "model": "Pressure X 8M Elongated",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "gearbox-pro-control-elongated",
+   "brand": "Gearbox",
+   "model": "Pro Control Elongated",
+   "shape": "elongated",
+   "weightOz": 8.07,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 274.99,
+   "pricePhp": 15900,
+   "url": ""
+  },
+  {
+   "id": "gearbox-pro-control-integra",
+   "brand": "Gearbox",
+   "model": "Pro Control Integra",
+   "shape": "widebody",
+   "weightOz": 7.95,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 274.99,
+   "pricePhp": 15900,
+   "url": ""
+  },
+  {
+   "id": "gearbox-pro-power-integra",
+   "brand": "Gearbox",
+   "model": "Pro Power Integra",
+   "shape": "widebody",
+   "weightOz": 7.98,
+   "thicknessMm": 14,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 274.99,
+   "pricePhp": 15900,
+   "url": ""
+  },
+  {
+   "id": "gearbox-pro-ultimate-elongated-14",
+   "brand": "Gearbox",
+   "model": "Pro Ultimate Elongated 14",
+   "shape": "elongated",
+   "weightOz": 8.05,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 275,
+   "pricePhp": 16000,
+   "url": ""
+  },
+  {
+   "id": "gearbox-pro-ultimate-elongated-16",
+   "brand": "Gearbox",
+   "model": "Pro Ultimate Elongated 16",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 274.99,
+   "pricePhp": 15900,
+   "url": ""
+  },
+  {
+   "id": "gearbox-pro-ultimate-hyper",
+   "brand": "Gearbox",
+   "model": "Pro Ultimate Hyper",
+   "shape": "widebody",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 274.99,
+   "pricePhp": 15900,
+   "url": ""
+  },
+  {
+   "id": "gherkin-draco-elongated",
+   "brand": "Gherkin",
+   "model": "Draco Elongated",
+   "shape": "elongated",
+   "weightOz": 7.75,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "gherkin-draco-hybrid",
+   "brand": "Gherkin",
+   "model": "Draco Hybrid",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "gherkin-draco-widebody",
+   "brand": "Gherkin",
+   "model": "Draco Widebody",
+   "shape": "widebody",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "gherkin-nightshade-e",
+   "brand": "Gherkin",
+   "model": "Nightshade E",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 135,
+   "pricePhp": 7800,
+   "url": ""
+  },
+  {
+   "id": "gherkin-nightshade-h",
+   "brand": "Gherkin",
+   "model": "Nightshade H",
+   "shape": "hybrid",
+   "weightOz": 7.98,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 135,
+   "pricePhp": 7800,
+   "url": ""
+  },
+  {
+   "id": "gherkin-wraith-e",
+   "brand": "Gherkin",
+   "model": "Wraith E",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 135,
+   "pricePhp": 7800,
+   "url": ""
+  },
+  {
+   "id": "gherkin-wraith-h",
+   "brand": "Gherkin",
+   "model": "Wraith H",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 135,
+   "pricePhp": 7800,
+   "url": ""
+  },
+  {
+   "id": "gherkin-wraith-s",
+   "brand": "Gherkin",
+   "model": "Wraith S",
+   "shape": "widebody",
+   "weightOz": 7.96,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 135,
+   "pricePhp": 7800,
+   "url": ""
+  },
+  {
+   "id": "gruvn-lazr-16hd-full-foam",
+   "brand": "Gruvn",
+   "model": "LAZR-16HD Full Foam",
+   "shape": "hybrid",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "gruvn-lazr-16s",
+   "brand": "Gruvn",
+   "model": "LAZR-16S",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "gruvn-lazr-16x",
+   "brand": "Gruvn",
+   "model": "LAZR-16X",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "gruvn-lazr-16x-full-foam",
+   "brand": "Gruvn",
+   "model": "LAZR-16X Full Foam",
+   "shape": "elongated",
+   "weightOz": 7.98,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 169,
+   "pricePhp": 9800,
+   "url": ""
+  },
+  {
+   "id": "gruvn-muvn-13s",
+   "brand": "Gruvn",
+   "model": "MUVN-13S",
+   "shape": "widebody",
+   "weightOz": 7.9,
+   "thicknessMm": 13,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 159,
+   "pricePhp": 9200,
+   "url": ""
+  },
+  {
+   "id": "gruvn-muvn-16hd-full-foam",
+   "brand": "Gruvn",
+   "model": "MUVN-16HD Full Foam",
+   "shape": "hybrid",
+   "weightOz": 8.2,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 169,
+   "pricePhp": 9800,
+   "url": ""
+  },
+  {
+   "id": "head-boom-tour-ex",
+   "brand": "Head",
+   "model": "Boom Tour EX",
+   "shape": "elongated",
+   "weightOz": 7.84,
+   "thicknessMm": 11,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "head-gravity-pro-ex15",
+   "brand": "Head",
+   "model": "Gravity Pro EX15",
+   "shape": "hybrid",
+   "weightOz": 8.24,
+   "thicknessMm": 15,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "head-radical-nite",
+   "brand": "Head",
+   "model": "Radical Nite",
+   "shape": "elongated",
+   "weightOz": 8.11,
+   "thicknessMm": 15,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 219,
+   "pricePhp": 12700,
+   "url": ""
+  },
+  {
+   "id": "head-radical-pro-15",
+   "brand": "Head",
+   "model": "Radical Pro 15",
+   "shape": "widebody",
+   "weightOz": 8.5,
+   "thicknessMm": 15,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "head-radical-pro-ex-15",
+   "brand": "Head",
+   "model": "Radical Pro EX 15",
+   "shape": "elongated",
+   "weightOz": 8.13,
+   "thicknessMm": 15,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "head-tour-radical-raw-ex",
+   "brand": "Head",
+   "model": "Tour Radical Raw EX",
+   "shape": "elongated",
+   "weightOz": 8.17,
+   "thicknessMm": 15,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 169.95,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "holbrook-aero-metallic-ti-16mm",
+   "brand": "Holbrook",
+   "model": "Aero Metallic TI (16mm)",
+   "shape": "elongated",
+   "weightOz": 7.95,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "holbrook-aero-s-16mm",
+   "brand": "Holbrook",
+   "model": "Aero S (16mm)",
+   "shape": "widebody",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "holbrook-aero-t-14mm",
+   "brand": "Holbrook",
+   "model": "Aero T (14mm)",
+   "shape": "elongated",
+   "weightOz": 7.8,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "holbrook-aero-t-16mm",
+   "brand": "Holbrook",
+   "model": "Aero T (16mm)",
+   "shape": "elongated",
+   "weightOz": 7.81,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "holbrook-aero-x-14mm",
+   "brand": "Holbrook",
+   "model": "Aero X (14mm)",
+   "shape": "elongated",
+   "weightOz": 7.8,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "holbrook-aero-x-16mm",
+   "brand": "Holbrook",
+   "model": "Aero X (16mm)",
+   "shape": "elongated",
+   "weightOz": 7.82,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "holbrook-arma-s",
+   "brand": "Holbrook",
+   "model": "Arma S",
+   "shape": "widebody",
+   "weightOz": 8.1,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "holbrook-arma-t",
+   "brand": "Holbrook",
+   "model": "Arma T",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "holbrook-arma-x",
+   "brand": "Holbrook",
+   "model": "Arma X",
+   "shape": "elongated",
+   "weightOz": 8.2,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 279.99,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "holbrook-fuze-elongated-14",
+   "brand": "Holbrook",
+   "model": "Fuze Elongated 14",
+   "shape": "elongated",
+   "weightOz": 7.8,
+   "thicknessMm": 14,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "holbrook-fuze-elongated-16",
+   "brand": "Holbrook",
+   "model": "Fuze Elongated 16",
+   "shape": "elongated",
+   "weightOz": 7.94,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "holbrook-fuze-hybrid-16",
+   "brand": "Holbrook",
+   "model": "Fuze Hybrid 16",
+   "shape": "hybrid",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "holbrook-fuze-vantagrit-elongated",
+   "brand": "Holbrook",
+   "model": "Fuze VantaGrit Elongated",
+   "shape": "elongated",
+   "weightOz": 8.2,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "holbrook-fuze-vantagrit-hybrid",
+   "brand": "Holbrook",
+   "model": "Fuze VantaGrit Hybrid",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "holbrook-fuze-widebody-16",
+   "brand": "Holbrook",
+   "model": "Fuze Widebody 16",
+   "shape": "widebody",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "holbrook-mav-pro",
+   "brand": "Holbrook",
+   "model": "Mav Pro",
+   "shape": "elongated",
+   "weightOz": 8.17,
+   "thicknessMm": 13,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "holbrook-power-pro",
+   "brand": "Holbrook",
+   "model": "Power Pro",
+   "shape": "elongated",
+   "weightOz": 8.03,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "holbrook-pro-power-e",
+   "brand": "Holbrook",
+   "model": "Pro Power E",
+   "shape": "elongated",
+   "weightOz": 8.25,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-j2cr-cbe",
+   "brand": "Honolulu Pickleball",
+   "model": "J2CR CBE",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 195,
+   "pricePhp": 11300,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-j2cr-cbe-lh",
+   "brand": "Honolulu Pickleball",
+   "model": "J2CR CBE LH",
+   "shape": "hybrid",
+   "weightOz": 7.97,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 195,
+   "pricePhp": 11300,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-j2fc",
+   "brand": "Honolulu Pickleball",
+   "model": "J2FC+",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 195,
+   "pricePhp": 11300,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-j2nf",
+   "brand": "Honolulu Pickleball",
+   "model": "J2NF",
+   "shape": "hybrid",
+   "weightOz": 7.95,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 195,
+   "pricePhp": 11300,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-j2nf-lh",
+   "brand": "Honolulu Pickleball",
+   "model": "J2NF LH",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 195,
+   "pricePhp": 11300,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-j2nfk",
+   "brand": "Honolulu Pickleball",
+   "model": "J2NFK",
+   "shape": "hybrid",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 195,
+   "pricePhp": 11300,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-j2nft",
+   "brand": "Honolulu Pickleball",
+   "model": "J2NFT",
+   "shape": "hybrid",
+   "weightOz": 8.3,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 195,
+   "pricePhp": 11300,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-j3cr-cbe",
+   "brand": "Honolulu Pickleball",
+   "model": "J3CR CBE",
+   "shape": "widebody",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 195,
+   "pricePhp": 11300,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-j3nf",
+   "brand": "Honolulu Pickleball",
+   "model": "J3NF",
+   "shape": "widebody",
+   "weightOz": 7.98,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 195,
+   "pricePhp": 11300,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-j6cr",
+   "brand": "Honolulu Pickleball",
+   "model": "J6CR",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 195,
+   "pricePhp": 11300,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-j6cr-cbe",
+   "brand": "Honolulu Pickleball",
+   "model": "J6CR CBE",
+   "shape": "elongated",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 195,
+   "pricePhp": 11300,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-j6fc",
+   "brand": "Honolulu Pickleball",
+   "model": "J6FC+",
+   "shape": "elongated",
+   "weightOz": 8.13,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 195,
+   "pricePhp": 11300,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-j6nf",
+   "brand": "Honolulu Pickleball",
+   "model": "J6NF",
+   "shape": "elongated",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 195,
+   "pricePhp": 11300,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-sword-shield-j2",
+   "brand": "Honolulu Pickleball",
+   "model": "Sword & Shield J2",
+   "shape": "hybrid",
+   "weightOz": 7.95,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 145,
+   "pricePhp": 8400,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-sword-shield-j2k-x",
+   "brand": "Honolulu Pickleball",
+   "model": "Sword & Shield J2K",
+   "shape": "hybrid",
+   "weightOz": 8.22,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 155,
+   "pricePhp": 9000,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-sword-shield-j2k",
+   "brand": "Honolulu Pickleball",
+   "model": "Sword & Shield J2K+",
+   "shape": "hybrid",
+   "weightOz": 8.26,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 165,
+   "pricePhp": 9600,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-sword-shield-j2ti-x",
+   "brand": "Honolulu Pickleball",
+   "model": "Sword & Shield J2Ti",
+   "shape": "hybrid",
+   "weightOz": 8.05,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 155,
+   "pricePhp": 9000,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-sword-shield-j2ti",
+   "brand": "Honolulu Pickleball",
+   "model": "Sword & Shield J2Ti+",
+   "shape": "hybrid",
+   "weightOz": 8.3,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 165,
+   "pricePhp": 9600,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-sword-shield-j3k",
+   "brand": "Honolulu Pickleball",
+   "model": "Sword & Shield J3k",
+   "shape": "widebody",
+   "weightOz": 8.28,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 155,
+   "pricePhp": 9000,
+   "url": ""
+  },
+  {
+   "id": "honolulu-pickleball-sword-shield-j7k",
+   "brand": "Honolulu Pickleball",
+   "model": "Sword & Shield J7K",
+   "shape": "elongated",
+   "weightOz": 8.25,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 155,
+   "pricePhp": 9000,
+   "url": ""
+  },
+  {
+   "id": "hudef-mage-pro",
+   "brand": "Hudef",
+   "model": "Mage Pro",
+   "shape": "elongated",
+   "weightOz": 7.77,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 99,
+   "pricePhp": 5700,
+   "url": ""
+  },
+  {
+   "id": "hudef-viva-pro-gen-2",
+   "brand": "Hudef",
+   "model": "Viva Pro Gen 2",
+   "shape": "elongated",
+   "weightOz": 8.06,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 129.99,
+   "pricePhp": 7500,
+   "url": ""
+  },
+  {
+   "id": "hudef-viva-pro-gen-3",
+   "brand": "Hudef",
+   "model": "Viva Pro Gen 3",
+   "shape": "elongated",
+   "weightOz": 7.76,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "joola-agassi-edge-16mm",
+   "brand": "JOOLA",
+   "model": "Agassi Edge (16mm)",
+   "shape": "elongated",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 99.95,
+   "pricePhp": 5800,
+   "url": ""
+  },
+  {
+   "id": "joola-agassi-pro-14mm",
+   "brand": "JOOLA",
+   "model": "Agassi Pro (14mm)",
+   "shape": "elongated",
+   "weightOz": 8.1,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.95,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "joola-agassi-pro-16mm",
+   "brand": "JOOLA",
+   "model": "Agassi Pro (16mm)",
+   "shape": "elongated",
+   "weightOz": 8.17,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.95,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "joola-agassi-pro-v-16mm",
+   "brand": "JOOLA",
+   "model": "Agassi Pro V (16mm)",
+   "shape": "elongated",
+   "weightOz": 8.15,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 299.95,
+   "pricePhp": 17400,
+   "url": ""
+  },
+  {
+   "id": "joola-hyperion-3s-14mm",
+   "brand": "JOOLA",
+   "model": "Hyperion 3S (14mm)",
+   "shape": "elongated",
+   "weightOz": 7.85,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "UPA-A",
+   "priceUsd": 279.95,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "joola-hyperion-3s-16mm",
+   "brand": "JOOLA",
+   "model": "Hyperion 3S (16mm)",
+   "shape": "elongated",
+   "weightOz": 7.89,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "UPA-A",
+   "priceUsd": 279.95,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "joola-hyperion-pro-v-14mm",
+   "brand": "JOOLA",
+   "model": "Hyperion Pro V (14mm)",
+   "shape": "elongated",
+   "weightOz": 7.78,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 299.95,
+   "pricePhp": 17400,
+   "url": ""
+  },
+  {
+   "id": "joola-hyperion-pro-v-16mm",
+   "brand": "JOOLA",
+   "model": "Hyperion Pro V (16mm)",
+   "shape": "elongated",
+   "weightOz": 8.03,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 299.95,
+   "pricePhp": 17400,
+   "url": ""
+  },
+  {
+   "id": "joola-kosmos-pro-v-16mm",
+   "brand": "JOOLA",
+   "model": "Kosmos Pro V (16mm)",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 299.95,
+   "pricePhp": 17400,
+   "url": ""
+  },
+  {
+   "id": "joola-magnus-3s-14mm",
+   "brand": "JOOLA",
+   "model": "Magnus 3S (14mm)",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "UPA-A",
+   "priceUsd": 279.95,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "joola-magnus-3s-16mm",
+   "brand": "JOOLA",
+   "model": "Magnus 3S (16mm)",
+   "shape": "elongated",
+   "weightOz": 8.14,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "UPA-A",
+   "priceUsd": 275,
+   "pricePhp": 16000,
+   "url": ""
+  },
+  {
+   "id": "joola-perseus-14-mm",
+   "brand": "JOOLA",
+   "model": "Perseus (14 mm)",
+   "shape": "elongated",
+   "weightOz": 7.93,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "joola-perseus-16-mm",
+   "brand": "JOOLA",
+   "model": "Perseus (16 mm)",
+   "shape": "elongated",
+   "weightOz": 7.85,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "joola-perseus-3s-14mm",
+   "brand": "JOOLA",
+   "model": "Perseus 3S (14mm)",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 14,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "UPA-A",
+   "priceUsd": 279.95,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "joola-perseus-3s-16mm",
+   "brand": "JOOLA",
+   "model": "Perseus 3S (16mm)",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "UPA-A",
+   "priceUsd": 279.95,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "joola-perseus-pro-iv-14mm",
+   "brand": "JOOLA",
+   "model": "Perseus Pro IV (14mm)",
+   "shape": "elongated",
+   "weightOz": 7.95,
+   "thicknessMm": 14,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.95,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "joola-perseus-pro-iv-16mm",
+   "brand": "JOOLA",
+   "model": "Perseus Pro IV (16mm)",
+   "shape": "elongated",
+   "weightOz": 8.2,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.95,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "joola-perseus-pro-v-16mm",
+   "brand": "JOOLA",
+   "model": "Perseus Pro V (16mm)",
+   "shape": "elongated",
+   "weightOz": 7.95,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 299.95,
+   "pricePhp": 17400,
+   "url": ""
+  },
+  {
+   "id": "joola-perseus-pro-v-14",
+   "brand": "JOOLA",
+   "model": "Perseus Pro V 14",
+   "shape": "elongated",
+   "weightOz": 7.76,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 299.99,
+   "pricePhp": 17400,
+   "url": ""
+  },
+  {
+   "id": "joola-power-fx",
+   "brand": "JOOLA",
+   "model": "Power FX",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 179.95,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "joola-scorpeus-14-mm",
+   "brand": "JOOLA",
+   "model": "Scorpeus (14 mm)",
+   "shape": "widebody",
+   "weightOz": 7.65,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "joola-scorpeus-16-mm",
+   "brand": "JOOLA",
+   "model": "Scorpeus (16 mm)",
+   "shape": "widebody",
+   "weightOz": 8.02,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "joola-scorpeus-3s-14mm",
+   "brand": "JOOLA",
+   "model": "Scorpeus 3S (14mm)",
+   "shape": "widebody",
+   "weightOz": 7.85,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "UPA-A",
+   "priceUsd": 279.95,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "joola-scorpeus-3s-16mm",
+   "brand": "JOOLA",
+   "model": "Scorpeus 3S (16mm)",
+   "shape": "widebody",
+   "weightOz": 8.12,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "UPA-A",
+   "priceUsd": 279.95,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "joola-scorpeus-pro-iv-14mm",
+   "brand": "JOOLA",
+   "model": "Scorpeus Pro IV (14mm)",
+   "shape": "widebody",
+   "weightOz": 8.16,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.95,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "joola-scorpeus-pro-iv-16-mm",
+   "brand": "JOOLA",
+   "model": "Scorpeus Pro IV (16 mm)",
+   "shape": "widebody",
+   "weightOz": 8.16,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279.95,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "joola-scorpeus-pro-v-14mm",
+   "brand": "JOOLA",
+   "model": "Scorpeus Pro V (14mm)",
+   "shape": "widebody",
+   "weightOz": 7.8,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 299.95,
+   "pricePhp": 17400,
+   "url": ""
+  },
+  {
+   "id": "joola-scorpeus-pro-v-16mm",
+   "brand": "JOOLA",
+   "model": "Scorpeus Pro V (16mm)",
+   "shape": "widebody",
+   "weightOz": 8.13,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 299.95,
+   "pricePhp": 17400,
+   "url": ""
+  },
+  {
+   "id": "luzz-cannon-xpp",
+   "brand": "Luzz",
+   "model": "Cannon XPP",
+   "shape": "elongated",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 179,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "luzz-frozen-inferno",
+   "brand": "Luzz",
+   "model": "Frozen Inferno",
+   "shape": "elongated",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "luzz-glider",
+   "brand": "Luzz",
+   "model": "Glider",
+   "shape": "hybrid",
+   "weightOz": 7.87,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 109,
+   "pricePhp": 6300,
+   "url": ""
+  },
+  {
+   "id": "luzz-glider-2026",
+   "brand": "Luzz",
+   "model": "Glider 2026",
+   "shape": "hybrid",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 119,
+   "pricePhp": 6900,
+   "url": ""
+  },
+  {
+   "id": "luzz-inferno-2",
+   "brand": "Luzz",
+   "model": "Inferno 2",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 239,
+   "pricePhp": 13900,
+   "url": ""
+  },
+  {
+   "id": "luzz-pro-blade-2",
+   "brand": "Luzz",
+   "model": "Pro Blade 2",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 14,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "luzz-pro-cannon",
+   "brand": "Luzz",
+   "model": "Pro Cannon",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 109,
+   "pricePhp": 6300,
+   "url": ""
+  },
+  {
+   "id": "luzz-pro-4-inferno",
+   "brand": "Luzz",
+   "model": "Pro-4 Inferno",
+   "shape": "elongated",
+   "weightOz": 7.88,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "luzz-tornazo",
+   "brand": "Luzz",
+   "model": "Tornazo",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "mark-02-r3",
+   "brand": "Mark",
+   "model": "02 R3",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 189.99,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "mark-one",
+   "brand": "Mark",
+   "model": "One",
+   "shape": "hybrid",
+   "weightOz": 8.18,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 159.99,
+   "pricePhp": 9300,
+   "url": ""
+  },
+  {
+   "id": "mark-onex",
+   "brand": "Mark",
+   "model": "OneX",
+   "shape": "hybrid",
+   "weightOz": 7.94,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 159.99,
+   "pricePhp": 9300,
+   "url": ""
+  },
+  {
+   "id": "mark-two",
+   "brand": "Mark",
+   "model": "Two",
+   "shape": "elongated",
+   "weightOz": 8.24,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 159.99,
+   "pricePhp": 9300,
+   "url": ""
+  },
+  {
+   "id": "mark-unmarked-2026",
+   "brand": "Mark",
+   "model": "UnMarked 2026",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 189.99,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "maverix-havik-2",
+   "brand": "Maverix",
+   "model": "Havik 2",
+   "shape": "elongated",
+   "weightOz": 8.1,
+   "thicknessMm": 15,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 164.99,
+   "pricePhp": 9600,
+   "url": ""
+  },
+  {
+   "id": "maverix-havik-15-all-court",
+   "brand": "Maverix",
+   "model": "Havik-15 All-Court",
+   "shape": "elongated",
+   "weightOz": 8.18,
+   "thicknessMm": 15,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 180,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "maverix-havik-15-pro",
+   "brand": "Maverix",
+   "model": "Havik-15 Pro",
+   "shape": "elongated",
+   "weightOz": 8.23,
+   "thicknessMm": 15,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "neonic-flare-prime-x",
+   "brand": "Neonic",
+   "model": "Flare Prime X",
+   "shape": "widebody",
+   "weightOz": 7.77,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "neonic-flare-titanium-16mm",
+   "brand": "Neonic",
+   "model": "Flare Titanium 16mm",
+   "shape": "widebody",
+   "weightOz": 8.15,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 149.99,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "neonic-flow",
+   "brand": "Neonic",
+   "model": "Flow",
+   "shape": "hybrid",
+   "weightOz": 8.14,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 129.99,
+   "pricePhp": 7500,
+   "url": ""
+  },
+  {
+   "id": "neonic-flow-prime-x",
+   "brand": "Neonic",
+   "model": "Flow Prime X",
+   "shape": "hybrid",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "neonic-force",
+   "brand": "Neonic",
+   "model": "Force",
+   "shape": "elongated",
+   "weightOz": 8.06,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 99.99,
+   "pricePhp": 5800,
+   "url": ""
+  },
+  {
+   "id": "neonic-swift-flx-elongated",
+   "brand": "Neonic",
+   "model": "Swift FLX Elongated",
+   "shape": "elongated",
+   "weightOz": 7.74,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 165,
+   "pricePhp": 9600,
+   "url": ""
+  },
+  {
+   "id": "nox-x-foam",
+   "brand": "NOX",
+   "model": "X-FOAM",
+   "shape": "hybrid",
+   "weightOz": 8.08,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "paddletek-bantam-alw-c-12-7",
+   "brand": "Paddletek",
+   "model": "Bantam ALW-C 12.7",
+   "shape": "widebody",
+   "weightOz": 7.55,
+   "thicknessMm": 12.7,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "paddletek-bantam-alw-c-14-3",
+   "brand": "Paddletek",
+   "model": "Bantam ALW-C 14.3",
+   "shape": "widebody",
+   "weightOz": 7.7,
+   "thicknessMm": 14.3,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "paddletek-bantam-esq-c-12-7",
+   "brand": "Paddletek",
+   "model": "Bantam ESQ-C 12.7",
+   "shape": "widebody",
+   "weightOz": 7.82,
+   "thicknessMm": 12.7,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "paddletek-bantam-esq-c-14-3",
+   "brand": "Paddletek",
+   "model": "Bantam ESQ-C 14.3",
+   "shape": "widebody",
+   "weightOz": 7.85,
+   "thicknessMm": 14.3,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "paddletek-bantam-gto-c-12-7",
+   "brand": "Paddletek",
+   "model": "Bantam GTO-C 12.7",
+   "shape": "hybrid",
+   "weightOz": 7.9,
+   "thicknessMm": 12.7,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "paddletek-bantam-gto-c-14-3",
+   "brand": "Paddletek",
+   "model": "Bantam GTO-C 14.3",
+   "shape": "hybrid",
+   "weightOz": 7.93,
+   "thicknessMm": 14.3,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "paddletek-bantam-tko-c-12-7",
+   "brand": "Paddletek",
+   "model": "Bantam TKO-C 12.7",
+   "shape": "elongated",
+   "weightOz": 7.78,
+   "thicknessMm": 12.7,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "paddletek-bantam-tko-c-14-3",
+   "brand": "Paddletek",
+   "model": "Bantam TKO-C 14.3",
+   "shape": "elongated",
+   "weightOz": 7.75,
+   "thicknessMm": 14.3,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "paddletek-bantam-tko-cx-12-7",
+   "brand": "Paddletek",
+   "model": "Bantam TKO-CX 12.7",
+   "shape": "elongated",
+   "weightOz": 7.82,
+   "thicknessMm": 12.7,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "paddletek-bantam-tko-cx-14-3",
+   "brand": "Paddletek",
+   "model": "Bantam TKO-CX 14.3",
+   "shape": "elongated",
+   "weightOz": 8.06,
+   "thicknessMm": 14.3,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 229.99,
+   "pricePhp": 13300,
+   "url": ""
+  },
+  {
+   "id": "paddletek-tempest-wave-pro-c",
+   "brand": "Paddletek",
+   "model": "Tempest Wave Pro-C",
+   "shape": "widebody",
+   "weightOz": 7.92,
+   "thicknessMm": 14.3,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 209.99,
+   "pricePhp": 12200,
+   "url": ""
+  },
+  {
+   "id": "paddletek-tko-x-16",
+   "brand": "Paddletek",
+   "model": "TKO-X 16",
+   "shape": "elongated",
+   "weightOz": 8.35,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "pakle-fuse-elongated",
+   "brand": "Pakle",
+   "model": "Fuse Elongated",
+   "shape": "elongated",
+   "weightOz": 7.7,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 119,
+   "pricePhp": 6900,
+   "url": ""
+  },
+  {
+   "id": "pakle-fuse-hybrid-w",
+   "brand": "Pakle",
+   "model": "Fuse Hybrid W",
+   "shape": "hybrid",
+   "weightOz": 7.6,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 119,
+   "pricePhp": 6900,
+   "url": ""
+  },
+  {
+   "id": "pickleball-apes-charm-s",
+   "brand": "Pickleball Apes",
+   "model": "Charm S",
+   "shape": "hybrid",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "pickleball-apes-charm-v",
+   "brand": "Pickleball Apes",
+   "model": "Charm V",
+   "shape": "widebody",
+   "weightOz": 8.14,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "pickleball-apes-charm-x",
+   "brand": "Pickleball Apes",
+   "model": "Charm X",
+   "shape": "elongated",
+   "weightOz": 8.18,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "pickleball-apes-harmony-s",
+   "brand": "Pickleball Apes",
+   "model": "Harmony S",
+   "shape": "hybrid",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "pickleball-apes-harmony-v",
+   "brand": "Pickleball Apes",
+   "model": "Harmony V",
+   "shape": "widebody",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "pickleball-apes-harmony-x",
+   "brand": "Pickleball Apes",
+   "model": "Harmony X",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "pickleball-apes-joy-s",
+   "brand": "Pickleball Apes",
+   "model": "Joy S",
+   "shape": "hybrid",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 109.99,
+   "pricePhp": 6400,
+   "url": ""
+  },
+  {
+   "id": "pickleball-apes-joy-s-x",
+   "brand": "Pickleball Apes",
+   "model": "Joy S +",
+   "shape": "hybrid",
+   "weightOz": 7.97,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 109.99,
+   "pricePhp": 6400,
+   "url": ""
+  },
+  {
+   "id": "pickleball-apes-pro-line-energy",
+   "brand": "Pickleball Apes",
+   "model": "Pro Line Energy",
+   "shape": "elongated",
+   "weightOz": 8.16,
+   "thicknessMm": 16.5,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 149.99,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "pickleball-apes-pro-line-energy-s",
+   "brand": "Pickleball Apes",
+   "model": "Pro Line Energy S",
+   "shape": "hybrid",
+   "weightOz": 8.1,
+   "thicknessMm": 16.5,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "pickleball-apes-pulse-e",
+   "brand": "Pickleball Apes",
+   "model": "Pulse E",
+   "shape": "elongated",
+   "weightOz": 8.26,
+   "thicknessMm": 16.5,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "pickleball-apes-pulse-s",
+   "brand": "Pickleball Apes",
+   "model": "Pulse S",
+   "shape": "hybrid",
+   "weightOz": 7.98,
+   "thicknessMm": 16.5,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "pickleball-apes-pulse-v",
+   "brand": "Pickleball Apes",
+   "model": "Pulse V",
+   "shape": "widebody",
+   "weightOz": 8.13,
+   "thicknessMm": 16.5,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "pickleball-apes-pulse-x",
+   "brand": "Pickleball Apes",
+   "model": "Pulse X",
+   "shape": "elongated",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "pickleball-apes-zen-s",
+   "brand": "Pickleball Apes",
+   "model": "Zen S+",
+   "shape": "hybrid",
+   "weightOz": 7.76,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "prokennex-black-ace-14",
+   "brand": "ProKennex",
+   "model": "Black Ace 14",
+   "shape": "widebody",
+   "weightOz": 7.8,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 279,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "prokennex-black-ace-16",
+   "brand": "ProKennex",
+   "model": "Black Ace 16",
+   "shape": "widebody",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 279,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "prokennex-black-ace-lg-14",
+   "brand": "ProKennex",
+   "model": "Black Ace LG 14",
+   "shape": "elongated",
+   "weightOz": 7.8,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 279,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "prokennex-black-ace-xf-14",
+   "brand": "ProKennex",
+   "model": "Black Ace XF 14",
+   "shape": "elongated",
+   "weightOz": 7.8,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 279,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "proton-peacock-elongated-13mm",
+   "brand": "Proton",
+   "model": "Peacock Elongated 13mm",
+   "shape": "elongated",
+   "weightOz": 7.6,
+   "thicknessMm": 13,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 280,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "proton-peacock-widebody-13mm",
+   "brand": "Proton",
+   "model": "Peacock Widebody 13mm",
+   "shape": "widebody",
+   "weightOz": 7.8,
+   "thicknessMm": 13,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 280,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "proton-peacock-widebody-15mm",
+   "brand": "Proton",
+   "model": "Peacock Widebody 15mm",
+   "shape": "widebody",
+   "weightOz": 7.9,
+   "thicknessMm": 15,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 280,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "proton-project-coyote",
+   "brand": "Proton",
+   "model": "Project Coyote",
+   "shape": "elongated",
+   "weightOz": 7.94,
+   "thicknessMm": 15,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 195,
+   "pricePhp": 11300,
+   "url": ""
+  },
+  {
+   "id": "proton-project-flamingo",
+   "brand": "Proton",
+   "model": "Project Flamingo",
+   "shape": "elongated",
+   "weightOz": 8.16,
+   "thicknessMm": 15,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 280,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "proton-project-peacock-elongated-15mm",
+   "brand": "Proton",
+   "model": "Project Peacock Elongated 15mm",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 15,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 280,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "proton-series-1-type-a-elongated-11mm",
+   "brand": "Proton",
+   "model": "Series 1 Type A Elongated 11mm",
+   "shape": "elongated",
+   "weightOz": 8.14,
+   "thicknessMm": 11,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 280,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "proton-series-1-type-a-elongated-15mm",
+   "brand": "Proton",
+   "model": "Series 1 Type A Elongated 15mm",
+   "shape": "elongated",
+   "weightOz": 8.6,
+   "thicknessMm": 15,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 280,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "proton-series-1-type-a-square-shape-11mm",
+   "brand": "Proton",
+   "model": "Series 1 Type A Square Shape 11mm",
+   "shape": "widebody",
+   "weightOz": 7.96,
+   "thicknessMm": 11,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 280,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "proton-series-2",
+   "brand": "Proton",
+   "model": "Series 2",
+   "shape": "hybrid",
+   "weightOz": 8.38,
+   "thicknessMm": 15,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 220,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "proton-series-3",
+   "brand": "Proton",
+   "model": "Series 3",
+   "shape": "elongated",
+   "weightOz": 8.2,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "proton-series-4",
+   "brand": "Proton",
+   "model": "Series 4",
+   "shape": "elongated",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 300,
+   "pricePhp": 17400,
+   "url": ""
+  },
+  {
+   "id": "reload-rld-1",
+   "brand": "Reload",
+   "model": "RLD-1",
+   "shape": "elongated",
+   "weightOz": 8.17,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "rev-zeus",
+   "brand": "Rev",
+   "model": "Zeus",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 149,
+   "pricePhp": 8600,
+   "url": ""
+  },
+  {
+   "id": "revolin-drift-pure",
+   "brand": "Revolin",
+   "model": "Drift Pure",
+   "shape": "widebody",
+   "weightOz": 8.08,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 174.99,
+   "pricePhp": 10100,
+   "url": ""
+  },
+  {
+   "id": "revolin-drift-reach",
+   "brand": "Revolin",
+   "model": "Drift Reach",
+   "shape": "elongated",
+   "weightOz": 8.23,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 174.99,
+   "pricePhp": 10100,
+   "url": ""
+  },
+  {
+   "id": "revolin-revo-pro-pure",
+   "brand": "Revolin",
+   "model": "Revo Pro Pure",
+   "shape": "widebody",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "revolin-revo-pro-reach",
+   "brand": "Revolin",
+   "model": "Revo Pro Reach",
+   "shape": "elongated",
+   "weightOz": 7.91,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "ronbus-pulsar-fx-r1",
+   "brand": "Ronbus",
+   "model": "Pulsar FX.R1",
+   "shape": "elongated",
+   "weightOz": 8.21,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 180,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "ronbus-pulsar-fx-r2",
+   "brand": "Ronbus",
+   "model": "Pulsar FX.R2",
+   "shape": "widebody",
+   "weightOz": 8.18,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 180,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "ronbus-pulsar-fx-r3",
+   "brand": "Ronbus",
+   "model": "Pulsar FX.R3",
+   "shape": "elongated",
+   "weightOz": 8.22,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 180,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "ronbus-quanta-pro-r2",
+   "brand": "Ronbus",
+   "model": "Quanta Pro R2",
+   "shape": "widebody",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 120,
+   "pricePhp": 7000,
+   "url": ""
+  },
+  {
+   "id": "ronbus-quanta-pro-r3",
+   "brand": "Ronbus",
+   "model": "Quanta Pro R3",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 120,
+   "pricePhp": 7000,
+   "url": ""
+  },
+  {
+   "id": "ronbus-quanta-pro-r4",
+   "brand": "Ronbus",
+   "model": "Quanta Pro R4",
+   "shape": "hybrid",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 120,
+   "pricePhp": 7000,
+   "url": ""
+  },
+  {
+   "id": "ronbus-quanta-r1",
+   "brand": "Ronbus",
+   "model": "Quanta R1",
+   "shape": "elongated",
+   "weightOz": 7.65,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 119,
+   "pricePhp": 6900,
+   "url": ""
+  },
+  {
+   "id": "ronbus-quanta-r2",
+   "brand": "Ronbus",
+   "model": "Quanta R2",
+   "shape": "widebody",
+   "weightOz": 7.68,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 119,
+   "pricePhp": 6900,
+   "url": ""
+  },
+  {
+   "id": "ronbus-quanta-r3",
+   "brand": "Ronbus",
+   "model": "Quanta R3",
+   "shape": "elongated",
+   "weightOz": 7.69,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 119,
+   "pricePhp": 6900,
+   "url": ""
+  },
+  {
+   "id": "ronbus-quanta-r4",
+   "brand": "Ronbus",
+   "model": "Quanta R4",
+   "shape": "hybrid",
+   "weightOz": 7.7,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 119,
+   "pricePhp": 6900,
+   "url": ""
+  },
+  {
+   "id": "ronbus-quanta-r5",
+   "brand": "Ronbus",
+   "model": "Quanta R5",
+   "shape": "widebody",
+   "weightOz": 7.7,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 119,
+   "pricePhp": 6900,
+   "url": ""
+  },
+  {
+   "id": "ronbus-r1-nova",
+   "brand": "Ronbus",
+   "model": "R1 Nova",
+   "shape": "elongated",
+   "weightOz": 8.14,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 180,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "ronbus-r1-pulsar",
+   "brand": "Ronbus",
+   "model": "R1 Pulsar",
+   "shape": "elongated",
+   "weightOz": 7.87,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 170,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "ronbus-r1-16",
+   "brand": "Ronbus",
+   "model": "R1.16",
+   "shape": "elongated",
+   "weightOz": 7.96,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2022,
+   "approval": "USAP",
+   "priceUsd": 120,
+   "pricePhp": 7000,
+   "url": ""
+  },
+  {
+   "id": "ronbus-r3-nova",
+   "brand": "Ronbus",
+   "model": "R3 Nova",
+   "shape": "elongated",
+   "weightOz": 8.07,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 180,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "ronbus-r3-pulsar",
+   "brand": "Ronbus",
+   "model": "R3 Pulsar",
+   "shape": "elongated",
+   "weightOz": 7.98,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 170,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "ronbus-r3-16",
+   "brand": "Ronbus",
+   "model": "R3.16",
+   "shape": "elongated",
+   "weightOz": 7.73,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2022,
+   "approval": "USAP",
+   "priceUsd": 120,
+   "pricePhp": 7000,
+   "url": ""
+  },
+  {
+   "id": "ronbus-ripple-v2-r1-14",
+   "brand": "Ronbus",
+   "model": "Ripple V2 R1.14",
+   "shape": "elongated",
+   "weightOz": 8.2,
+   "thicknessMm": 14,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 280,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "ronbus-ripple-v2-r2-14",
+   "brand": "Ronbus",
+   "model": "Ripple V2 R2.14",
+   "shape": "widebody",
+   "weightOz": 8.2,
+   "thicknessMm": 14,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 280,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "ronbus-ripple-v2-r4-14",
+   "brand": "Ronbus",
+   "model": "Ripple V2 R4.14",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 14,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 280,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "ronbus-tenon-r1-16",
+   "brand": "Ronbus",
+   "model": "Tenon R1.16",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "ronbus-tenon-r2-16",
+   "brand": "Ronbus",
+   "model": "Tenon R2.16",
+   "shape": "widebody",
+   "weightOz": 7.97,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "ronbus-tenon-r3-16",
+   "brand": "Ronbus",
+   "model": "Tenon R3.16",
+   "shape": "elongated",
+   "weightOz": 8.06,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "ronbus-tenon-r4-16",
+   "brand": "Ronbus",
+   "model": "Tenon R4.16",
+   "shape": "hybrid",
+   "weightOz": 7.87,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 169.99,
+   "pricePhp": 9900,
+   "url": ""
+  },
+  {
+   "id": "rpm-friction-pro-elongated-14",
+   "brand": "RPM",
+   "model": "Friction Pro Elongated 14",
+   "shape": "elongated",
+   "weightOz": 7.81,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "rpm-friction-pro-elongated-16",
+   "brand": "RPM",
+   "model": "Friction Pro Elongated 16",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "rpm-friction-pro-v2-elongated-16",
+   "brand": "RPM",
+   "model": "Friction Pro V2 Elongated 16",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "rpm-friction-pro-widebody-14",
+   "brand": "RPM",
+   "model": "Friction Pro Widebody 14",
+   "shape": "widebody",
+   "weightOz": 7.93,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "rpm-friction-pro-widebody-16",
+   "brand": "RPM",
+   "model": "Friction Pro Widebody 16",
+   "shape": "widebody",
+   "weightOz": 7.95,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "rpm-jade-elongated-16",
+   "brand": "RPM",
+   "model": "Jade Elongated 16",
+   "shape": "elongated",
+   "weightOz": 7.75,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 269.99,
+   "pricePhp": 15700,
+   "url": ""
+  },
+  {
+   "id": "rpm-q2-elongated-14",
+   "brand": "RPM",
+   "model": "Q2 Elongated 14",
+   "shape": "elongated",
+   "weightOz": 7.7,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "rpm-q2-elongated-16",
+   "brand": "RPM",
+   "model": "Q2 Elongated 16",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "rpm-q2-widebody-14",
+   "brand": "RPM",
+   "model": "Q2 Widebody 14",
+   "shape": "widebody",
+   "weightOz": 7.7,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "rpm-q2-widebody-16",
+   "brand": "RPM",
+   "model": "Q2 Widebody 16",
+   "shape": "widebody",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "selkirk-amped-epic-control",
+   "brand": "Selkirk",
+   "model": "Amped Epic Control",
+   "shape": "widebody",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 160,
+   "pricePhp": 9300,
+   "url": ""
+  },
+  {
+   "id": "selkirk-amped-epic-pro-air",
+   "brand": "Selkirk",
+   "model": "Amped Epic Pro Air",
+   "shape": "widebody",
+   "weightOz": 7.97,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 180,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "selkirk-amped-invikta-pro-air",
+   "brand": "Selkirk",
+   "model": "Amped Invikta Pro Air",
+   "shape": "elongated",
+   "weightOz": 7.86,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 180,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "selkirk-boomstik-elongated",
+   "brand": "Selkirk",
+   "model": "Boomstik Elongated",
+   "shape": "elongated",
+   "weightOz": 8.4,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 333,
+   "pricePhp": 19300,
+   "url": ""
+  },
+  {
+   "id": "selkirk-boomstik-widebody",
+   "brand": "Selkirk",
+   "model": "Boomstik Widebody",
+   "shape": "widebody",
+   "weightOz": 8.3,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 333,
+   "pricePhp": 19300,
+   "url": ""
+  },
+  {
+   "id": "selkirk-luxx-control-air-epic",
+   "brand": "Selkirk",
+   "model": "Luxx Control Air Epic",
+   "shape": "widebody",
+   "weightOz": 8.08,
+   "thicknessMm": 20,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "selkirk-luxx-control-air-invikta",
+   "brand": "Selkirk",
+   "model": "Luxx Control Air Invikta",
+   "shape": "elongated",
+   "weightOz": 7.96,
+   "thicknessMm": 20,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "selkirk-luxx-control-air-invikta-infinigrit",
+   "brand": "Selkirk",
+   "model": "Luxx Control Air Invikta Infinigrit",
+   "shape": "elongated",
+   "weightOz": 8.05,
+   "thicknessMm": 19,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 280,
+   "pricePhp": 16200,
+   "url": ""
+  },
+  {
+   "id": "selkirk-luxx-control-air-s2",
+   "brand": "Selkirk",
+   "model": "Luxx Control Air S2",
+   "shape": "widebody",
+   "weightOz": 8.17,
+   "thicknessMm": 20,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "selkirk-omni-elongated-w-moi",
+   "brand": "Selkirk",
+   "model": "Omni Elongated w/MOI",
+   "shape": "elongated",
+   "weightOz": 8.11,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 300,
+   "pricePhp": 17400,
+   "url": ""
+  },
+  {
+   "id": "selkirk-omni-elongated-w-o-moi",
+   "brand": "Selkirk",
+   "model": "Omni Elongated w/o MOI",
+   "shape": "elongated",
+   "weightOz": 7.58,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 300,
+   "pricePhp": 17400,
+   "url": ""
+  },
+  {
+   "id": "selkirk-omni-widebody-w-moi",
+   "brand": "Selkirk",
+   "model": "Omni Widebody w/MOI",
+   "shape": "widebody",
+   "weightOz": 8.28,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 300,
+   "pricePhp": 17400,
+   "url": ""
+  },
+  {
+   "id": "selkirk-omni-widebody-w-o-moi",
+   "brand": "Selkirk",
+   "model": "Omni Widebody w/o MOI",
+   "shape": "widebody",
+   "weightOz": 7.75,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 300,
+   "pricePhp": 17400,
+   "url": ""
+  },
+  {
+   "id": "selkirk-power-air-epic",
+   "brand": "Selkirk",
+   "model": "Power Air Epic",
+   "shape": "widebody",
+   "weightOz": 8.04,
+   "thicknessMm": 13,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2022,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "selkirk-power-air-invikta",
+   "brand": "Selkirk",
+   "model": "Power Air Invikta",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 13,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2022,
+   "approval": "USAP",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "selkirk-slk-dauntless-elongated",
+   "brand": "Selkirk",
+   "model": "SLK Dauntless Elongated",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 180,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "selkirk-slk-dauntless-widebody",
+   "brand": "Selkirk",
+   "model": "SLK Dauntless Widebody",
+   "shape": "widebody",
+   "weightOz": 7.86,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 180,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "selkirk-vanguard-control-epic-midweight",
+   "brand": "Selkirk",
+   "model": "Vanguard Control Epic (midweight)",
+   "shape": "widebody",
+   "weightOz": 8.14,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "selkirk-vanguard-control-invikta-mideweight",
+   "brand": "Selkirk",
+   "model": "Vanguard Control Invikta (mideweight)",
+   "shape": "elongated",
+   "weightOz": 7.97,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "selkirk-vanguard-control-s2-midweight",
+   "brand": "Selkirk",
+   "model": "Vanguard Control S2 (midweight)",
+   "shape": "widebody",
+   "weightOz": 8.01,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "selkirk-vanguard-pro-power-invikta",
+   "brand": "Selkirk",
+   "model": "Vanguard Pro Power Invikta",
+   "shape": "elongated",
+   "weightOz": 8.03,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 220,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "selkirk-labs-008-epic-13mm",
+   "brand": "Selkirk Labs",
+   "model": "008 Epic 13mm",
+   "shape": "widebody",
+   "weightOz": 7.75,
+   "thicknessMm": 13,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 288,
+   "pricePhp": 16700,
+   "url": ""
+  },
+  {
+   "id": "selkirk-labs-008-invikta-10mm",
+   "brand": "Selkirk Labs",
+   "model": "008 Invikta 10mm",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 10,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 288,
+   "pricePhp": 16700,
+   "url": ""
+  },
+  {
+   "id": "selkirk-labs-008-invikta-13mm",
+   "brand": "Selkirk Labs",
+   "model": "008 Invikta 13mm",
+   "shape": "elongated",
+   "weightOz": 7.7,
+   "thicknessMm": 13,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 288,
+   "pricePhp": 16700,
+   "url": ""
+  },
+  {
+   "id": "selkirk-labs-008-tour-13mm",
+   "brand": "Selkirk Labs",
+   "model": "008 Tour 13mm",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 13,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 288,
+   "pricePhp": 16700,
+   "url": ""
+  },
+  {
+   "id": "selkirk-labs-008-tour-16mm",
+   "brand": "Selkirk Labs",
+   "model": "008 Tour 16mm",
+   "shape": "elongated",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 288,
+   "pricePhp": 16700,
+   "url": ""
+  },
+  {
+   "id": "selkirk-labs-project-006-maxima",
+   "brand": "Selkirk Labs",
+   "model": "Project 006 Maxima",
+   "shape": "elongated",
+   "weightOz": 8.39,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 333,
+   "pricePhp": 19300,
+   "url": ""
+  },
+  {
+   "id": "selkirk-labs-project-007-epic-14mm",
+   "brand": "Selkirk Labs",
+   "model": "Project 007 Epic 14mm",
+   "shape": "widebody",
+   "weightOz": 8.13,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 333,
+   "pricePhp": 19300,
+   "url": ""
+  },
+  {
+   "id": "selkirk-labs-project-007-invikta-14mm",
+   "brand": "Selkirk Labs",
+   "model": "Project 007 Invikta 14mm",
+   "shape": "elongated",
+   "weightOz": 8.13,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 333,
+   "pricePhp": 19300,
+   "url": ""
+  },
+  {
+   "id": "six-zero-black-diamond-14mm",
+   "brand": "Six Zero",
+   "model": "Black Diamond 14mm",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 180,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "six-zero-black-diamond-16mm",
+   "brand": "Six Zero",
+   "model": "Black Diamond 16mm",
+   "shape": "hybrid",
+   "weightOz": 8.07,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "six-zero-black-diamond-amethyst-pro",
+   "brand": "Six Zero",
+   "model": "Black Diamond Amethyst Pro",
+   "shape": "hybrid",
+   "weightOz": 8.23,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 199,
+   "pricePhp": 11500,
+   "url": ""
+  },
+  {
+   "id": "six-zero-black-diamond-infinity-16mm",
+   "brand": "Six Zero",
+   "model": "Black Diamond Infinity 16mm",
+   "shape": "hybrid",
+   "weightOz": 7.97,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 220,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "six-zero-black-opal",
+   "brand": "Six Zero",
+   "model": "Black Opal",
+   "shape": "hybrid",
+   "weightOz": 8.1,
+   "thicknessMm": 14,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 250,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "six-zero-boulder-opal",
+   "brand": "Six Zero",
+   "model": "Boulder Opal",
+   "shape": "hybrid",
+   "weightOz": 8.14,
+   "thicknessMm": 14,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 220,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "six-zero-coral-elongated",
+   "brand": "Six Zero",
+   "model": "Coral Elongated",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "six-zero-coral-hybrid",
+   "brand": "Six Zero",
+   "model": "Coral Hybrid",
+   "shape": "hybrid",
+   "weightOz": 8.16,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "six-zero-coral-pro-elongated",
+   "brand": "Six Zero",
+   "model": "Coral Pro Elongated",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 220,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "six-zero-coral-pro-hybrid",
+   "brand": "Six Zero",
+   "model": "Coral Pro Hybrid",
+   "shape": "hybrid",
+   "weightOz": 8.2,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 220,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "six-zero-coral-pro-widebody",
+   "brand": "Six Zero",
+   "model": "Coral Pro Widebody",
+   "shape": "widebody",
+   "weightOz": 8.16,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 220,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "six-zero-coral-widebody",
+   "brand": "Six Zero",
+   "model": "Coral Widebody",
+   "shape": "widebody",
+   "weightOz": 8.26,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "six-zero-double-black-diamond-elongated",
+   "brand": "Six Zero",
+   "model": "Double Black Diamond (Elongated)",
+   "shape": "elongated",
+   "weightOz": 8.18,
+   "thicknessMm": 15,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 189.99,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "six-zero-double-black-diamond-14-mm",
+   "brand": "Six Zero",
+   "model": "Double Black Diamond 14 mm",
+   "shape": "hybrid",
+   "weightOz": 7.87,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "six-zero-double-black-diamond-16-mm",
+   "brand": "Six Zero",
+   "model": "Double Black Diamond 16 mm",
+   "shape": "hybrid",
+   "weightOz": 8.07,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "six-zero-double-black-diamond-infinity-16mm",
+   "brand": "Six Zero",
+   "model": "Double Black Diamond Infinity 16mm",
+   "shape": "hybrid",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 220,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "six-zero-infinity-ruby",
+   "brand": "Six Zero",
+   "model": "Infinity Ruby",
+   "shape": "hybrid",
+   "weightOz": 8.5,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 220,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "six-zero-quartz",
+   "brand": "Six Zero",
+   "model": "Quartz",
+   "shape": "widebody",
+   "weightOz": 7.97,
+   "thicknessMm": 15,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 89.99,
+   "pricePhp": 5200,
+   "url": ""
+  },
+  {
+   "id": "six-zero-ruby",
+   "brand": "Six Zero",
+   "model": "Ruby",
+   "shape": "hybrid",
+   "weightOz": 8.33,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "six-zero-ruby-14mm",
+   "brand": "Six Zero",
+   "model": "Ruby (14mm)",
+   "shape": "hybrid",
+   "weightOz": 8.1,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "six-zero-ruby-pro",
+   "brand": "Six Zero",
+   "model": "Ruby Pro",
+   "shape": "hybrid",
+   "weightOz": 8.1,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 225,
+   "pricePhp": 13100,
+   "url": ""
+  },
+  {
+   "id": "six-zero-sapphire-v2",
+   "brand": "Six Zero",
+   "model": "Sapphire V2",
+   "shape": "elongated",
+   "weightOz": 7.85,
+   "thicknessMm": 13,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "slk-era-power-elongated",
+   "brand": "SLK",
+   "model": "ERA Power Elongated",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "slk-era-power-widebody",
+   "brand": "SLK",
+   "model": "ERA Power Widebody",
+   "shape": "widebody",
+   "weightOz": 8.14,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 200,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "slk-halo-control-max",
+   "brand": "SLK",
+   "model": "Halo Control Max",
+   "shape": "widebody",
+   "weightOz": 7.94,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2022,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "slk-halo-control-max-2024-version",
+   "brand": "SLK",
+   "model": "Halo Control Max (2024 version)",
+   "shape": "widebody",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 130,
+   "pricePhp": 7500,
+   "url": ""
+  },
+  {
+   "id": "slk-halo-control-xl",
+   "brand": "SLK",
+   "model": "Halo Control XL",
+   "shape": "elongated",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2022,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "slk-halo-power-max",
+   "brand": "SLK",
+   "model": "Halo Power Max",
+   "shape": "widebody",
+   "weightOz": 7.97,
+   "thicknessMm": 13,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2022,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "slk-halo-power-max-2024-version",
+   "brand": "SLK",
+   "model": "Halo Power Max (2024 version)",
+   "shape": "widebody",
+   "weightOz": 7.7,
+   "thicknessMm": 13,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 130,
+   "pricePhp": 7500,
+   "url": ""
+  },
+  {
+   "id": "slk-halo-power-xl",
+   "brand": "SLK",
+   "model": "Halo Power XL",
+   "shape": "elongated",
+   "weightOz": 7.97,
+   "thicknessMm": 13,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2022,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "slk-halo-pro-max",
+   "brand": "SLK",
+   "model": "Halo Pro Max",
+   "shape": "widebody",
+   "weightOz": 7.92,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 150,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "slk-halo-pro-xl",
+   "brand": "SLK",
+   "model": "Halo Pro XL",
+   "shape": "elongated",
+   "weightOz": 7.98,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 150,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "spartus-apollo",
+   "brand": "Spartus",
+   "model": "Apollo",
+   "shape": "widebody",
+   "weightOz": 8.07,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 129.99,
+   "pricePhp": 7500,
+   "url": ""
+  },
+  {
+   "id": "spartus-ballista",
+   "brand": "Spartus",
+   "model": "Ballista",
+   "shape": "elongated",
+   "weightOz": 7.94,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 159.99,
+   "pricePhp": 9300,
+   "url": ""
+  },
+  {
+   "id": "spartus-gladius-centurion",
+   "brand": "Spartus",
+   "model": "Gladius Centurion",
+   "shape": "elongated",
+   "weightOz": 7.98,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 99.99,
+   "pricePhp": 5800,
+   "url": ""
+  },
+  {
+   "id": "spartus-odyssey-apex",
+   "brand": "Spartus",
+   "model": "Odyssey Apex",
+   "shape": "hybrid",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 89.99,
+   "pricePhp": 5200,
+   "url": ""
+  },
+  {
+   "id": "spartus-olympus",
+   "brand": "Spartus",
+   "model": "Olympus",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 14,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "spartus-orion",
+   "brand": "Spartus",
+   "model": "Orion",
+   "shape": "elongated",
+   "weightOz": 7.93,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 89.99,
+   "pricePhp": 5200,
+   "url": ""
+  },
+  {
+   "id": "spartus-p1-hybrid",
+   "brand": "Spartus",
+   "model": "P1 Hybrid",
+   "shape": "hybrid",
+   "weightOz": 8.12,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "spartus-p1-standard",
+   "brand": "Spartus",
+   "model": "P1 Standard",
+   "shape": "widebody",
+   "weightOz": 8.15,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "spartus-spitfire-elongated",
+   "brand": "Spartus",
+   "model": "Spitfire Elongated",
+   "shape": "elongated",
+   "weightOz": 7.82,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 109.99,
+   "pricePhp": 6400,
+   "url": ""
+  },
+  {
+   "id": "tecnifibre-tf-blitz",
+   "brand": "Tecnifibre",
+   "model": "TF-Blitz",
+   "shape": "elongated",
+   "weightOz": 8.24,
+   "thicknessMm": 15,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 209,
+   "pricePhp": 12100,
+   "url": ""
+  },
+  {
+   "id": "tecnifibre-tf-command",
+   "brand": "Tecnifibre",
+   "model": "TF-Command",
+   "shape": "widebody",
+   "weightOz": 8.16,
+   "thicknessMm": 15,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 209,
+   "pricePhp": 12100,
+   "url": ""
+  },
+  {
+   "id": "tecnifibre-tf-select",
+   "brand": "Tecnifibre",
+   "model": "TF-Select",
+   "shape": "hybrid",
+   "weightOz": 8.1,
+   "thicknessMm": 15,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 209,
+   "pricePhp": 12100,
+   "url": ""
+  },
+  {
+   "id": "thrive-azul-16",
+   "brand": "Thrive",
+   "model": "Azul 16",
+   "shape": "hybrid",
+   "weightOz": 8.12,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "thrive-blackout-16",
+   "brand": "Thrive",
+   "model": "Blackout 16",
+   "shape": "hybrid",
+   "weightOz": 8.28,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "thrive-fury-elongated",
+   "brand": "Thrive",
+   "model": "Fury Elongated",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 15.5,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "thrive-ignite-elongated",
+   "brand": "Thrive",
+   "model": "Ignite Elongated",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 15.5,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "thrive-ignite-elongated-arc",
+   "brand": "Thrive",
+   "model": "Ignite Elongated Arc",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 15.5,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "thrive-ignite-hybrid",
+   "brand": "Thrive",
+   "model": "Ignite Hybrid",
+   "shape": "hybrid",
+   "weightOz": 7.99,
+   "thicknessMm": 15.5,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "thrive-ignite-hybrid-light-weight",
+   "brand": "Thrive",
+   "model": "Ignite Hybrid Light Weight",
+   "shape": "hybrid",
+   "weightOz": 7.8,
+   "thicknessMm": 15.5,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "thrive-project-fury",
+   "brand": "Thrive",
+   "model": "Project Fury",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 15.5,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "thrive-rush-13mm",
+   "brand": "Thrive",
+   "model": "Rush 13mm",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 13,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "thrive-smoke",
+   "brand": "Thrive",
+   "model": "Smoke",
+   "shape": "elongated",
+   "weightOz": 7.96,
+   "thicknessMm": 14.5,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 219.99,
+   "pricePhp": 12800,
+   "url": ""
+  },
+  {
+   "id": "thrive-surge-16",
+   "brand": "Thrive",
+   "model": "Surge 16",
+   "shape": "hybrid",
+   "weightOz": 8.03,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "thrive-threat-16mm",
+   "brand": "Thrive",
+   "model": "Threat 16mm",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-flash-14-mm",
+   "brand": "Vatic Pro",
+   "model": "Flash 14 mm",
+   "shape": "hybrid",
+   "weightOz": 7.94,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-flash-16-mm",
+   "brand": "Vatic Pro",
+   "model": "Flash 16 mm",
+   "shape": "hybrid",
+   "weightOz": 8.25,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-prism-bloom-14mm",
+   "brand": "Vatic Pro",
+   "model": "Prism Bloom 14mm",
+   "shape": "widebody",
+   "weightOz": 7.7,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 99.99,
+   "pricePhp": 5800,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-prism-bloom-16mm",
+   "brand": "Vatic Pro",
+   "model": "Prism Bloom 16mm",
+   "shape": "widebody",
+   "weightOz": 7.92,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 99.99,
+   "pricePhp": 5800,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-prism-flash-14-mm",
+   "brand": "Vatic Pro",
+   "model": "Prism Flash 14 mm",
+   "shape": "hybrid",
+   "weightOz": 7.8,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 99.99,
+   "pricePhp": 5800,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-prism-flash-16-mm",
+   "brand": "Vatic Pro",
+   "model": "Prism Flash 16 mm",
+   "shape": "hybrid",
+   "weightOz": 7.91,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 99.99,
+   "pricePhp": 5800,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-prism-flash-lh-14",
+   "brand": "Vatic Pro",
+   "model": "Prism Flash LH 14",
+   "shape": "hybrid",
+   "weightOz": 7.94,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 99.99,
+   "pricePhp": 5800,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-prism-flash-lh-16",
+   "brand": "Vatic Pro",
+   "model": "Prism Flash LH 16",
+   "shape": "hybrid",
+   "weightOz": 8.05,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 99.99,
+   "pricePhp": 5800,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-prism-v7",
+   "brand": "Vatic Pro",
+   "model": "Prism V7",
+   "shape": "elongated",
+   "weightOz": 8.44,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 99.99,
+   "pricePhp": 5800,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-prism-v7-lh",
+   "brand": "Vatic Pro",
+   "model": "Prism V7 LH",
+   "shape": "elongated",
+   "weightOz": 7.97,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 99.99,
+   "pricePhp": 5800,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-saga-bloom-14mm",
+   "brand": "Vatic Pro",
+   "model": "Saga Bloom 14mm",
+   "shape": "widebody",
+   "weightOz": 7.7,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 149.99,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-saga-bloom-16mm",
+   "brand": "Vatic Pro",
+   "model": "Saga Bloom 16mm",
+   "shape": "widebody",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 149.99,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-saga-flash-lh-16mm",
+   "brand": "Vatic Pro",
+   "model": "Saga Flash LH 16mm",
+   "shape": "elongated",
+   "weightOz": 8.17,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 149.99,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-saga-flash-sh-14mm",
+   "brand": "Vatic Pro",
+   "model": "Saga Flash SH 14mm",
+   "shape": "hybrid",
+   "weightOz": 7.7,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 149.99,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-saga-flash-sh-16mm",
+   "brand": "Vatic Pro",
+   "model": "Saga Flash SH 16mm",
+   "shape": "hybrid",
+   "weightOz": 7.93,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 149.99,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-saga-v7-lh",
+   "brand": "Vatic Pro",
+   "model": "Saga V7 LH",
+   "shape": "elongated",
+   "weightOz": 8.28,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 149.99,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-saga-v7-sh",
+   "brand": "Vatic Pro",
+   "model": "Saga V7 SH",
+   "shape": "elongated",
+   "weightOz": 8.13,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 149.99,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-saga-v7-sh-14mm",
+   "brand": "Vatic Pro",
+   "model": "Saga V7 SH 14mm",
+   "shape": "elongated",
+   "weightOz": 7.9,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 149.99,
+   "pricePhp": 8700,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-v-sol-power-bloom",
+   "brand": "Vatic Pro",
+   "model": "V-Sol Power Bloom",
+   "shape": "widebody",
+   "weightOz": 7.95,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 109.99,
+   "pricePhp": 6400,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-v-sol-power-flash",
+   "brand": "Vatic Pro",
+   "model": "V-Sol Power Flash",
+   "shape": "hybrid",
+   "weightOz": 7.97,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 109.99,
+   "pricePhp": 6400,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-v-sol-power-v7",
+   "brand": "Vatic Pro",
+   "model": "V-Sol Power V7",
+   "shape": "elongated",
+   "weightOz": 8.14,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 109.99,
+   "pricePhp": 6400,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-v-sol-power-v7-lh",
+   "brand": "Vatic Pro",
+   "model": "V-Sol Power V7 LH",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 109.99,
+   "pricePhp": 6400,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-v-sol-pro-bloom",
+   "brand": "Vatic Pro",
+   "model": "V-Sol Pro Bloom",
+   "shape": "widebody",
+   "weightOz": 7.92,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 109.99,
+   "pricePhp": 6400,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-v-sol-pro-flash",
+   "brand": "Vatic Pro",
+   "model": "V-Sol Pro Flash",
+   "shape": "hybrid",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 109.99,
+   "pricePhp": 6400,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-v-sol-pro-flash-lh",
+   "brand": "Vatic Pro",
+   "model": "V-Sol Pro Flash LH",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 109.99,
+   "pricePhp": 6400,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-v-sol-pro-v7",
+   "brand": "Vatic Pro",
+   "model": "V-Sol Pro V7",
+   "shape": "elongated",
+   "weightOz": 8.15,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 109.99,
+   "pricePhp": 6400,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-v-sol-pro-v7-lh",
+   "brand": "Vatic Pro",
+   "model": "V-Sol Pro V7 LH",
+   "shape": "elongated",
+   "weightOz": 7.97,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 109.99,
+   "pricePhp": 6400,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-v-sol-tour-bloom",
+   "brand": "Vatic Pro",
+   "model": "V-Sol Tour Bloom",
+   "shape": "widebody",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 109.99,
+   "pricePhp": 6400,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-v-sol-tour-elongated",
+   "brand": "Vatic Pro",
+   "model": "V-Sol Tour Elongated",
+   "shape": "elongated",
+   "weightOz": 8.05,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 109.99,
+   "pricePhp": 6400,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-v-sol-tour-flash-sh",
+   "brand": "Vatic Pro",
+   "model": "V-Sol Tour Flash SH",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 109.99,
+   "pricePhp": 6400,
+   "url": ""
+  },
+  {
+   "id": "vatic-pro-v7",
+   "brand": "Vatic Pro",
+   "model": "V7",
+   "shape": "elongated",
+   "weightOz": 8.32,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "versix-vector-xl",
+   "brand": "Versix",
+   "model": "Vector XL",
+   "shape": "elongated",
+   "weightOz": 8.3,
+   "thicknessMm": 15,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 129.99,
+   "pricePhp": 7500,
+   "url": ""
+  },
+  {
+   "id": "volair-cmd-hybrid",
+   "brand": "Volair",
+   "model": "CMD Hybrid",
+   "shape": "hybrid",
+   "weightOz": 7.8,
+   "thicknessMm": 16,
+   "style": "all-court",
+   "levels": [
+    "beginner",
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "volair-ctrl-1-forza",
+   "brand": "Volair",
+   "model": "CTRL 1 Forza",
+   "shape": "hybrid",
+   "weightOz": 8,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "volair-ctrl-2-forza",
+   "brand": "Volair",
+   "model": "CTRL 2 Forza",
+   "shape": "widebody",
+   "weightOz": 7.96,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2024,
+   "approval": "USAP",
+   "priceUsd": 199.99,
+   "pricePhp": 11600,
+   "url": ""
+  },
+  {
+   "id": "volair-mach-1-14mm",
+   "brand": "Volair",
+   "model": "Mach 1 14mm",
+   "shape": "elongated",
+   "weightOz": 7.84,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2022,
+   "approval": "USAP",
+   "priceUsd": 159.99,
+   "pricePhp": 9300,
+   "url": ""
+  },
+  {
+   "id": "volair-mach-1-16mm",
+   "brand": "Volair",
+   "model": "Mach 1 16mm",
+   "shape": "elongated",
+   "weightOz": 8.06,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2022,
+   "approval": "USAP",
+   "priceUsd": 159.99,
+   "pricePhp": 9300,
+   "url": ""
+  },
+  {
+   "id": "volair-mach-1-forza-14mm",
+   "brand": "Volair",
+   "model": "Mach 1 Forza 14mm",
+   "shape": "elongated",
+   "weightOz": 7.69,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "volair-mach-1-forza-16mm",
+   "brand": "Volair",
+   "model": "Mach 1 Forza 16mm",
+   "shape": "elongated",
+   "weightOz": 8.19,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "volair-mach-2-14mm",
+   "brand": "Volair",
+   "model": "Mach 2 14mm",
+   "shape": "widebody",
+   "weightOz": 7.9,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "volair-mach-2-16-mm",
+   "brand": "Volair",
+   "model": "Mach 2 16 mm",
+   "shape": "widebody",
+   "weightOz": 7.97,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 139.99,
+   "pricePhp": 8100,
+   "url": ""
+  },
+  {
+   "id": "volair-mach-2-forza-14mm",
+   "brand": "Volair",
+   "model": "Mach 2 Forza 14mm",
+   "shape": "widebody",
+   "weightOz": 7.8,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "volair-mach-2-forza-16mm",
+   "brand": "Volair",
+   "model": "Mach 2 Forza 16mm",
+   "shape": "widebody",
+   "weightOz": 8.02,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2023,
+   "approval": "USAP",
+   "priceUsd": 179.99,
+   "pricePhp": 10400,
+   "url": ""
+  },
+  {
+   "id": "volair-shift-el-14",
+   "brand": "Volair",
+   "model": "Shift EL 14",
+   "shape": "elongated",
+   "weightOz": 8.2,
+   "thicknessMm": 14,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 189.99,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "volair-shift-hyb-14",
+   "brand": "Volair",
+   "model": "Shift HYB 14",
+   "shape": "hybrid",
+   "weightOz": 8.15,
+   "thicknessMm": 14,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP/UPA-A",
+   "priceUsd": 189.99,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "volair-shift-wb-14",
+   "brand": "Volair",
+   "model": "Shift WB 14",
+   "shape": "widebody",
+   "weightOz": 8.2,
+   "thicknessMm": 14,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "USAP",
+   "priceUsd": 189.99,
+   "pricePhp": 11000,
+   "url": ""
+  },
+  {
+   "id": "volair-v-1f-hyb",
+   "brand": "Volair",
+   "model": "V.1F HYB",
+   "shape": "hybrid",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199,
+   "pricePhp": 11500,
+   "url": ""
+  },
+  {
+   "id": "volair-v-1f-wb",
+   "brand": "Volair",
+   "model": "V.1F WB",
+   "shape": "widebody",
+   "weightOz": 8.1,
+   "thicknessMm": 16,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 199,
+   "pricePhp": 11500,
+   "url": ""
+  },
+  {
+   "id": "vulcan-dark-matter",
+   "brand": "Vulcan",
+   "model": "Dark Matter",
+   "shape": "hybrid",
+   "weightOz": 7.9,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "vulcan-kyrgios",
+   "brand": "Vulcan",
+   "model": "Kyrgios",
+   "shape": "elongated",
+   "weightOz": 8.12,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "vulcan-white-noise",
+   "brand": "Vulcan",
+   "model": "White Noise",
+   "shape": "widebody",
+   "weightOz": 7.76,
+   "thicknessMm": 16,
+   "style": "power",
+   "levels": [
+    "intermediate",
+    "advanced"
+   ],
+   "year": 2026,
+   "approval": "UPA-A",
+   "priceUsd": 249.99,
+   "pricePhp": 14500,
+   "url": ""
+  },
+  {
+   "id": "wilson-vesper-control-17",
+   "brand": "Wilson",
+   "model": "Vesper Control 17",
+   "shape": "widebody",
+   "weightOz": 8.05,
+   "thicknessMm": 17,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 249,
+   "pricePhp": 14400,
+   "url": ""
+  },
+  {
+   "id": "wilson-vesper-power-14",
+   "brand": "Wilson",
+   "model": "Vesper Power 14",
+   "shape": "elongated",
+   "weightOz": 8,
+   "thicknessMm": 14,
+   "style": "control",
+   "levels": [
+    "beginner",
+    "intermediate"
+   ],
+   "year": 2025,
+   "approval": "USAP",
+   "priceUsd": 249,
+   "pricePhp": 14400,
+   "url": ""
+  }
+ ]
 }

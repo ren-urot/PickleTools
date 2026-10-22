@@ -11,15 +11,19 @@ export interface Paddle {
   shape: Shape
   weightOz: number
   thicknessMm: number
-  face: string
   style: Style
   levels: string[]
+  year: number | null
+  /** e.g. "USAP", "USAP/UPA-A", "UPA-A". */
+  approval: string
+  priceUsd: number
   pricePhp: number
   url: string
 }
 
 export const catalog = data.paddles as Paddle[]
-export const catalogInfo = { lastReviewed: data.lastReviewed, note: data.note }
+export const catalogInfo = { lastReviewed: data.lastReviewed, note: data.note, source: data.source, usdToPhp: data.usdToPhp }
+export const brands = [...new Set(catalog.map((p) => p.brand))].sort((a, b) => a.localeCompare(b))
 export const MAX_COMPARE = 3
 
 export function weightClass(oz: number): WeightClass {
@@ -28,18 +32,26 @@ export function weightClass(oz: number): WeightClass {
   return 'mid'
 }
 
+/** Approved for USA Pickleball sanctioned play. */
+export const isApproved = (p: Pick<Paddle, 'approval'>) => /USAP/.test(p.approval)
+
 export interface Filters {
+  query: string
+  brand: string
   maxPrice: number
   weight: WeightClass | 'any'
   shape: Shape | 'any'
   style: Style | 'any'
   level: string
-  sort: 'price-asc' | 'price-desc' | 'weight'
+  sort: 'price-asc' | 'price-desc' | 'weight' | 'newest'
 }
 
+export const PRICE_FLOOR = Math.floor(Math.min(...catalog.map((p) => p.pricePhp)) / 1000) * 1000
 export const PRICE_CEILING = Math.ceil(Math.max(...catalog.map((p) => p.pricePhp)) / 1000) * 1000
 
 export const defaultFilters = (): Filters => ({
+  query: '',
+  brand: 'any',
   maxPrice: PRICE_CEILING,
   weight: 'any',
   shape: 'any',
@@ -48,9 +60,14 @@ export const defaultFilters = (): Filters => ({
   sort: 'price-asc',
 })
 
+const normalize = (s: string) => s.toLowerCase().replace(/\s+/g, ' ').trim()
+
 export function applyFilters(list: Paddle[], f: Filters): Paddle[] {
+  const q = normalize(f.query ?? '')
   const out = list.filter(
     (p) =>
+      (!q || normalize(`${p.brand} ${p.model}`).includes(q)) &&
+      (!f.brand || f.brand === 'any' || p.brand === f.brand) &&
       p.pricePhp <= f.maxPrice &&
       (f.weight === 'any' || weightClass(p.weightOz) === f.weight) &&
       (f.shape === 'any' || p.shape === f.shape) &&
@@ -61,6 +78,7 @@ export function applyFilters(list: Paddle[], f: Filters): Paddle[] {
     'price-asc': (a: Paddle, b: Paddle) => a.pricePhp - b.pricePhp,
     'price-desc': (a: Paddle, b: Paddle) => b.pricePhp - a.pricePhp,
     weight: (a: Paddle, b: Paddle) => a.weightOz - b.weightOz,
+    newest: (a: Paddle, b: Paddle) => (b.year ?? 0) - (a.year ?? 0) || a.pricePhp - b.pricePhp,
   }[f.sort]
   return out.sort(by)
 }

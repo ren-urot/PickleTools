@@ -1,19 +1,24 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { AppShell } from '../../shared/AppShell'
 import { DemoLimit, isDemo } from '../../shared/demo'
 import { peso } from '../../config/store'
 import { useLocalState } from '../../shared/storage'
 import { useOnline } from '../../shared/pwa'
-import { applyFilters, catalog, catalogInfo, defaultFilters, MAX_COMPARE, PRICE_CEILING, shopUrl, toggleCompare, weightClass, type Filters, type Paddle } from './filter'
+import { applyFilters, brands, catalog, catalogInfo, defaultFilters, isApproved, MAX_COMPARE, PRICE_CEILING, PRICE_FLOOR, shopUrl, toggleCompare, weightClass, type Filters, type Paddle } from './filter'
 
 type Tab = 'browse' | 'compare' | 'favorites' | 'guide'
 const cap = (s: string) => s[0].toUpperCase() + s.slice(1)
 
 /** The demo shows the first few matching paddles; filters and compare still work on them. */
 const DEMO_PADDLES = 4
+/** Cards rendered per "Show more" step, so 500+ paddles stay fast on phones. */
+const PAGE = 24
 
 export default function App() {
-  const [filters, setFilters] = useLocalState<Filters>('pt:paddle-finder:filters', defaultFilters)
+  const [savedFilters, setFilters] = useLocalState<Filters>('pt:paddle-finder:filters', defaultFilters)
+  const filters = useMemo(() => ({ ...defaultFilters(), ...savedFilters }), [savedFilters])
+  const [shown, setShown] = useState(PAGE)
+  useEffect(() => setShown(PAGE), [filters])
   const [favs, setFavs] = useLocalState<string[]>('pt:paddle-finder:favorites', [])
   const [compare, setCompare] = useState<string[]>([])
   const [tab, setTab] = useState<Tab>('browse')
@@ -66,7 +71,12 @@ export default function App() {
             </div>
           ) : (
             <>
-              <ul className="grid gap-3 sm:grid-cols-2">{(isDemo() ? results.slice(0, DEMO_PADDLES) : results).map(card)}</ul>
+              <ul className="grid gap-3 sm:grid-cols-2">{results.slice(0, isDemo() ? DEMO_PADDLES : shown).map(card)}</ul>
+              {!isDemo() && results.length > shown && (
+                <button className="btn-ghost w-full" onClick={() => setShown((n) => n + PAGE)}>
+                  Show {Math.min(PAGE, results.length - shown)} more · {results.length - shown} left
+                </button>
+              )}
               {isDemo() && results.length > DEMO_PADDLES && (
                 <DemoLimit slug="paddle-finder" title={`${results.length - DEMO_PADDLES} more paddles match your filters`}>Buy the app to browse the whole catalog, save favourites and use it offline.</DemoLimit>
               )}
@@ -88,7 +98,11 @@ export default function App() {
       {tab === 'guide' && <Guide />}
 
       <p className="mt-6 text-xs text-ink/50">
-        Catalog reviewed {new Date(catalogInfo.lastReviewed).toLocaleDateString('en-PH', { month: 'long', year: 'numeric' })}. {catalogInfo.note}
+        {catalog.length} paddles from {brands.length} brands. Specs from the{' '}
+        <a className="underline" href={catalogInfo.source.url} target="_blank" rel="noopener noreferrer">
+          {catalogInfo.source.name}
+        </a>
+        , updated {new Date(catalogInfo.lastReviewed).toLocaleDateString('en-PH', { month: 'long', year: 'numeric' })}. {catalogInfo.note}
       </p>
     </AppShell>
   )
@@ -115,23 +129,32 @@ function Select<T extends string>({ label, value, options, onChange }: { label: 
 function FilterPanel({ f, set, count }: { f: Filters; set: (f: Filters) => void; count: number }) {
   return (
     <div className="card space-y-3 p-4">
+      <div className="grid gap-3 sm:grid-cols-[1fr_14rem]">
+        <div>
+          <label className="label text-xs" htmlFor="q">
+            Search
+          </label>
+          <input id="q" type="search" className="input min-h-10 py-1.5 text-sm" placeholder="Brand or model, e.g. Perseus" value={f.query} onChange={(e) => set({ ...f, query: e.target.value })} />
+        </div>
+        <Select label="Brand" value={f.brand} onChange={(brand) => set({ ...f, brand })} options={[['any', `All brands (${brands.length})`], ...brands.map((b): [string, string] => [b, b])]} />
+      </div>
       <div>
         <label className="label flex justify-between text-xs" htmlFor="price">
           <span>Max price</span>
           <span className="tabular-nums">{peso(f.maxPrice)}</span>
         </label>
-        <input id="price" type="range" min={1000} max={PRICE_CEILING} step={500} value={f.maxPrice} onChange={(e) => set({ ...f, maxPrice: Number(e.target.value) })} className="w-full accent-court-600" />
+        <input id="price" type="range" min={PRICE_FLOOR} max={PRICE_CEILING} step={500} value={f.maxPrice} onChange={(e) => set({ ...f, maxPrice: Number(e.target.value) })} className="w-full accent-court-600" />
       </div>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <Select label="Weight" value={f.weight} onChange={(weight) => set({ ...f, weight })} options={[['any', 'Any'], ['light', 'Light (< 7.6 oz)'], ['mid', 'Mid (7.6-8.2 oz)'], ['heavy', 'Heavy (> 8.2 oz)']]} />
-        <Select label="Shape" value={f.shape} onChange={(shape) => set({ ...f, shape })} options={[['any', 'Any'], ['standard', 'Standard'], ['widebody', 'Widebody'], ['hybrid', 'Hybrid'], ['elongated', 'Elongated']]} />
+        <Select label="Shape" value={f.shape} onChange={(shape) => set({ ...f, shape })} options={[['any', 'Any'], ['widebody', 'Widebody'], ['hybrid', 'Hybrid'], ['elongated', 'Elongated']]} />
         <Select label="Play style" value={f.style} onChange={(style) => set({ ...f, style })} options={[['any', 'Any'], ['control', 'Control'], ['all-court', 'All-court'], ['power', 'Power']]} />
         <Select label="Level" value={f.level} onChange={(level) => set({ ...f, level })} options={[['any', 'Any'], ['beginner', 'Beginner'], ['intermediate', 'Intermediate'], ['advanced', 'Advanced']]} />
       </div>
       <div className="flex items-end justify-between gap-2">
         <p className="text-sm text-ink/60">{count} paddles</p>
         <div className="w-44">
-          <Select label="Sort" value={f.sort} onChange={(sort) => set({ ...f, sort })} options={[['price-asc', 'Price: low to high'], ['price-desc', 'Price: high to low'], ['weight', 'Lightest first']]} />
+          <Select label="Sort" value={f.sort} onChange={(sort) => set({ ...f, sort })} options={[['price-asc', 'Price: low to high'], ['price-desc', 'Price: high to low'], ['newest', 'Newest first'], ['weight', 'Lightest first']]} />
         </div>
       </div>
     </div>
@@ -162,7 +185,12 @@ function PaddleCard({ p, fav, comparing, onFav, onCompare }: { p: Paddle; fav: b
       <div className="mt-2 flex flex-wrap gap-1.5">
         <span className={`chip ${styleChip[p.style]}`}>{cap(p.style)}</span>
         <span className="chip bg-ink/5 text-ink/70">{cap(p.shape)}</span>
-        <span className="chip bg-ink/5 text-ink/70">{cap(p.face)}</span>
+        {p.year && <span className="chip bg-ink/5 text-ink/70">{p.year}</span>}
+        {isApproved(p) && (
+          <span className="chip bg-court-50 text-court-800" title="Approved for USA Pickleball sanctioned play">
+            ✓ USAP
+          </span>
+        )}
       </div>
       <dl className="mt-3 grid grid-cols-3 gap-2 text-center text-sm">
         <div className="rounded-lg bg-paper p-1.5">
@@ -176,6 +204,7 @@ function PaddleCard({ p, fav, comparing, onFav, onCompare }: { p: Paddle; fav: b
         <div className="rounded-lg bg-paper p-1.5">
           <dt className="text-xs text-ink/50">Approx.</dt>
           <dd className="font-semibold tabular-nums">{peso(p.pricePhp)}</dd>
+          <dd className="text-[10px] tabular-nums text-ink/50">US${p.priceUsd}</dd>
         </div>
       </dl>
       <p className="mt-2 text-xs text-ink/60">Good for: {p.levels.map(cap).join(', ')}</p>
@@ -196,11 +225,12 @@ function Compare({ ids, onRemove }: { ids: string[]; onRemove: (id: string) => v
   if (list.length === 0) return <p className="card p-6 text-center text-ink/60">Choose up to {MAX_COMPARE} paddles with “+ Compare” on the Browse tab.</p>
   const rows: [string, (p: Paddle) => string][] = [
     ['Brand', (p) => p.brand],
-    ['Price (approx.)', (p) => peso(p.pricePhp)],
+    ['Price (approx.)', (p) => `${peso(p.pricePhp)} (US$${p.priceUsd})`],
     ['Weight', (p) => `~${p.weightOz} oz (${weightClass(p.weightOz)})`],
     ['Core thickness', (p) => `${p.thicknessMm} mm`],
     ['Shape', (p) => cap(p.shape)],
-    ['Face', (p) => cap(p.face)],
+    ['Year', (p) => (p.year ? String(p.year) : '-')],
+    ['USA Pickleball', (p) => (isApproved(p) ? 'Approved' : p.approval || '-')],
     ['Play style', (p) => cap(p.style)],
     ['Levels', (p) => p.levels.map(cap).join(', ')],
   ]
