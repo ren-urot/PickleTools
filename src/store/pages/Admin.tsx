@@ -438,6 +438,7 @@ function ActivationPanel({ o, password, onChange }: { o: DeskOrder; password: st
   const [activation, setActivation] = useState<Activation | null | undefined>(undefined)
   const [error, setError] = useState('')
   const [confirmReset, setConfirmReset] = useState(false)
+  const [releasing, setReleasing] = useState(false)
 
   const refresh = async () => {
     setError('')
@@ -476,15 +477,18 @@ function ActivationPanel({ o, password, onChange }: { o: DeskOrder; password: st
               <span className="flex-1 text-amber-900">Free this purchase so the buyer can activate on a new phone?</span>
               <button
                 className="btn-primary min-h-10"
+                disabled={releasing}
                 onClick={async () => {
+                  setReleasing(true)
                   const r = await adminCall(password, { action: 'reset', orderId: o.orderId })
+                  setReleasing(false)
                   if (!r.ok) return setError(r.message)
                   setConfirmReset(false)
                   setActivation(null)
                   onChange(withStatus(o, 'verified', `Phone ${activation.device} released for a new phone`))
                 }}
               >
-                Yes, allow a new phone
+                {releasing ? 'Releasing…' : 'Yes, allow a new phone'}
               </button>
               <button className="btn-ghost min-h-10" onClick={() => setConfirmReset(false)}>
                 Cancel
