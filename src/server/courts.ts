@@ -30,6 +30,8 @@ export interface Venue {
   /** 'free' | 'paid' | '' (unknown). Actual prices are not published on the map. */
   fee: '' | 'free' | 'paid'
   reservation: string
+  /** True when mapped as private/customers-only: commercial clubs often use this for pay-to-play. */
+  restricted: boolean
   /** Nearest mapped parking; distanceM 0 means parking at the venue itself. null = unknown. */
   parking: { distanceM: number } | null
   osmUrl: string
@@ -67,7 +69,8 @@ interface Group {
 export function buildCourts(elements: OsmElement[]): Venue[] {
   const located = elements.map((e) => ({ ...e, p: pos(e)!, tags: e.tags ?? {} })).filter((e): e is Located => !!e.p)
   const parking = located.filter((e) => e.tags.amenity === 'parking')
-  const places = located.filter((e) => isPickleball(e.tags) && e.tags.access !== 'private' && e.tags.access !== 'no')
+  // access=private is common for pay-to-play clubs, so those are kept (and labelled); only access=no is dropped.
+  const places = located.filter((e) => isPickleball(e.tags) && e.tags.access !== 'no')
 
   // Named features become venues; unnamed courts join the nearest venue or an unnamed cluster.
   const groups: Group[] = places.filter((e) => e.tags.name).map((e) => ({ anchor: e, members: [e] }))
@@ -122,6 +125,7 @@ export function buildCourts(elements: OsmElement[]): Venue[] {
       surface: t.surface ?? '',
       fee: t.fee === 'no' ? 'free' : t.fee === 'yes' ? 'paid' : '',
       reservation: t.reservation ?? '',
+      restricted: t.access === 'private' || t.access === 'customers' || t.access === 'members',
       parking: park,
       osmUrl: `https://www.openstreetmap.org/${anchor.type}/${anchor.id}`,
     }

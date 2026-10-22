@@ -62,12 +62,14 @@ describe('buildCourts', () => {
     expect(b.parking).toBeNull()
   })
 
-  it('reads fee, reservation, phone and website tags, and ignores private courts', () => {
+  it('reads fee, reservation, phone and website tags; keeps private clubs labelled, drops access=no', () => {
     const venues = buildCourts([
       el(1, 5, 5, { leisure: 'pitch', sport: 'pickleball', name: 'Open Court', fee: 'no', reservation: 'required', phone: '+63 917 000 0000', website: 'https://open.example' }),
-      el(2, 6, 6, { leisure: 'pitch', sport: 'pickleball', name: 'Private Club', access: 'private' }),
+      el(2, 6, 6, { leisure: 'sports_centre', sport: 'pickleball', name: 'PUMPD Pickleball Cebu', access: 'private', indoor: 'yes' }),
+      el(3, 7, 7, { leisure: 'pitch', sport: 'pickleball', name: 'Closed', access: 'no' }),
     ])
-    expect(venues).toHaveLength(1)
-    expect(venues[0]).toMatchObject({ fee: 'free', reservation: 'required', phone: '+63 917 000 0000', website: 'https://open.example' })
+    expect(venues.map((v) => v.name)).toEqual(['Open Court', 'PUMPD Pickleball Cebu'])
+    expect(venues[0]).toMatchObject({ fee: 'free', reservation: 'required', phone: '+63 917 000 0000', website: 'https://open.example', restricted: false })
+    expect(venues[1]).toMatchObject({ restricted: true, indoor: true })
   })
 })

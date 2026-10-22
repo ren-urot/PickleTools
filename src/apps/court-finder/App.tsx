@@ -213,7 +213,7 @@ export default function App() {
 const yes = (b: boolean | null, label: string, no: string) => (b === null ? null : b ? label : no)
 
 function VenueCard({ v, km, from }: { v: Venue; km: number; from: LatLon | null }) {
-  const chips = [yes(v.indoor, 'Indoor', 'Outdoor'), v.indoor ? null : yes(v.covered, 'Covered', 'Open-air'), yes(v.lit, 'Lights for night play', 'No lights'), v.surface ? `Surface: ${v.surface}` : null, v.reservation === 'required' ? 'Booking required' : v.reservation === 'yes' ? 'Booking accepted' : null].filter(Boolean)
+  const chips = [v.restricted ? 'Customers/members only, ask the venue' : null, yes(v.indoor, 'Indoor', 'Outdoor'), v.indoor ? null : yes(v.covered, 'Covered', 'Open-air'), yes(v.lit, 'Lights for night play', 'No lights'), v.surface ? `Surface: ${v.surface}` : null, v.reservation === 'required' ? 'Booking required' : v.reservation === 'yes' ? 'Booking accepted' : null].filter(Boolean)
   const facebook = v.facebook && (v.facebook.startsWith('http') ? v.facebook : `https://facebook.com/${v.facebook}`)
   const contact = v.phone || facebook || v.website
 
