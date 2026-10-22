@@ -16,7 +16,10 @@ export function Home() {
         <HeroImage />
         <div className="relative mx-auto max-w-6xl px-4 py-16 sm:py-28">
           <p className="chip bg-ball text-ink">{peso(store.price)} per app · no subscription</p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-black leading-[1.05] tracking-tight drop-shadow-sm sm:text-6xl">Six pickleball tools. One simple toolkit.</h1>
+          {/* Desktop: exactly two lines, one sentence each. Phones wrap naturally. */}
+          <h1 className="mt-4 max-w-3xl text-4xl font-black leading-[1.05] tracking-tight drop-shadow-sm sm:text-6xl md:max-w-none">
+            <span className="md:block md:whitespace-nowrap">Six pickleball tools.</span> <span className="md:block md:whitespace-nowrap">One simple toolkit.</span>
+          </h1>
           <p className="mt-5 max-w-xl text-lg text-white/90">
             Keep score, track your matches, plan practice, run club brackets, find the right paddle and master the rules - with fast apps that install on your phone and work offline.
           </p>
