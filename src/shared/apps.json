@@ -121,5 +121,25 @@
       "Printable quick-reference guide"
     ],
     "offline": "Fully offline. Rules and quiz content are built into the app."
+  },
+  {
+    "slug": "court-finder",
+    "code": "CF",
+    "name": "Court Finder",
+    "shortName": "Courts",
+    "tagline": "Find a court near you, fast.",
+    "description": "Find pickleball courts near you by GPS, with distance, estimated drive time, directions, parking and contact details.",
+    "color": "#15803d",
+    "glyph": "map",
+    "features": [
+      "Courts near you using your phone’s GPS",
+      "Distance and estimated drive time",
+      "One-tap directions in Google Maps",
+      "Number of courts, parking, indoor/covered and lights where mapped",
+      "Opening hours, phone and Facebook links",
+      "Search within 10, 25 or 50 km, or the whole Philippines",
+      "Your location stays on your phone"
+    ],
+    "offline": "Needs internet to download the court list; the last list you downloaded stays available offline."
   }
 ]

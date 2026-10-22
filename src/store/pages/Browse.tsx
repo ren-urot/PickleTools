@@ -18,10 +18,10 @@ export function Home() {
           <p className="chip bg-ball text-ink">{peso(store.price)} per app · no subscription</p>
           {/* Desktop: exactly two lines, one sentence each. Phones wrap naturally. */}
           <h1 className="mt-4 max-w-3xl text-4xl font-black leading-[1.05] tracking-tight drop-shadow-sm sm:text-6xl md:max-w-none">
-            <span className="md:block md:whitespace-nowrap">Six pickleball tools.</span> <span className="md:block md:whitespace-nowrap">One simple toolkit.</span>
+            <span className="md:block md:whitespace-nowrap">Seven pickleball tools.</span> <span className="md:block md:whitespace-nowrap">One simple toolkit.</span>
           </h1>
           <p className="mt-5 max-w-xl text-lg text-white/90">
-            Keep score, track your matches, plan practice, run club brackets, find the right paddle and master the rules - with fast apps that install on your phone and work offline.
+            Keep score, track your matches, plan practice, run club brackets, find the right paddle, master the rules and find courts near you - with fast apps that install on your phone.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href={href('/apps')} className="btn-ball px-6 py-3 text-lg">
@@ -127,7 +127,7 @@ function PriceTable() {
           </tr>
         ))}
         <tr className="border-t-2 border-ink/20 font-bold">
-          <td className="px-4 py-2.5">All six apps</td>
+          <td className="px-4 py-2.5">All seven apps</td>
           <td className="px-4 py-2.5 text-right tabular-nums">{peso(store.price * apps.length)}</td>
         </tr>
       </tbody>
@@ -153,7 +153,7 @@ export function FaqList({ items }: { items: typeof faqs }) {
 
 export function Catalog() {
   return (
-    <Page title="All apps" intro={`Six focused tools for players, coaches and organisers. ${peso(store.price)} each, one-time.`}>
+    <Page title="All apps" intro={`Seven focused tools for players, coaches and organisers. ${peso(store.price)} each, one-time.`}>
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {apps.map((a) => (
           <AppCard key={a.slug} app={a} />

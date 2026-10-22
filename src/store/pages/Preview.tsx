@@ -159,6 +159,42 @@ const screens: Record<string, ReactNode> = {
       ))}
     </>
   ),
+  'court-finder': (
+    <>
+      <Box className="flex items-center gap-2">
+        <span aria-hidden="true">📍</span>
+        <span className="flex-1 font-semibold">Your location</span>
+        <span className="rounded-lg bg-ink/5 px-2 py-0.5">↻ Update</span>
+      </Box>
+      <div className="flex gap-1">
+        {['10 km', '25 km', '50 km'].map((r) => (
+          <span key={r} className={`rounded-full px-2 py-0.5 ${r === '25 km' ? 'bg-court-600 text-white' : 'bg-white'}`}>
+            Within {r}
+          </span>
+        ))}
+      </div>
+      {[
+        ['Riverside Pickleball Club', '1.2 km', '~6 min', '4', 'On site'],
+        ['Barangay Covered Court', '3.8 km', '~18 min', 'Not listed', '120 m away'],
+      ].map(([name, dist, eta, courts, parking]) => (
+        <Box key={name} className="space-y-1.5">
+          <div className="flex justify-between gap-2">
+            <b>{name}</b>
+            <span className="text-right">
+              <b>{dist}</b>
+              <br />
+              <span className="text-ink/50">{eta} drive</span>
+            </span>
+          </div>
+          <div className="grid grid-cols-2 gap-1">
+            <span className="rounded bg-paper p-1">Courts: {courts}</span>
+            <span className="rounded bg-paper p-1">Parking: {parking}</span>
+          </div>
+          <div className="rounded-lg bg-court-600 py-1 text-center font-bold text-white">Directions ↗</div>
+        </Box>
+      ))}
+    </>
+  ),
   'rules-quiz': (
     <>
       <div className="rounded-xl border border-ink/20 bg-white px-2 py-1.5 text-ink/40">Search rules - kitchen</div>

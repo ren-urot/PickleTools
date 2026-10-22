@@ -55,7 +55,7 @@ export function Layout({ path, children }: { path: string; children: ReactNode }
             <p className="flex items-center gap-2 text-lg font-black text-white">
               <Logo /> {store.businessName}
             </p>
-            <p className="mt-2 text-sm">Six pickleball tools · {peso(store.price)} each · one-time payment.</p>
+            <p className="mt-2 text-sm">Seven pickleball tools · {peso(store.price)} each · one-time payment.</p>
           </div>
           <div>
             <p className="font-bold text-white">Help</p>

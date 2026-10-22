@@ -1,6 +1,6 @@
 # PickleTools
 
-Six installable pickleball apps (PWAs) sold for ₱100 each through a static storefront with GoTyme QR checkout. No server and no database. Payments are checked by hand, and each purchase is **activated on one device**.
+Seven installable pickleball apps (PWAs) sold for ₱100 each through a static storefront with GoTyme QR checkout. No server and no database. Payments are checked by hand, and each purchase is **activated on one device**.
 
 | App | Path (before salting) |
 |---|---|

@@ -1,7 +1,7 @@
 import data from './apps.json'
 
 export type AppMeta = (typeof data)[number]
-export type AppSlug = 'scorekeeper' | 'match-tracker' | 'drill-generator' | 'tournament' | 'paddle-finder' | 'rules-quiz'
+export type AppSlug = 'scorekeeper' | 'match-tracker' | 'drill-generator' | 'tournament' | 'paddle-finder' | 'rules-quiz' | 'court-finder'
 
 export const apps = data as AppMeta[]
 
